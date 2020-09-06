@@ -1,0 +1,6 @@
+1. Investigate and fix the muon data bug; CSVs get additional spaces for no unknown reason
+2. Identify an experiment to do, and write up the hypothesis
+3. Refactor code??? Need to write out how the code flows in the first place.
+
+Confirmation Number:	23
+Submission Passcode:	23X-H8F5H8G3J3

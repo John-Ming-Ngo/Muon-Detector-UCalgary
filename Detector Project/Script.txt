@@ -1,0 +1,26 @@
+Greetings, I am John Ming Ngo, an undergraduate at the University of Calgary. 
+
+I'm here today to present on the streamlined Android-based application for a cheap and portable muon detector. 
+
+This project was originally a group project as part of my Software Engineering 300 class, with Celina Ma and Omar Quersi, under the supervision of Professors Zahra Shakeri and Jason Donev, but since then the project has been continued by me, under the guidence of Professor Donev.
+
+First, some background. In prior years, Jordan Hanania, a former undergraduate at the University of Calgary, designed a cheap and portable muon detector under the supervision of Professor Donev, with inspiration from a related project from MIT. 
+
+However, whilst the detector itself was small, it was hamstrung by the need to be tethered to a PC in order to operate. Almost all PCs are relatively large and lacking in easy portabiltiy and deployment, which unfortunately counteracts the detector's strengths. 
+
+Professor Donev recognized some of these flaws, and figured that if it were possible to replace the PC with a mobile device, such as an android based phone, 
+
+With this increased convenience and portability, the goal is that 
+
+
+
+All this said, what are muons, and why do we care about them?
+
+
+[CORE FEATURES AND STRENGTHS OF THIS APPLICATION/INTENDED USE CASES]
+
+
+
+[SAMPLE EXPERIMENTS, PERSONAL ANECDOTES ABOUT GETTING THAT DATA]
+
+[CONCLUSIONS.]

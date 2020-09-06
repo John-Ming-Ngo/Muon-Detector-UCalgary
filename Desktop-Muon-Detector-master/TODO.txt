@@ -1,0 +1,5 @@
+- Location Recording.
+- Data Export. https://developer.android.com/training/data-storage/files#WriteInternalStorage
+- Fixing Initial USB Detection.
+- User defined recording intervals.
+- User inputted altitude and data tags.

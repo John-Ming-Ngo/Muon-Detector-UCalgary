@@ -1,0 +1,12 @@
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\CosmicWatch_Library.deps.json
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\CosmicWatch_Library.dll
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.csprojAssemblyReference.cache
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.AssemblyInfoInputs.cache
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.AssemblyInfo.cs
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\CosmicWatch_Library.pdb
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.dll
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.pdb
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\Windows.Foundation.FoundationContract.winmd
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.csproj.CopyComplete
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.csproj.CoreCompileInputs.cache

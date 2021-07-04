@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CosmicWatch.MainPage"
+
+             xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!--Navigation Toolbar, Hierarchical Organization-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Options" Order="Primary" Text="Options" Priority="0" Clicked = "OnOptions"/>
+        <ToolbarItem Name="Data Analysis" Order="Primary" Text="Data Analysis" Priority="1" Clicked = "OnDataAnalysis"/>
+    </ContentPage.ToolbarItems>
+    
+    <!-- Main Display/Content -->
+    <StackLayout Orientation= "Vertical">
+        <!-- Middle Screen: Content -->
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <!--Display Current Time and Recording Time Elapsed.-->
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name ="timeDisplay" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MM/dd/yyyy HH:mm:ss}'}" FontSize="20" TextColor="White" HorizontalOptions="StartAndExpand"/>
+                <Label x:Name ="elapsedDisplay" Text="Elapsed Time: 0 (s)" FontSize="20" TextColor="White" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <!--Title-->
+            <Frame BackgroundColor="#2196F3" CornerRadius="20">
+                <Label Text="CosmicWatch Detector Interface" HorizontalTextAlignment="Center" TextColor="White" FontSize="20"/>
+            </Frame>
+            <!-- Data Recording Results -->
+            <Frame BackgroundColor="#5643fd" CornerRadius="20">
+                <StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Column="0">
+                            <Label Text="Total Events:" FontSize = "20" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                            <Label Text="Events Per Minute:" FontSize = "20" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label x:Name ="muonCountsDisplay" Text="0" FontSize = "20" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                            <Label x:Name ="muonsPerMinuteDisplay" Text="0" FontSize = "20" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            <!--Data Recording Toolbar-->
+            <Frame BackgroundColor="#2d475e" CornerRadius="20">
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="recordingTimeEntry" Placeholder="Record For (seconds)" Keyboard="Numeric" ClearButtonVisibility="WhileEditing" TextChanged="OnRecordingLengthEntry" Completed="OnRecordingLengthEntry" TextColor="White" BackgroundColor="#2d475e" HorizontalOptions="FillAndExpand" PlaceholderColor="LightBlue"></Entry>
+                    <Button x:Name="recordButton" Text="Start Recording" Padding="10" CornerRadius="20" TextColor="White" HorizontalOptions="FillAndExpand" Clicked="OnRecord"></Button>
+                </StackLayout>
+            </Frame>
+            
+            <!--Status Display.-->
+            <Label x:Name ="statusDisplay" Text="" FontSize="20" TextColor="White"/>
+            
+        </StackLayout>
+        
+        <!-- Bottom Bar: Screen Options -->
+        <StackLayout BackgroundColor="#ba1e68" Orientation="Horizontal" VerticalOptions="End">
+            <Picker x:Name="supportedDevices" Title="Supported Devices" TitleColor="White" PropertyChanged="OnDeviceChange"></Picker>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                <Label Text="Connection Status: " FontSize = "14" HorizontalTextAlignment="Center" TextColor="White" HorizontalOptions="FillAndExpand"></Label>
+                <Label x:Name = "ConnectionLabel" Text="Not Connected" FontSize = "14" HorizontalTextAlignment="Center" TextColor="White" HorizontalOptions="FillAndExpand"></Label>
+            </StackLayout>
+
+            <Button x:Name="connectionButton" Text="Connect to Device" CornerRadius="20" HorizontalOptions="CenterAndExpand" TextColor="White" Clicked="OnConnect"></Button>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

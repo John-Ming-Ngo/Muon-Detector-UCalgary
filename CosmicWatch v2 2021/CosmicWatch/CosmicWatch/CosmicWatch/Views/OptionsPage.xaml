@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CosmicWatch.Views.OptionsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Options"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                TextColor="White"
+                 />
+            <!-- Grid format - Options -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!-- Left Column - Options -->
+                <StackLayout Orientation="Vertical" Grid.Column="0">
+                    <Label Text="Option 1" HorizontalOptions="StartAndExpand" TextColor="White" Padding="10" BackgroundColor="MediumPurple"></Label>
+                    <Label Text="Option 2" HorizontalOptions="StartAndExpand" TextColor="White" Padding="10" BackgroundColor="MediumPurple"></Label>
+                    <Label Text="Option 3" HorizontalOptions="StartAndExpand" TextColor="White" Padding="10" BackgroundColor="MediumPurple"></Label>
+                </StackLayout>
+                <!-- Right Column - Buttons and Dials -->
+                <StackLayout Orientation="Vertical" Grid.Column="1">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <CheckBox HorizontalOptions="CenterAndExpand"></CheckBox>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <CheckBox HorizontalOptions="CenterAndExpand"></CheckBox>
+                        <CheckBox HorizontalOptions="CenterAndExpand"></CheckBox>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Picker x:Name="TESTPICKER"
+                        Title="TESTPICKER"
+                        TitleColor="White">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}" x:Name="TESTPICKERLIST">
+                                    <x:String>ROBBER</x:String>
+                                    <x:String>ROBBER</x:String>
+                                    <x:String>ROBBER</x:String>
+                                    <x:String>ROBBER</x:String>
+                                    <x:String>ROBBER</x:String>
+                                    <x:String>ROBBER</x:String>
+                                    <x:String>ROBBER</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

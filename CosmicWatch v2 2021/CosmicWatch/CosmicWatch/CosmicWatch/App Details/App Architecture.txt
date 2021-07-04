@@ -1,0 +1,11 @@
+﻿MVVM
+
+View (UI Logic):
+	Main
+	Data Analysis
+	Options
+
+ViewModels (UI Data and data management):
+	
+
+Models (Business logic);

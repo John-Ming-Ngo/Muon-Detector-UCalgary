@@ -1,0 +1,55 @@
+﻿Priorities:
+	2. Clean up the app, start extracting things into variables meant to be modified by the config file, and comment it.
+	2a. More meaninful CSV save files.
+	3. Minimally functional options page.
+		a. This likely involves integration and usage of the C# Configurations class/library.
+	4. Implement different recording types. Ex. repeated recordings over X period of time.
+	5. Conclude project/round 1. Publish app?
+
+Timer display
+Time input as time picker or preset intervals
+Explaination, background information, and/or construction page. Possibly an embedded youtube video?
+Options:
+	Colour (for the colourblind especially)
+	Languages
+Inside/outside selector?
+Dedicated preset options.
+
+Altimiter maybe? Hardware end of things. Not my area of expertise here.
+
+
+New Functionality: Code up the Options and Data Analysis Pages, along with any necessary mods to ReadFromFile.cs
+
+
+Code Refactor and Upgrade.
+	Currently have something funky going on with close. Should look into IDispose instead. May run into errors.
+	More serious:
+		Architecture issues between multiple things keeping track of when a recording has or hasn't begun.
+			Possiblility: Rather than a boolean variable keeping track, most things use a boolean action/function; they query one switch. Still, honestly this sucks.
+				Observer/event based programming, duh silly.
+					Centralize what to do when recording ends function calls in MainPageModel, probably.
+					Also centralize the stopwatch and TWO data records - one for raw, the other for processed.
+		Issue with new recordings needing to start a new connection to not have a stupid backlog of data.
+		Problem is: I want to flush the input buffer of a serial device. It's not really letting me :// No obvious way.
+
+Bing Maps API integration to get reverse geocoding for the UWP side of this app: Figure it out.
+	==> Promoting this problem to the status of undead demon. I spent 3 hrs trying to figure this BS out! It won't work!
+
+USB Serial Communication
+	Working, may need more info or adjustments.
+
+Graphing Library Integration - 80% completed
+	Figure out how to offline the code; currently needs to be online for the javascript part to work.
+	Consider plugin: https://github.com/datavisyn/chartjs-plugin-error-bars
+
+Options:
+	Save/No save
+	Simulate with a fake device?
+
+Comment on and refactor code
+	MainPageModel is becoming an insane monolith. Need refactor bad.
+
+Data comparison - One set of data against the other.
+	==> Need verification that we're comparing like against like!
+
+Device_filter.xml in the Cosmic Watch Android Resources XML folder may not be necessary.

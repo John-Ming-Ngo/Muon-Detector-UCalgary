@@ -1,0 +1,23 @@
+﻿Cosmic Watch Mk.2 Specifications
+	1. Android, UWP and iOS Compatability.
+	2. Interfaces with an Arduino-based muon detector (and possibly other scientific instruments, especially event-based ones)
+		a. This interface must provide power from the phone to the detector.
+		b. This interface must be able to read data from this detector and use it.
+	3. The application must be user friendly. No more fiddly-sticks with plug in-go sequences! 
+	4. The app's functionalities are as follows:
+		a. Identify and display the type of device connected to. 
+			Alternatively, ability to select the device type.
+		b. Display the live data as it is being recorded. Ex. number of counts. Potentially differentiate count numbers by sound.
+		c. Add more data that the peripheral detector cannot determine. Ex. Exact timestamps, geolocation, altitude??
+		d. Have some data display and analysis functionality. Ex. plot one column against another column.
+			Currently using: Chart.js, for its sheer flexibility.
+		e. Save the raw data, and a cleaned up version, to CSV or an SQL database online, depending on user preferences or settings.
+			d1. Possibly look into export to Google drive as well.
+
+Resources required:
+	a. Access to the muon detector.
+	b. Access to a computer with Xamarin Visual Studio.
+	c. Potentially, I might want to go into and edit Jordan Hanania's code directly, see if I can add more functionality to the arduino's output code, because at the current moment, identifying the start of one new event and its end is less intuitive than I would like. I remember spending hours trying to monkey around that when there should be an easier way.
+			=> I need to get an arduino editor and compiler. Luckily, that should not be too too hard. Understanding his code, however, will be a project in and of itself. Even if the only detail I really need to care about is the surface level output code.
+
+https://medium.com/@sureshgandhi2/arduino-android-serial-communication-b72b124142fbord 

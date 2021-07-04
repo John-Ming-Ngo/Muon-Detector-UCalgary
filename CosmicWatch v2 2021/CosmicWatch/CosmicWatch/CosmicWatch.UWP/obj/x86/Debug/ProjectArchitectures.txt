@@ -1,0 +1,1 @@
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\CosmicWatch.UWP.csproj;x86

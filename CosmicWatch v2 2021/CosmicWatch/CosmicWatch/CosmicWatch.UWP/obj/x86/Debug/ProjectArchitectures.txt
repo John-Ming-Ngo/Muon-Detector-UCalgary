@@ -1,1 +1,1 @@
-D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\CosmicWatch.UWP.csproj;x86
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\CosmicWatch.UWP.csproj;x86

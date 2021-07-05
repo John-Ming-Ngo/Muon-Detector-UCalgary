@@ -94,13 +94,13 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\UsbSerialForAndroid-master\UsbSerialForAndroid\UsbSerialForAndroid.csproj">
-      <Project>{a64567bc-548a-4cb7-9f2c-ece75ee1a868}</Project>
-      <Name>UsbSerialForAndroid</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\CosmicWatch_Library\CosmicWatch_Library.csproj">
       <Project>{D372B860-9A0E-4BDB-A560-87E3F30464E8}</Project>
       <Name>CosmicWatch_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UsbSerialForAndroid\UsbSerialForAndroid.csproj">
+      <Project>{A64567BC-548A-4CB7-9F2C-ECE75EE1A868}</Project>
+      <Name>UsbSerialForAndroid</Name>
     </ProjectReference>
     <ProjectReference Include="..\CosmicWatch\CosmicWatch.csproj">
       <Project>{7EC00081-F1D0-4AD4-99A0-0C0F485C2E29}</Project>

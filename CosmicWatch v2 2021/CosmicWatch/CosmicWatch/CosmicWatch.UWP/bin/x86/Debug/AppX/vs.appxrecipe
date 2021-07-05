@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ec0cc741-fd3e-485c-81be-68815c480690</PackageIdentityName>
     <PackageIdentityPublisher>CN=b5a02528-862b-452c-995b-1023ef5a16bc</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>D5C88DEBD7A591B31532C312E12098919253FF1118A972DDF1733D53B8E930D1</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>b0c704da-8932-48eb-9d48-719b45cebf63_1.0.0.0_x86__z1sq4jxngb7wr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>b0c704da-8932-48eb-9d48-719b45cebf63_z1sq4jxngb7wr!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-07-04T21:32:32.124</Modified>
+      <Modified>2021-07-05T22:52:37.764</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\CosmicWatch.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\CosmicWatch.UWP.exe">
       <PackagePath>entrypoint\CosmicWatch.UWP.exe</PackagePath>
-      <Modified>2021-07-04T21:32:28.983</Modified>
+      <Modified>2021-07-05T22:52:34.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\john-\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.9\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -718,11 +718,11 @@
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2020-07-14T08:19:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch.dll">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch.dll">
       <PackagePath>CosmicWatch.dll</PackagePath>
-      <Modified>2021-07-04T21:32:18.834</Modified>
+      <Modified>2021-07-05T22:52:25.037</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\CosmicWatch_Library.dll">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\CosmicWatch_Library.dll">
       <PackagePath>CosmicWatch_Library.dll</PackagePath>
       <Modified>2021-07-04T21:32:16.458</Modified>
     </AppxPackagedFile>
@@ -738,156 +738,156 @@
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
       <Modified>2020-07-14T08:19:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.674</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.677</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.680</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.799</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.801</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.804</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.807</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.810</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.872</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.875</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.877</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.879</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.881</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.886</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.943</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.945</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.947</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.949</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.952</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:04.955</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:05.016</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:05.020</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:05.024</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:05.026</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:05.028</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:05.087</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-10-26T15:15:05.090</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2020-10-26T15:15:05.097</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\CosmicWatch.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\CosmicWatch.UWP.xr.xml">
       <PackagePath>CosmicWatch.UWP.xr.xml</PackagePath>
       <Modified>2020-10-26T15:17:00.967</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-07-04T21:32:28.713</Modified>
+      <Modified>2021-07-05T22:52:33.864</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-07-04T21:32:28.714</Modified>
+      <Modified>2021-07-05T22:52:33.864</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -901,13 +901,13 @@
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2019-12-12T09:48:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-11-16T16:17:35.746</Modified>
+      <Modified>2021-07-05T22:52:36.378</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Core\CosmicWatch.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Core\CosmicWatch.UWP.exe">
       <PackagePath>CosmicWatch.UWP.exe</PackagePath>
-      <Modified>2021-07-04T21:32:32.117</Modified>
+      <Modified>2021-07-05T22:52:37.755</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -816,6 +816,15 @@
         "runtime": {
           "bin/placeholder/CosmicWatch_Library.dll": {}
         }
+      },
+      "UsbSerialForAndroid/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/UsbSerialForAndroid.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UsbSerialForAndroid.dll": {}
+        }
       }
     }
   },
@@ -1959,12 +1968,18 @@
       "type": "project",
       "path": "../../CosmicWatch_Library/CosmicWatch_Library.csproj",
       "msbuildProject": "../../CosmicWatch_Library/CosmicWatch_Library.csproj"
+    },
+    "UsbSerialForAndroid/1.0.0": {
+      "type": "project",
+      "path": "../../UsbSerialForAndroid/UsbSerialForAndroid.csproj",
+      "msbuildProject": "../../UsbSerialForAndroid/UsbSerialForAndroid.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
       "CosmicWatch >= 1.0.0",
       "CosmicWatch_Library >= 1.0.0",
+      "UsbSerialForAndroid >= 1.0.0",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.6.0.1141"
     ]
@@ -2006,6 +2021,9 @@
             },
             "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj": {
               "projectPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj"
+            },
+            "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\UsbSerialForAndroid\\UsbSerialForAndroid.csproj": {
+              "projectPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\UsbSerialForAndroid\\UsbSerialForAndroid.csproj"
             }
           }
         }

@@ -18,3 +18,23 @@ D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandar
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch_Library.pdb
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.csproj.CoreCompileInputs.cache
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch.deps.json
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch.dll
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\ref\CosmicWatch.dll
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch.pdb
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch_Library.dll
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\Windows.Foundation.FoundationContract.winmd
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch_Library.pdb
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.csprojAssemblyReference.cache
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\DataAnalysisPage.xaml.g.cs
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\OptionsPage.xaml.g.cs
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.AssemblyInfoInputs.cache
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.AssemblyInfo.cs
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.csproj.CoreCompileInputs.cache
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.csproj.CopyComplete
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.dll
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\ref\CosmicWatch.dll
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.pdb

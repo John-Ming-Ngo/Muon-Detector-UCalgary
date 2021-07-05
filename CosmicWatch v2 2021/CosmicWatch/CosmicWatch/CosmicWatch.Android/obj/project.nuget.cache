@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7Coa1uoWquVXrTsL7CXYn4Nexqfk9Rfrw4oH/5gMXOJ42k8ssO77ozz5ZQmMT/L9gniGF3AmzUjcG03ih43srg==",
+  "dgSpecHash": "23xwzUBjti+QmAKMf5m29LyEMA+sI4un/l2PcLAPFQLaEdmKDoZJ/w1STGdpRC9fqzd+l37q8X6cKbbi7bc1lg==",
   "success": true,
-  "projectFilePath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.Android\\CosmicWatch.Android.csproj",
+  "projectFilePath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch.Android\\CosmicWatch.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\john-\\.nuget\\packages\\chart.js\\2.9.3\\chart.js.2.9.3.nupkg.sha512",
     "D:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",

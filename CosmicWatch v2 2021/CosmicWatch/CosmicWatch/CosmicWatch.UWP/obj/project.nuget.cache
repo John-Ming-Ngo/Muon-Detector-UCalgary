@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "giecqBTJxRCcazJn+TN7W9Jg0o1xRPlLk+XO+a6YP5wcgbpOxoPdUm7XF4qOgA2WAMUoLO4G+5to0Fo05/mH1Q==",
+  "dgSpecHash": "pso5ELhmKqgTOH0gMH1qoFvz1RT3KnjLYMkr8N2C9nZdiJotEFcyZ4yVF6+OJNC2GphgMUiDAQ6VC8KONnsYcA==",
   "success": true,
-  "projectFilePath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.UWP\\CosmicWatch.UWP.csproj",
+  "projectFilePath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch.UWP\\CosmicWatch.UWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\john-\\.nuget\\packages\\chart.js\\2.9.3\\chart.js.2.9.3.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\microsoft.net.native.compiler\\2.1.8\\microsoft.net.native.compiler.2.1.8.nupkg.sha512",

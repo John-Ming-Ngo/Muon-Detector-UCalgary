@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gab9uue62ynctv7MVOfFnxGR3NUnDyE/e2k5mpe0Wb9DwhVaiM8MH64Q3TAxRKjoPzgFFeW48LhooBfa9V4WwQ==",
+  "dgSpecHash": "Xzk7R2Vc3qXMybmesQIP1BiMbk5CuvGa0qEdH47d7oaX6e6/HRrXi0S+NBpVIgzqWiSfZMFI76/7ADb7M9gD5g==",
   "success": true,
-  "projectFilePath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj",
+  "projectFilePath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\john-\\.nuget\\packages\\chart.js\\2.9.3\\chart.js.2.9.3.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

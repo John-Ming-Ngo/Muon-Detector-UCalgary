@@ -676,11 +676,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj",
+      "projectUniqueName": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj",
       "projectName": "CosmicWatch",
-      "projectPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj",
+      "projectPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj",
       "packagesPath": "C:\\Users\\john-\\.nuget\\packages\\",
-      "outputPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch\\obj\\",
+      "outputPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\"
@@ -700,8 +700,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj": {
-              "projectPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj"
+            "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj": {
+              "projectPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj"
             }
           }
         }

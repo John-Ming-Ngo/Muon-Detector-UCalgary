@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0bRx1UYs3mNHeu0jfnJE4gEMhW2RF7QvTNpGtUQ4n1xTrdavkJ1IRUSBLV+ejmeWXfg8zOAabJGDqtUyuaQExw==",
+  "dgSpecHash": "b5RzOm5TPfffk21nP+DC23A18jg+w4sIH/HSz31WzgJjCiJLgRowkz6jffe30AWnonH4nPKAb8eQTo7eE8PJaw==",
   "success": true,
-  "projectFilePath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.iOS\\CosmicWatch.iOS.csproj",
+  "projectFilePath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch.iOS\\CosmicWatch.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\john-\\.nuget\\packages\\chart.js\\2.9.3\\chart.js.2.9.3.nupkg.sha512",
     "D:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",

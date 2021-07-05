@@ -816,15 +816,6 @@
         "runtime": {
           "bin/placeholder/CosmicWatch_Library.dll": {}
         }
-      },
-      "UsbSerialForAndroid/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/UsbSerialForAndroid.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/UsbSerialForAndroid.dll": {}
-        }
       }
     }
   },
@@ -1968,18 +1959,12 @@
       "type": "project",
       "path": "../../CosmicWatch_Library/CosmicWatch_Library.csproj",
       "msbuildProject": "../../CosmicWatch_Library/CosmicWatch_Library.csproj"
-    },
-    "UsbSerialForAndroid/1.0.0": {
-      "type": "project",
-      "path": "../../../UsbSerialForAndroid-master/UsbSerialForAndroid/UsbSerialForAndroid.csproj",
-      "msbuildProject": "../../../UsbSerialForAndroid-master/UsbSerialForAndroid/UsbSerialForAndroid.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
       "CosmicWatch >= 1.0.0",
       "CosmicWatch_Library >= 1.0.0",
-      "UsbSerialForAndroid >= 1.0.0",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.6.0.1141"
     ]
@@ -1991,11 +1976,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.Android\\CosmicWatch.Android.csproj",
+      "projectUniqueName": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch.Android\\CosmicWatch.Android.csproj",
       "projectName": "CosmicWatch.Android",
-      "projectPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.Android\\CosmicWatch.Android.csproj",
+      "projectPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch.Android\\CosmicWatch.Android.csproj",
       "packagesPath": "C:\\Users\\john-\\.nuget\\packages\\",
-      "outputPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.Android\\obj\\",
+      "outputPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2016,14 +2001,11 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj": {
-              "projectPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj"
+            "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj": {
+              "projectPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj"
             },
-            "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj": {
-              "projectPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj"
-            },
-            "D:\\VisualStudioProjects\\UsbSerialForAndroid-master\\UsbSerialForAndroid\\UsbSerialForAndroid.csproj": {
-              "projectPath": "D:\\VisualStudioProjects\\UsbSerialForAndroid-master\\UsbSerialForAndroid\\UsbSerialForAndroid.csproj"
+            "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj": {
+              "projectPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj"
             }
           }
         }

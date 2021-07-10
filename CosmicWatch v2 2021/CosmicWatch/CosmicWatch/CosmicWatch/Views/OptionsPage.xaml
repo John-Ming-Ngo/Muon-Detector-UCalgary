@@ -9,7 +9,7 @@
                 HorizontalOptions="CenterAndExpand"
                 TextColor="White"
                  />
-            <!-- Grid format - Options -->
+            <!-- Grid: Options -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
@@ -36,10 +36,6 @@
                         TitleColor="White">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}" x:Name="TESTPICKERLIST">
-                                    <x:String>ROBBER</x:String>
-                                    <x:String>ROBBER</x:String>
-                                    <x:String>ROBBER</x:String>
-                                    <x:String>ROBBER</x:String>
                                     <x:String>ROBBER</x:String>
                                     <x:String>ROBBER</x:String>
                                     <x:String>ROBBER</x:String>

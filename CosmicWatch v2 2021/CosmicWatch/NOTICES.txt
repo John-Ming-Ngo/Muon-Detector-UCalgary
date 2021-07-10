@@ -1,0 +1,17 @@
+--
+Other Libraries or Code Utilized in this Project
+--
+
+In addition to the functionality provided by Microsoft with the C# code platform, and the Xamarin Forms developers, code from other sources was utilized at various stages of this project. I would like to document and give thanks to them here.
+
+In Particular:
+	Chart.js
+		- Graphing Functionality.
+		- MIT License
+		https://github.com/chartjs/Chart.js
+	UsbSerialForAndroid
+		- USB Serial communications on the Android platform.
+		- GNU Lesser General Public License v2.1
+		https://github.com/anotherlab/UsbSerialForAndroid
+		
+Thank you to the creators and contributors to each of these resources!

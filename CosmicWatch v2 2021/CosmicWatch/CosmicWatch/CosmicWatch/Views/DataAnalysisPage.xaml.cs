@@ -15,6 +15,19 @@ using Xamarin.Essentials;
 
 namespace CosmicWatch.Views
 {
+    /*
+    Code-behind for the display and analysis screen
+    Viewmodel is DisplayAnalysisPageModel
+
+    This page handles all the UI Logic for the Display Analysis Page
+    This means any changes or functionality which comes about due to the UI
+    Ex. Functions to handle screen transitions, button presses or what can be displayed.
+
+    Organization:
+        1. By Functionality
+
+    Any data manipulation is sent to the Viewmodel to handle and return to here.
+     */
     public partial class DisplayAnalysisPage : ContentPage
     {
         //[Viewmodel]
@@ -36,6 +49,7 @@ namespace CosmicWatch.Views
             //exportFile.WriteLine(ChartCreator.BarChartString(new List<String> { "A", "B", "C", "D", "E" }, new List<double> { 10, 20, 30, 40, 50 }, "Title", "XLabel", "YLabel", true));
             //exportFile.Close();
         }
+        //[Picker Choice Selection Functions]
         private void OnDatasetSelect(object sender, EventArgs e)
         {
             Picker selector = (Picker)sender;
@@ -61,12 +75,16 @@ namespace CosmicWatch.Views
             String selectedY = (String)selector.SelectedItem;
             pageModel.SelectYList(selectedY);
         }
+        //[Upload Functions - TODO, NOT DONE]
+        private void OnUploadClick(object sender, EventArgs e)
+        {
+            //pageModel.[NOT IMPLEMENTED]
+        }
 
+        //[Display Update Functions]
         private void UpdateDataChoiceDisplay(List<String> DataChoices)
         {
             Device.BeginInvokeOnMainThread(() => Datasets.ItemsSource = DataChoices);
-
-            var someVar = Datasets.ItemsSource;
         }
         private void UpdateGraphChoiceDisplay(List<ChartCreator.ChartTypes> DataChoices)
         {

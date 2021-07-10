@@ -2,70 +2,61 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CosmicWatch.Views.DisplayAnalysisPage">
+    <!--Navigation Toolbar, Hierarchical Organization-->
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
-        <StackLayout>
-            
+        <!-- Stack Layout: Main Display/Content -->
+        <StackLayout Orientation= "Vertical">
+            <!-- Picker: Datasets -->
             <Picker x:Name="Datasets"
-            Title="Datasets"
-            TitleColor="White"
-            FontSize="20" 
-            SelectedIndexChanged="OnDatasetSelect">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}" x:Name="supportedDevicesList">
-                        <x:String>2020/10/26 2:30 MIT Desktop Muon Detector</x:String>
-                        <x:String>2020/10/26 2:30 MIT Desktop Muon Detector</x:String>
-                        <x:String>2020/10/26 2:30 MIT Desktop Muon Detector</x:String>
-                        <x:String>2020/10/26 2:30 MIT Desktop Muon Detector</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            
+                    Title="Datasets"
+                    TitleColor="White"
+                    FontSize="20" 
+                    SelectedIndexChanged="OnDatasetSelect"/>
+
+            <!-- Picker: Display Type -->
             <Picker x:Name="Display_Type"
-            Title="Display Type"
-            TitleColor="White"
-            FontSize="20"
-            SelectedIndexChanged="OnGraphTypeSelect">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}" x:Name="supportedGraphsList">
-                        <x:String>Bar Graph</x:String>
-                        <x:String>Scatter Graph</x:String>
-                        <x:String>Line Graph</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            
+                    Title="Display Type"
+                    TitleColor="White"
+                    FontSize="20"
+                    SelectedIndexChanged="OnGraphTypeSelect"/>
+
+            <!-- Stack Layout: Axis Options and Export -->
             <StackLayout Orientation="Horizontal">
+                <!-- Picker: X Axis -->
                 <Picker x:Name="X_Axis"
-                Title="X Axis"
-                TitleColor="White"
-                FontSize="20"
-                SelectedIndexChanged="OnXSelect">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}" x:Name="generatedXAxisOptions">
-                            <x:String>Time</x:String>
-                            <x:String>Time</x:String>
-                            <x:String>Time</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+                        Title="X Axis"
+                        TitleColor="White"
+                        FontSize="20"
+                        SelectedIndexChanged="OnXSelect"/>
+
+                <!-- Picker: Y Axis -->
                 <Picker x:Name="Y_Axis"
-                Title="Y Axis"
-                TitleColor="White"
-                FontSize="20"
-                SelectedIndexChanged="OnYSelect">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}" x:Name="generatedYAxisOptions">
-                            <x:String>Muon Count</x:String>
-                            <x:String>Muon Count Time Average</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-                <Button TextColor="White" FontSize="16" Text="Export CSV to Google Drive" CornerRadius="20"></Button>
+                        Title="Y Axis"
+                        TitleColor="White"
+                        FontSize="20"
+                        SelectedIndexChanged="OnYSelect"/>
+
+                <!-- Button: Upload Selected File to Google Drive -->
+                <Button TextColor="White" 
+                        FontSize="16" 
+                        Text="Export to Google Drive" 
+                        CornerRadius="20"
+                        Pressed="OnUploadClick"/>
+
             </StackLayout>
-            <!--Status Display.-->
-            <Label x:Name ="statusDisplay" Text="" FontSize="20" TextColor="White"/>
-            <!-- Graph Webview -->
-            <WebView BackgroundColor = "#0c164f"  VerticalOptions="EndAndExpand" HeightRequest="400" WidthRequest="500">
+            <!-- Text: Status Display.-->
+            <Label x:Name ="statusDisplay" 
+                   Text="" 
+                   FontSize="20" 
+                   TextColor="White"/>
+            <!-- Webview: Graph Display -->
+            <WebView BackgroundColor = "#0c164f"  
+                     VerticalOptions="EndAndExpand" 
+                     HeightRequest="400" 
+                     WidthRequest="500">
                 <WebView.Source>
                     <HtmlWebViewSource x:Name = "HtmlSource" />
                 </WebView.Source>

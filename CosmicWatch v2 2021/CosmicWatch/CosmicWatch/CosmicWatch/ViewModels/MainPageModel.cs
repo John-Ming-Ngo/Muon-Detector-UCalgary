@@ -11,7 +11,7 @@ using Xamarin.Essentials;
 
 namespace CosmicWatch.ViewModels
 {
-    
+
     /*
     Purpose: 
         Main view model of the main page.
@@ -38,28 +38,17 @@ namespace CosmicWatch.ViewModels
 
     On Interactions with Utility Functions from CosmicWatch Library:
         IUSBSerialConnection:
-            Purpose:
-            Does to:
-            Receives from:
-
-    //HOLD UP, these next two might belong in MuonDetectRecord more than the MainPageModel.cs
-        GeolocationString:
-            Purpose:
-            Does to:
-            Receives from:
-
-        SaveToFile:
-            Purpose:
-            Does to:
-            Receives from:
+            Purpose: Handles connections and data transfer from a USB Serial Connection.
+            To Model: Starting and Ending the serial communication, as well as the function to pass data back with and recording settings.
+            From Model: USB Serial Communication Data (receive)
 
     On Models this Viewmodel Interacts with:
-        MuonDetectRecord:
-            Purpose:
-            Does to:
-            Receives from:
+        DetectionRecord:
+            Purpose: Records and saves the detection data.
+            To Model: String detection data, initiation and closing/saving of the record.
+            From Model: Current processed values of interest from the record.
     */
-    class MainPageModel
+    public class MainPageModel
     {
 
         //[Displays/Data Exit Functions]

@@ -35,6 +35,7 @@ using Hoho.Android.UsbSerial.Util;
 
 namespace CosmicWatch.Droid
 {
+    [BroadcastReceiver(Enabled = true)]
     [IntentFilter(new[] { UsbManager.ActionUsbDeviceAttached })]
     [MetaData(UsbManager.ActionUsbDeviceAttached, Resource = "@xml/device_filter")]
     public class AndroidUsbSerialConnection : IUSBSerialConnection
@@ -66,6 +67,10 @@ namespace CosmicWatch.Droid
 
             LocContext = Android.App.Application.Context;
             UsbManager = (UsbManager)LocContext.GetSystemService(Context.UsbService);
+
+            //Detect and ask for permission upon detecting a new USB connection.
+            UsbDeviceDetachedReceiver detachedReceiver = new UsbDeviceDetachedReceiver(this);
+            LocContext.RegisterReceiver(detachedReceiver, new IntentFilter(UsbManager.ActionUsbDeviceDetached));
         }
 
         //This follows the example set in the Xamarin USBSerial library closely.
@@ -155,5 +160,32 @@ namespace CosmicWatch.Droid
             }
         }
 
+        //To detect and ask for permission upon detecting a new USB connection.
+        class UsbDeviceDetachedReceiver
+            : BroadcastReceiver
+        {
+            readonly string TAG = typeof(UsbDeviceDetachedReceiver).Name;
+            readonly AndroidUsbSerialConnection connection;
+            public UsbDeviceDetachedReceiver(AndroidUsbSerialConnection connection)
+            {
+                this.connection = connection;
+            }
+                        
+            public override void OnReceive(Context context, Intent intent)
+            {
+                UsbDevice device = intent.GetParcelableExtra(UsbManager.ExtraDevice) as UsbDevice;
+
+                if (connection.UsbManager.HasPermission(device))
+                {
+                    connection.UsbManager.RequestPermission(device, null);
+                }
+
+
+                Log.Info(TAG, "USB device detached: " + device.DeviceName);
+
+                //await activity.PopulateListAsync();
+                String value = intent.GetStringExtra("key");
+            }
+        }
     }
 }

@@ -25,7 +25,6 @@ C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWat
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch_Library.dll
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\Windows.Foundation.FoundationContract.winmd
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch_Library.pdb
-C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.csprojAssemblyReference.cache
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\DataAnalysisPage.xaml.g.cs
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
@@ -38,3 +37,4 @@ C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWat
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.dll
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\ref\CosmicWatch.dll
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.pdb
+C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.csproj.AssemblyReference.cache

@@ -12,6 +12,36 @@ using System.Linq;
 
 namespace CosmicWatch.ViewModels
 {
+    /*
+    Purpose: 
+        Main view model of the Display Analysis page.
+        Handles the data manipulation for the Display Analysis page.
+   
+    Organization of this page:
+        1. Data and References
+        2. By location on the screen (Top first, bottom last)
+    
+    On Interactions with the Display Analysis Page:
+        Takes arguments from the Analysis page:
+            Through the contructor
+            Via public functions
+        Returns data to the main page:
+            Via display update functions.
+        
+        Intended Pattern of Data Transfer:
+            Page to Page Model:
+                What to do.
+            Page Model to Page:
+                What to display.
+        
+        Anything else is bad and needs to be refactored.
+
+        Models Interacted With:
+            ReadFromFile:
+                Purpose: Read previously saved data files, and load them into memory for this page model to manipulate.
+                From Model: Availiable files to read, data contents of these files, as functions.
+                To Model: Which file to read, as string, input as function.
+    */
     public class DisplayAnalysisPageModel
     {
         //[Displays/Data Exit Functions]
@@ -22,10 +52,10 @@ namespace CosmicWatch.ViewModels
         public Action<String> UpdateStatusDisplay;
         public Action<String> UpdateGraphDisplay;
 
-        //Models interacted with.
-        ReadFromFile recordings;
+        //[Models]
+        private ReadFromFile recordings;
 
-        //Data variables.
+        //[Data variables]
         
         //[Constructors]
         public DisplayAnalysisPageModel(Action<List<String>> UpdateDataChoiceDisplay, Action<List<ChartCreator.ChartTypes>> UpdateGraphChoiceDisplay, Action<List<String>> UpdateXChoiceDisplay, Action<List<String>> UpdateYChoiceDisplay, Action<String> UpdateStatusDisplay, Action<String> UpdateGraphDisplay)
@@ -45,26 +75,30 @@ namespace CosmicWatch.ViewModels
             UpdateDataChoiceDisplay(new List<String>(recordings.GetFiles()));
             UpdateGraphChoiceDisplay(new List<ChartCreator.ChartTypes> { ChartCreator.ChartTypes.Bar, ChartCreator.ChartTypes.Line, ChartCreator.ChartTypes.Scatter });
         }
-        /**/
-        Dictionary<String, List<String>> DataChoices;
 
-        ChartCreator.ChartTypes chartType;
-        List<String> XList;
-        List<String> YList;
-        String Title = "";
-        String XLabel;
-        String YLabel;
-        bool BeginAtZero = true;
+        /*Webview Graph Display Functions and Data Variables!*/
 
+        //[CSV Data: Label and Data under the Label]
+        private Dictionary<String, List<String>> DataChoices;
+
+        //[Graph Data: Information the graph needs to function]
+        private ChartCreator.ChartTypes chartType;
+        private List<String> XList;
+        private List<String> YList;
+        private String Title = "";
+        private String XLabel;
+        private String YLabel;
+        private bool BeginAtZero = true;
+
+        //[Maximum Read Lines: To Prevent Reading too Much Data and Crashing]
+        //Todo: Should be dynamically done?
         const int MAX_READ_LINES = 10000;
 
-        private bool DataInitialized()
-        {
-            return (chartType != null && XList != null && YList != null && Title != null && XLabel != null && YLabel != null && BeginAtZero != null);
-        }
-
+        //[On Data Selected Functions]
+        //These functions are called by the page's picker functions, and select the data to be displayed in the graph.
         public void SelectDataChoice(String filename)
         {
+            //Function to get the next bit of data in the selected file.
             List<String> NextData()
             {
                 if (recordings == null || recordings.EndOfFile) return new List<String>();
@@ -73,12 +107,15 @@ namespace CosmicWatch.ViewModels
                 //return new List<String>(labels.Split(','));
             }
 
+            //Open the selected file.
             recordings.Open(filename);
-            List<String> labelsList = NextData();
 
+            //Get the first row of data. In a normal CSV, that contains the labels. We then update the choice of X and Y axis with these labels.
+            List<String> labelsList = NextData();
             UpdateXChoiceDisplay(labelsList);
             UpdateYChoiceDisplay(labelsList);
 
+            //We initialize the Data Choices with these data labels and a list ready to contain the data under each label.
             DataChoices = new Dictionary<string, List<string>>();
             foreach (String label in labelsList)
             {
@@ -86,7 +123,7 @@ namespace CosmicWatch.ViewModels
             }
 
             //Read the data, to the maximum amount possible.
-            
+            //Then put this data under the list under the appropriate label.
             for (int currRow = 0; currRow < MAX_READ_LINES && !recordings.EndOfFile; currRow++)
             {
                 List<String> resultsList = NextData();
@@ -124,17 +161,24 @@ namespace CosmicWatch.ViewModels
             UpdateGraph();
         }
 
-        private List<Double> ToDoublesList(List<String> inputString)
-        {
-            if (inputString != null) return inputString.Select(s => double.TryParse(s, out double n) ? n : 0)//n : (double?)null)
-                //.Where(n => n.HasValue)
-                //.Select(n => n.Value)
-                .ToList();
-            return new List<double>();
-        }
-
         public void UpdateGraph()
         {
+            //Function to check if all the data has been initialized and can be fed into the UpdateGraphDisplay function.
+            bool DataInitialized()
+            {
+                return (XList != null && 
+                        YList != null && 
+                        Title != null && 
+                        XLabel != null && 
+                        YLabel != null);
+            }
+            //Function to convert the data to a list of doubles, so that the chart creator graph creation functions can accept the data.
+            List<Double> ToDoublesList(List<String> inputString)
+            {
+                if (inputString != null) return inputString.Select(x => double.TryParse(x, out double value) ? value : 0).ToList();
+                else return new List<double>();
+            }
+
             //UpdateStatusDisplay(String.Join(",", ToDoublesList(YList).Select(x => $"{x}")) + String.Join(",", XList));
             if (!DataInitialized()) return;
 

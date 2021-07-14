@@ -10,6 +10,17 @@ using System.Text;
 
 namespace CosmicWatch.Models
 {
+    /*
+     Purpose: 
+        Recorder and Processor for the detector's data.
+        Processes and saves string data from the detector into a comprehensible format.
+        
+    Organization of this page:
+        1. Data and References
+        2. Functionality.
+
+    Todo: Implement idisposable rather than what I did here.
+     */
     public class DetectionRecord
     {
         //[Core Record Data]
@@ -25,6 +36,7 @@ namespace CosmicWatch.Models
             get { return (stopwatch != null) ? eventCount / (stopwatch.ElapsedMilliseconds / 1000.0 / 60) : 0; }
         }
 
+        //Saving the data to an output file.
         SaveToFile RawDataRecord;
 
         //Buffers and Processing Information
@@ -64,11 +76,11 @@ namespace CosmicWatch.Models
             DataBuffer = EventsDetected[NumLastLine];
             EventCount += Math.Max(EventsDetected.Length - 1, 0);
         }
-        //
+        //Close and output classes this class depends upon.
         public void Close()
         {
-            stopwatch.Stop();
-            RawDataRecord.Close();
+            stopwatch?.Stop();
+            RawDataRecord?.Close();
         }
         //[Destructor in case Close was not called]
         ~DetectionRecord()

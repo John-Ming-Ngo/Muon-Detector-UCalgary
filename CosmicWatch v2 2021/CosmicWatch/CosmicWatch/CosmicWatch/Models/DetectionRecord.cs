@@ -42,24 +42,36 @@ namespace CosmicWatch.Models
         //Buffers and Processing Information
         String DataBuffer;
         String[] SplitSymbols;
+        String[] RejectSymbols;
 
         //[Constructor]
         public DetectionRecord(String filename)
         {
             //Initialize 
             RawDataRecord = new SaveToFile(filename);
+            
+            RawDataRecord.WriteLine(String.Join(" ", new String[]{ "Counts", "Ardn_time[ms]", "Amplitude[mV]", "SiPM[mV]", "Deadtime[ms]"}));
+
             EventCount = 0;
 
             DataBuffer = "";
-            SplitSymbols = new String[]{"\r\n", "\r", "\n"};
+            SplitSymbols = new String[]{"\n"};
+
+            //It turns out that I don't need to get rid of the other symbols; on the contrary I need to simply ignore them. That is unbelievably weird.
+            //RejectSymbols = new String[] { "\r\n", "\r" };
 
             stopwatch = new Stopwatch();
             stopwatch.Start();
         }
         //Receive and process new data.
-        public void ReceiveData(String input)
+        public void ReceiveData(String Input)
         {
-            DataBuffer += input;
+            //Sanitize the Input.
+            String SanitizedInput = Input;
+            //It turns out that I don't need to get rid of the other symbols; on the contrary I need to simply ignore them. That is unbelievably weird.
+            //String.Join("", Input.Split(RejectSymbols, StringSplitOptions.None), String.Empty);
+            //Add the input to the buffer, and then parse the input.
+            DataBuffer += SanitizedInput;
             ParseBufferDetections();
         }
 

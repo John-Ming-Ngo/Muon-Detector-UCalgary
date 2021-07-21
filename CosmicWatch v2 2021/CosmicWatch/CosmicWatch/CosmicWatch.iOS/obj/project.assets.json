@@ -1086,11 +1086,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch.iOS\\CosmicWatch.iOS.csproj",
+      "projectUniqueName": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.iOS\\CosmicWatch.iOS.csproj",
       "projectName": "CosmicWatch.iOS",
-      "projectPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch.iOS\\CosmicWatch.iOS.csproj",
+      "projectPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.iOS\\CosmicWatch.iOS.csproj",
       "packagesPath": "C:\\Users\\john-\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch.iOS\\obj\\",
+      "outputPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1113,11 +1113,11 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj": {
-              "projectPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj"
+            "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj": {
+              "projectPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj"
             },
-            "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj": {
-              "projectPath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj"
+            "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj": {
+              "projectPath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch_Library\\CosmicWatch_Library.csproj"
             }
           }
         }

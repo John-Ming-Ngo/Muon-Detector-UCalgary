@@ -94,6 +94,8 @@ namespace CosmicWatch.UWP
 
         public async void RunRecording()
         {
+            //UpdateStatus?.Invoke("Recording Run Attempt.");
+
             if (DeviceID != null) { await ConnectionStart(DeviceID); }
             IsRecording = true;
             
@@ -106,6 +108,7 @@ namespace CosmicWatch.UWP
                     {
                         bytesToRead = await DataInputStream.LoadAsync(MaxReadLength);
                         UpdateData?.Invoke(DataInputStream.ReadString(bytesToRead));
+                        //UpdateStatus?.Invoke("IsRecording.");
                     }
                     catch (Exception e)
                     {

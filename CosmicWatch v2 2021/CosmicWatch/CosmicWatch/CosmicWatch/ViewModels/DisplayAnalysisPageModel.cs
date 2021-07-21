@@ -53,7 +53,7 @@ namespace CosmicWatch.ViewModels
         public Action<String> UpdateGraphDisplay;
 
         //[Models]
-        private ReadFromFile recordings;
+        private ReadFromFile Recordings;
 
         //[Data variables]
         
@@ -69,10 +69,10 @@ namespace CosmicWatch.ViewModels
             this.UpdateGraphDisplay += UpdateGraphDisplay;
 
             //Initialize models
-            recordings = new ReadFromFile();
+            Recordings = new ReadFromFile();
 
             //Initialize Data
-            UpdateDataChoiceDisplay(new List<String>(recordings.GetFiles()));
+            UpdateDataChoiceDisplay(new List<String>(Recordings.GetFiles()));
             UpdateGraphChoiceDisplay(new List<ChartCreator.ChartTypes> { ChartCreator.ChartTypes.Bar, ChartCreator.ChartTypes.Line, ChartCreator.ChartTypes.Scatter });
         }
 
@@ -101,14 +101,14 @@ namespace CosmicWatch.ViewModels
             //Function to get the next bit of data in the selected file.
             List<String> NextData()
             {
-                if (recordings == null || recordings.EndOfFile) return new List<String>();
-                String labels = recordings.ReadLine();
+                if (Recordings == null || Recordings.EndOfFile) return new List<String>();
+                String labels = Recordings.ReadLine();
                 return new List<String>(labels.Split(' '));
                 //return new List<String>(labels.Split(','));
             }
 
             //Open the selected file.
-            recordings.Open(filename);
+            Recordings.Open(filename);
 
             //Get the first row of data. In a normal CSV, that contains the labels. We then update the choice of X and Y axis with these labels.
             List<String> labelsList = NextData();
@@ -124,13 +124,11 @@ namespace CosmicWatch.ViewModels
 
             //Read the data, to the maximum amount possible.
             //Then put this data under the list under the appropriate label.
-            for (int currRow = 0; currRow < MAX_READ_LINES && !recordings.EndOfFile; currRow++)
+            for (int currRow = 0; currRow < MAX_READ_LINES && !Recordings.EndOfFile; currRow++)
             {
                 List<String> resultsList = NextData();
-                for (int labelNumber = 0; labelNumber < labelsList.Count; labelNumber++)
+                for (int labelNumber = 0; labelNumber < labelsList.Count && labelNumber < resultsList.Count; labelNumber++)
                 {
-                    //_ = labelsList[labelNumber];
-                    //_ = resultsList[labelNumber];
                     DataChoices[labelsList[labelNumber]].Add(resultsList[labelNumber]);
                 }
             }
@@ -138,26 +136,27 @@ namespace CosmicWatch.ViewModels
 
         public void SelectChartType(ChartCreator.ChartTypes selectedType)
         {
+            //Set the chart type
             chartType = selectedType;
+            //Update the graph
             UpdateGraph();
         }
 
         public void SelectXList(String selection)
         {
+            //Set the X Axis label and the data of the X Axis
             XLabel = selection;
             XList = DataChoices[XLabel];
-            
-            //UpdateStatusDisplay(String.Join(",", XList));
+            //Update the graph
             UpdateGraph();
         }
 
         public void SelectYList(String selection)
         {
+            //Set the Y Axis label and the data of the Y Axis
             YLabel = selection;
             YList = DataChoices[YLabel];
-
-            //UpdateStatusDisplay(String.Join(",", ToDoublesList(YList).Select(x => $"{x}")));
-            //UpdateStatusDisplay(String.Join(",", YList));
+            //Update the graph
             UpdateGraph();
         }
 
@@ -175,28 +174,52 @@ namespace CosmicWatch.ViewModels
             //Function to convert the data to a list of doubles, so that the chart creator graph creation functions can accept the data.
             List<Double> ToDoublesList(List<String> inputString)
             {
-                if (inputString != null) return inputString.Select(x => double.TryParse(x, out double value) ? value : 0).ToList();
+                if (inputString != null) 
+                    return inputString.Select(x => double.TryParse(x, out double value) ? value : 0).ToList();
                 else return new List<double>();
             }
 
-            //UpdateStatusDisplay(String.Join(",", ToDoublesList(YList).Select(x => $"{x}")) + String.Join(",", XList));
+            //If not all the data is availiable, don't do anything.
             if (!DataInitialized()) return;
 
+            //Else, identify what type of chart we want to display, and then display it.
             switch (chartType)
             {
                 case ChartCreator.ChartTypes.Line:
-                    //UpdateGraphDisplay(ChartCreator.LineChartString(new List<String> { "A", "B", "C", "D", "E" }, new List<double> { 10, 20, 30, 40, 50 }, "Title", "XLabel", "YLabel", true));
-                    UpdateGraphDisplay(ChartCreator.LineChartString(XList, ToDoublesList(YList), Title, XLabel, YLabel, BeginAtZero));
+                    UpdateGraphDisplay(
+                        ChartCreator.LineChartString(
+                            XList, 
+                            ToDoublesList(YList), 
+                            Title, 
+                            XLabel, 
+                            YLabel, 
+                            BeginAtZero
+                            )
+                        );
                     break;
                 case ChartCreator.ChartTypes.Bar:
-                    //UpdateGraphDisplay(ChartCreator.BarChartString(new List<String> { "A", "B", "C", "D", "E" }, new List<double> { 10, 20, 30, 40, 50 }, "Title", "XLabel", "YLabel", true));
-                    UpdateGraphDisplay(ChartCreator.BarChartString(XList, ToDoublesList(YList), Title, XLabel, YLabel, BeginAtZero));
+                    UpdateGraphDisplay(
+                        ChartCreator.BarChartString(
+                            XList, 
+                            ToDoublesList(YList), 
+                            Title, 
+                            XLabel, 
+                            YLabel, 
+                            BeginAtZero
+                            )
+                        );
                     break;
                 case ChartCreator.ChartTypes.Scatter:
-                    //Wait, how to convert xList? Drat.
-                    //Instead of doing it here, maybe not? Maybe we simply take strings, and have something else create the chartString.
-                    //UpdateGraphDisplay(ChartCreator.ScatterChartString(new List<double> { 10, 20, 30, 40, 50 }, new List<double> { 10, 20, 30, 40, 50 }, "Title", "XLabel", "YLabel", true));
-                    UpdateGraphDisplay(ChartCreator.ScatterChartString(ToDoublesList(XList), ToDoublesList(YList), Title, XLabel, YLabel, BeginAtZero));
+                    UpdateGraphDisplay(
+                        ChartCreator.ScatterChartString(
+                            ToDoublesList(XList), 
+                            ToDoublesList(YList), 
+                            Title, 
+                            XLabel, 
+                            YLabel, 
+                            BeginAtZero
+                            )
+                        );
                     break;
                 default:
                     break;

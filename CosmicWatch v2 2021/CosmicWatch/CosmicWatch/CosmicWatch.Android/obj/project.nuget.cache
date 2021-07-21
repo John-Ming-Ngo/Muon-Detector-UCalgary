@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CQ48oetB5WKAzbQKg8nyt6itgspoLFCIDwswKDFkbJvpeapoSaI6FVXq500GAoDiTw1G/7rAnAAeNCDBKH9x2Q==",
+  "dgSpecHash": "ITmtAP389LuK1snUOJbJh8XVXWR/knUeuTXiEtCoImaZIrgLvHx1lk26sXAD9b0XDneps04YJsf/DTGu/S2qbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\john-\\OneDrive\\Github\\MuonDetectorProject\\CosmicWatch v2 2021\\CosmicWatch\\CosmicWatch\\CosmicWatch.Android\\CosmicWatch.Android.csproj",
+  "projectFilePath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.Android\\CosmicWatch.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\john-\\.nuget\\packages\\chart.js\\2.9.3\\chart.js.2.9.3.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

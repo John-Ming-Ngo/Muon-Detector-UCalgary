@@ -1,6 +1,5 @@
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\CosmicWatch_Library.deps.json
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\CosmicWatch_Library.dll
-D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.csprojAssemblyReference.cache
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.AssemblyInfoInputs.cache
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.AssemblyInfo.cs
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\CosmicWatch_Library.pdb
@@ -22,3 +21,4 @@ C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWat
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.dll
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.pdb
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.csproj.AssemblyReference.cache
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.csproj.AssemblyReference.cache

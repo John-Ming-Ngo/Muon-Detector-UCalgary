@@ -78,6 +78,7 @@ namespace CosmicWatch.ViewModels
             
             //Initiate the platform appropriate implementation of the USB serial connection.
             USBSerialConnection = DependencyService.Get<IUSBSerialConnection>();
+            USBSerialConnection.Initialize(ReceiveData, UpdateStatusMessage, 32);
 
             //Inititalize variables which need an unambiguous initial status.
             recording = false;
@@ -188,7 +189,6 @@ namespace CosmicWatch.ViewModels
             DeviceIndex = supportedIndex;
         }
         public async Task Connect() {
-            USBSerialConnection.Initialize(ReceiveData, UpdateStatusMessage, 32);
             DeviceConnected = await USBSerialConnection.Connect();
         }
     }

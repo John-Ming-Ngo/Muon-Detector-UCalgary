@@ -13,6 +13,7 @@
             <Picker x:Name="Datasets"
                     Title="Datasets"
                     TitleColor="White"
+                    TextColor="White"
                     FontSize="20" 
                     SelectedIndexChanged="OnDatasetSelect"/>
 
@@ -20,6 +21,7 @@
             <Picker x:Name="Display_Type"
                     Title="Display Type"
                     TitleColor="White"
+                    TextColor="White"
                     FontSize="20"
                     SelectedIndexChanged="OnGraphTypeSelect"/>
 
@@ -29,6 +31,7 @@
                 <Picker x:Name="X_Axis"
                         Title="X Axis"
                         TitleColor="White"
+                        TextColor="White"
                         FontSize="20"
                         SelectedIndexChanged="OnXSelect"/>
 
@@ -36,6 +39,7 @@
                 <Picker x:Name="Y_Axis"
                         Title="Y Axis"
                         TitleColor="White"
+                        TextColor="White"
                         FontSize="20"
                         SelectedIndexChanged="OnYSelect"/>
 

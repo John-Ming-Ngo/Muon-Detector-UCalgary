@@ -38,7 +38,7 @@ namespace CosmicWatch
         public MainPage() {
             InitializeComponent();
 
-            PageModel = new MainPageModel(UpdateMuonDisplay, UpdateMuonsPerMinuteDisplay, UpdateConnectedDisplay, UpdateTimeDisplay, UpdateElapsedDisplay, UpdateDeviceList, UpdateStatusMessage);
+            PageModel = new MainPageModel(UpdateMuonDisplay, UpdateMuonsPerMinuteDisplay, UpdateConnectedDisplay, UpdateTimeDisplay, UpdateElapsedDisplay, UpdateDeviceList, UpdateStatusMessage, EndRecording);
         }
         //[Menu Bar Buttons]
         private void OnOptions(object sender, EventArgs e) {
@@ -53,7 +53,7 @@ namespace CosmicWatch
         }
         private void UpdateElapsedDisplay(double elapsedMilleseconds)
         {
-            Device.BeginInvokeOnMainThread(() => elapsedDisplay.Text = $"Elapsed Time: {elapsedMilleseconds/1000 : 0.00} (s)");
+            Device.BeginInvokeOnMainThread(() => elapsedDisplay.Text = $"Elapsed Time: {elapsedMilleseconds/1000 : 0.0} (s)");
         }
         private void UpdateMuonDisplay(long count) {
             Device.BeginInvokeOnMainThread(() => muonCountsDisplay.Text = $"{count}");
@@ -80,29 +80,15 @@ namespace CosmicWatch
             }
         }
         //[Center Options - Buttons]
-        private void DisableWhilstRecording()
-        {        
-            recordingTimeEntry.IsEnabled = false;
-            PageModel.Recording();
-            recordButton.Text = "Recording...";
-        }
 
-        private void EnableAfterRecording()
-        {
-            recordingTimeEntry.IsEnabled = true;
-            recordButton.IsEnabled = true;
-            recordButton.Text = "Start Recording.";
-            PageModel.StopRecording();
-        }
-        DelayedEvent reenableLater;
         private void BeginRecording()
         {
-            bool isNumeric = long.TryParse(recordingTimeEntry.Text, out long seconds);
+            bool isNumeric = long.TryParse(recordingTimeEntry.Text, out long Seconds);
             if (!isNumeric)
             {
                 UpdateStatusMessage("Please enter numbers only!");
             }
-            else if (seconds <= 0)
+            else if (Seconds <= 0)
             {
                 UpdateStatusMessage("I require some amount of time to record for!");
             }
@@ -113,13 +99,23 @@ namespace CosmicWatch
             else
             {
                 UpdateStatusMessage("");
-                DisableWhilstRecording();
-                reenableLater = new DelayedEvent(seconds * 1000, EnableAfterRecording);
+                recordingTimeEntry.IsEnabled = false;
+                recordButton.Text = "Recording...";
+
+                //Start the Recording
+                PageModel.Recording(Seconds);
             }
         }
 
-        private void EndRecordingEarly() {
-            reenableLater.EndEarly();
+        private void EndRecording()
+        {
+            recordingTimeEntry.IsEnabled = true;
+            recordButton.Text = "Start Recording.";
+        }
+
+        private void EndRecordingEarly()
+        {
+            PageModel.StopRecordingEarly();
         }
 
         private void OnRecord(object sender, EventArgs e) {

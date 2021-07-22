@@ -19,14 +19,7 @@ Altimiter maybe? Hardware end of things. Not my area of expertise here.
 
 Code Refactor and Upgrade.
 	Currently have something funky going on with close. Should look into IDispose instead. May run into errors.
-	More serious:
-		Architecture issues between multiple things keeping track of when a recording has or hasn't begun.
-			Possiblility: Rather than a boolean variable keeping track, most things use a boolean action/function; they query one switch. Still, honestly this sucks.
-				Observer/event based programming, duh silly.
-					Centralize what to do when recording ends function calls in MainPageModel, probably.
-					Also centralize the stopwatch and TWO data records - one for raw, the other for processed.
-		Issue with new recordings needing to start a new connection to not have a stupid backlog of data.
-		Problem is: I want to flush the input buffer of a serial device. It's not really letting me :// No obvious way.
+	TWO data records - one for raw, the other for processed.
 
 Bing Maps API integration to get reverse geocoding for the UWP side of this app: Figure it out.
 	==> Promoting this problem to the status of undead demon. I spent 3 hrs trying to figure this BS out! It won't work!

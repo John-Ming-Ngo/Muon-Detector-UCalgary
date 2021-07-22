@@ -60,12 +60,14 @@ namespace CosmicWatch.ViewModels
         public Action<List<String>> UpdateSupportedDevices;
         public Action<String> UpdateStatusMessage;
 
+        public Action EndRecording;
+
         //[Models]
         IUSBSerialConnection USBSerialConnection;
         DetectionRecord record;
 
         //[Constructor]
-        public MainPageModel(Action<long> UpdateMuonDisplay, Action<double> UpdateMuonsPerMinuteDisplay, Action<bool> UpdateConnectedDisplay, Action<DateTime> UpdateTimeDisplay, Action<double> UpdateElapsedDisplay, Action<List<String>> UpdateSupportedDevices, Action<String> UpdateStatusMessage)
+        public MainPageModel(Action<long> UpdateMuonDisplay, Action<double> UpdateMuonsPerMinuteDisplay, Action<bool> UpdateConnectedDisplay, Action<DateTime> UpdateTimeDisplay, Action<double> UpdateElapsedDisplay, Action<List<String>> UpdateSupportedDevices, Action<String> UpdateStatusMessage, Action EndRecording)
         {
             //Save the given display functions to local memory for later use.
             this.UpdateMuonDisplay += UpdateMuonDisplay;
@@ -75,6 +77,7 @@ namespace CosmicWatch.ViewModels
             this.UpdateElapsedDisplay += UpdateElapsedDisplay;
             this.UpdateSupportedDevices += UpdateSupportedDevices;
             this.UpdateStatusMessage += UpdateStatusMessage;
+            this.EndRecording += EndRecording;
             
             //Initiate the platform appropriate implementation of the USB serial connection.
             USBSerialConnection = DependencyService.Get<IUSBSerialConnection>();
@@ -148,7 +151,7 @@ namespace CosmicWatch.ViewModels
 
         //[Methods: Center]
 
-        public async Task Recording()
+        public async Task Recording(long Time)
         {            
             //Prepare the data recording.
 
@@ -160,14 +163,12 @@ namespace CosmicWatch.ViewModels
             //Run the recording.
             USBSerialConnection.RunRecording();
 
-            while (recording)
+            while (recording && (record.stopwatch.ElapsedMilliseconds < (Time * 1000)))
             {
                 //Wait 20 milleseconds for data to accumulate.
                 //Todo: Make this selectable/more dynamic? 20 milleseconds is rather arbitrary.
                 //Note for self: Await in order to yield the thread to other processes until it is done. Maybe move this into its own utility function? Also there has to be some more clever way then starting a new task all the goddamn time.
-                await Task.Run(() => {
-                    System.Threading.Thread.Sleep(20);
-                });
+                await Task.Delay(25);
                 //Update the time.
                 UpdateTimeDisplay?.Invoke(DateTime.Now);
                 UpdateElapsedDisplay?.Invoke(record.stopwatch.ElapsedMilliseconds);
@@ -176,12 +177,16 @@ namespace CosmicWatch.ViewModels
                 MuonCount = record.EventCount;
                 UpdateMuonsPerMinuteDisplay?.Invoke(record.EventsPerMinute);
             }
-        }
-        public void StopRecording()
-        {
             recording = false;
+            //Clean up finished recording.
             USBSerialConnection.StopRecording();
             record.Close();
+            //End the recording.
+            EndRecording?.Invoke();
+        }
+        public void StopRecordingEarly()
+        {
+            recording = false;
         }
 
         //[Methods: Bottom Bar]

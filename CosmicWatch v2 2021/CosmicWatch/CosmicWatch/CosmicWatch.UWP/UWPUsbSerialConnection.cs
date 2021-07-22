@@ -52,6 +52,8 @@ namespace CosmicWatch.UWP
         {
             if (SerialPort == null) { return; }
 
+            SerialPort.BreakSignalState = true;
+
             SerialPort.WriteTimeout = TimeSpan.FromMilliseconds(1000);
             SerialPort.ReadTimeout = TimeSpan.FromMilliseconds(1000);
 
@@ -82,6 +84,7 @@ namespace CosmicWatch.UWP
                 try
                 {
                     DeviceID = serialDeviceInfo.Id;
+                    ConnectionStart(DeviceID);
                     return true;
                 }
                 catch (Exception e)
@@ -94,23 +97,22 @@ namespace CosmicWatch.UWP
 
         public async void RunRecording()
         {
-            //UpdateStatus?.Invoke("Recording Run Attempt.");
+            //if (DeviceID != null) { await ConnectionStart(DeviceID); }
 
-            if (DeviceID != null) { await ConnectionStart(DeviceID); }
-            IsRecording = true;
+            SerialPort.BreakSignalState = false;
+            //IsRecording = true;
             
             await Task.Run(async () =>
             {
                 uint bytesToRead;
-                while (IsRecording)
+                while (!SerialPort.BreakSignalState)//IsRecording)
                 {
                     try
                     {
                         bytesToRead = await DataInputStream.LoadAsync(MaxReadLength);
                         UpdateData?.Invoke(DataInputStream.ReadString(bytesToRead));
-                        //UpdateStatus?.Invoke("IsRecording.");
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
                         IsRecording = false;
                     }
@@ -120,9 +122,10 @@ namespace CosmicWatch.UWP
 
         public void StopRecording()
         {
-            IsRecording = false;
-            SerialPort?.Dispose();
-            DataInputStream?.Dispose();
+            SerialPort.BreakSignalState = true;
+            //IsRecording = false;
+            //SerialPort?.Dispose();
+            //DataInputStream?.Dispose();
         }
     }
 }

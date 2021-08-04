@@ -12,6 +12,15 @@ using Xamarin.Essentials;
 [assembly: Dependency(typeof(UWPPlatformDir))]
 namespace CosmicWatch.UWP
 {
+    /*
+     Purpose: 
+        
+    Organization of this page:
+        1. Data and References
+        2. Functionality.
+
+    Todo: Document this class and use it somewhere.
+     */
     class UWPPlatformDir : IPlatformDetails
     {
         public String GetExternalStorageDir()

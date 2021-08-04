@@ -40,14 +40,16 @@ namespace CosmicWatch.Views
             //Initialize Viewmodel
             pageModel = new DisplayAnalysisPageModel(UpdateDataChoiceDisplay, UpdateGraphChoiceDisplay, UpdateXChoiceDisplay, UpdateYChoiceDisplay, UpdateStatusMessage, UpdateGraphDisplay);
 
-            //
-            //UpdateGraphDisplay(ChartCreator.ScatterChartString(new List<double> { 10, 20, 30, 40, 50 }, new List<double> { 10, 20, 30, 40, 50 }, "Title", "XLabel", "YLabel", true));
-            //UpdateGraphDisplay(ChartCreator.LineChartString(new List<String> { "A", "B", "C", "D", "E" }, new List<double> { 10, 20, 30, 40, 50 }, "Title", "XLabel", "YLabel", true));
-            UpdateGraphDisplay(ChartCreator.BarChartString(new List<String> { "A", "B", "C", "D", "E" }, new List<double> { 10, 20, 30, 40, 50 }, "Title", "XLabel", "YLabel", true));
-
-            //SaveToFile exportFile = new SaveToFile("BarChartString.html");
-            //exportFile.WriteLine(ChartCreator.BarChartString(new List<String> { "A", "B", "C", "D", "E" }, new List<double> { 10, 20, 30, 40, 50 }, "Title", "XLabel", "YLabel", true));
-            //exportFile.Close();
+            //Initial Graph Display
+            UpdateGraphDisplay(
+                ChartCreator.ScatterChartString(
+                    new List<double> { 10, 20, 30, 40, 50 }, 
+                    new List<double> { 10, 20, 30, 40, 50 }, 
+                    "Example Graph", 
+                    "X Data", 
+                    "Y Data", 
+                    true)
+                );
         }
         //[Picker Choice Selection Functions]
         private void OnDatasetSelect(object sender, EventArgs e)

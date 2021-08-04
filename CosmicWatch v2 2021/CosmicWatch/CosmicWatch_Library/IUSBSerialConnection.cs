@@ -11,7 +11,7 @@ namespace CosmicWatch_Library
         
         Task<bool> Connect();
 
-        void RunRecording();
+        Task RunRecording();
 
         void StopRecording();
 

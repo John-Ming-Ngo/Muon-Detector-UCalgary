@@ -30,6 +30,7 @@ namespace CosmicWatch.Droid
      */
     public class AndroidPlatformDetails : IPlatformDetails
     {
+        
         public String GetExternalStorageDir()
         {
             Context context = Android.App.Application.Context;

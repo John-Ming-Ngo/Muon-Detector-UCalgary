@@ -12,17 +12,11 @@
             <!-- Picker: Datasets -->
             <Picker x:Name="Datasets"
                     Title="Datasets"
-                    TitleColor="White"
-                    TextColor="White"
-                    FontSize="20" 
                     SelectedIndexChanged="OnDatasetSelect"/>
 
             <!-- Picker: Display Type -->
             <Picker x:Name="Display_Type"
                     Title="Display Type"
-                    TitleColor="White"
-                    TextColor="White"
-                    FontSize="20"
                     SelectedIndexChanged="OnGraphTypeSelect"/>
 
             <!-- Stack Layout: Axis Options and Export -->
@@ -30,34 +24,25 @@
                 <!-- Picker: X Axis -->
                 <Picker x:Name="X_Axis"
                         Title="X Axis"
-                        TitleColor="White"
-                        TextColor="White"
-                        FontSize="20"
                         SelectedIndexChanged="OnXSelect"/>
 
                 <!-- Picker: Y Axis -->
                 <Picker x:Name="Y_Axis"
                         Title="Y Axis"
-                        TitleColor="White"
-                        TextColor="White"
-                        FontSize="20"
                         SelectedIndexChanged="OnYSelect"/>
 
                 <!-- Button: Upload Selected File to Google Drive -->
-                <Button TextColor="White" 
-                        FontSize="16" 
-                        Text="Export to Google Drive" 
+                <Button Text="Export to Google Drive" 
                         CornerRadius="20"
                         Pressed="OnUploadClick"/>
-
+                
             </StackLayout>
+            
             <!-- Text: Status Display.-->
-            <Label x:Name ="statusDisplay" 
-                   Text="" 
-                   FontSize="20" 
-                   TextColor="White"/>
+            <Label x:Name ="statusDisplay"/>
+            
             <!-- Webview: Graph Display -->
-            <WebView BackgroundColor = "#0c164f"  
+            <WebView BackgroundColor = "{StaticResource Background}"  
                      VerticalOptions="EndAndExpand" 
                      HeightRequest="400" 
                      WidthRequest="500">

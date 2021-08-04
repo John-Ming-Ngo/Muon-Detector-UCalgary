@@ -21,79 +21,87 @@
     
     <!-- Stack Layout: Main Display/Content -->
     <StackLayout Orientation= "Vertical">
+        
         <!-- Stack Layout: Middle Screen Content -->
         <StackLayout VerticalOptions="CenterAndExpand">
+            
             <!--Stack Layout: Display Current Time and Recording Time Elapsed.-->
             <StackLayout Orientation="Horizontal">
+                
                 <!-- Label: Time Display -->
                 <Label x:Name ="timeDisplay" 
-                       Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MM/dd/yyyy HH:mm:ss}'}" 
-                       FontSize="20" 
-                       TextColor="White" 
+                       Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MM/dd/yyyy HH:mm:ss}'}"
                        HorizontalOptions="StartAndExpand"/>
+                
                 <!-- Label: Elapsed Time Display -->
                 <Label x:Name ="elapsedDisplay" 
                        Text="Elapsed Time: 0 (s)" 
-                       FontSize="20" 
-                       TextColor="White" 
                        HorizontalOptions="EndAndExpand"/>
             </StackLayout>
+            
             <!-- Frame: Title Background Colour -->
-            <Frame BackgroundColor="#2196F3" CornerRadius="20">
+            <Frame BackgroundColor="{StaticResource BackgroundQuatrinary}">
+                
                 <!-- Label: Title Text -->
                 <Label Text="CosmicWatch Detector Interface" 
-                       HorizontalTextAlignment="Center" 
-                       TextColor="White" 
-                       FontSize="20"/>
+                       HorizontalTextAlignment="Center"/>
             </Frame>
+            
             <!-- Frame: Data Recording Results Background Colour -->
-            <Frame BackgroundColor="#5643fd" CornerRadius="20">
+            <Frame BackgroundColor="{StaticResource BackgroundTertiary}">
+                
                 <!-- Stack Layout: Data Recording Results Vertical Display -->
                 <StackLayout Orientation="Vertical">
+                    
                     <!-- Grid Layout: Arrange Display in a Grid -->
                     <Grid>
+                        
                         <!-- Grid Column Definitions: Two Columns -->
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
+                        
                         <!--  Grid Row Definitions: One Row -->
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
+                        
                         <!-- Stack Layout: Column 1 Row 1, Left Grid Items -->
                         <StackLayout Grid.Column="0">
+                            
                             <!-- Label: Total Events Title -->
                             <Label Text="Total Events:" 
-                                   FontSize = "20" 
-                                   HorizontalTextAlignment="Center" 
-                                   TextColor="White"/>
+                                   HorizontalTextAlignment="Center"/>
+                            
                             <!-- Label: Events Per Minute Title -->
                             <Label Text="Events Per Minute:" 
-                                   FontSize = "20" 
-                                   HorizontalTextAlignment="Center" 
-                                   TextColor="White"/>
+                                   HorizontalTextAlignment="Center"/>
                         </StackLayout>
+                        
                         <!-- Stack Layout: Column 2 Row 1, Right Grid Items -->
                         <StackLayout Grid.Column="1">
+                            
                             <!-- Label: Total Events Count -->
                             <Label x:Name ="muonCountsDisplay" 
-                                   Text="0" FontSize = "20" 
-                                   HorizontalTextAlignment="Center" 
-                                   TextColor="White"/>
+                                   Text="0"
+                                   HorizontalTextAlignment="Center"/>
+                            
                             <!-- Label: Events Per Minute Count -->
                             <Label x:Name ="muonsPerMinuteDisplay" 
-                                   Text="0" FontSize = "20" 
-                                   HorizontalTextAlignment="Center" 
-                                   TextColor="White"/>
+                                   Text="0"
+                                   HorizontalTextAlignment="Center"/>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
             </Frame>
+            
             <!--Data Recording Toolbar-->
-            <Frame BackgroundColor="#2d475e" CornerRadius="20">
+            <Frame BackgroundColor="#2d475e">
+                
                 <!-- Stack Layout: Data Recording Toolbar Options -->
                 <StackLayout Orientation="Horizontal">
+                    
                     <!-- Entry: Time Entry -->
                     <Entry x:Name="recordingTimeEntry" 
                            Placeholder="Record For (seconds)" 
@@ -101,61 +109,60 @@
                            ClearButtonVisibility="WhileEditing" 
                            TextChanged="OnRecordingLengthEntry" 
                            Completed="OnRecordingLengthEntry" 
-                           TextColor="White" 
-                           BackgroundColor="#2d475e" 
+                           TextColor="{StaticResource TextColour}" 
+                           BackgroundColor="{StaticResource BackgroundSecondary}" 
                            HorizontalOptions="FillAndExpand" 
-                           PlaceholderColor="LightBlue"/>
+                           PlaceholderColor="{StaticResource TextColour}"/>
+                    
                     <!-- Button: Start Recording -->
                     <Button x:Name="recordButton" 
                             Text="Start Recording" 
                             Padding="10" 
                             CornerRadius="20" 
-                            TextColor="White" 
                             HorizontalOptions="FillAndExpand" 
                             Clicked="OnRecord"/>
                 </StackLayout>
             </Frame>
 
             <!--Label: Status Display -->
-            <Label x:Name ="statusDisplay" 
-                   Text="" 
-                   FontSize="20" 
-                   TextColor="White"/>
+            <Label x:Name ="statusDisplay"/>
             
         </StackLayout>
 
         <!-- Stack Layout: Bottom Bar Screen Options -->
-        <StackLayout BackgroundColor="#ba1e68" 
+        <StackLayout BackgroundColor="{StaticResource BarColour}" 
                      Orientation="Horizontal" 
                      VerticalOptions="End">
+            
             <!-- Picker: Supported Devices -->
             <Picker x:Name="supportedDevices" 
+                    FontSize = "14" 
                     Title="Supported Devices" 
-                    TitleColor="White" 
                     PropertyChanged="OnDeviceChange"/>
+            
             <!-- Stack Layout: Connection Status Vertical Display -->
             <StackLayout Orientation="Vertical" 
                          HorizontalOptions="FillAndExpand">
+                
                 <!-- Label: Connection Status Title -->
                 <Label Text="Connection Status: " 
                        FontSize = "14" 
                        HorizontalTextAlignment="Center" 
-                       TextColor="White" 
                        HorizontalOptions="FillAndExpand"/>
+                
                 <!-- Label: Connection Status Display -->
                 <Label x:Name = "ConnectionLabel" 
                        Text="Not Connected" 
                        FontSize = "14" 
                        HorizontalTextAlignment="Center" 
-                       TextColor="White" 
                        HorizontalOptions="FillAndExpand"/>
             </StackLayout>
+            
             <!-- Button: Initiate Connection -->
             <Button x:Name="connectionButton" 
-                    Text="Connect to Device" 
+                    Text="Connect to Device"
                     CornerRadius="20" 
                     HorizontalOptions="CenterAndExpand" 
-                    TextColor="White" 
                     Clicked="OnConnect"/>
         </StackLayout>
     </StackLayout>

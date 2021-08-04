@@ -40,8 +40,12 @@ namespace CosmicWatch.UWP
 
         //Settings variables
         uint MaxReadLength;
+        int ReadTimeOutMs = 1000;
+        int WriteTimeOutMs = 1000;
 
-        public void Initialize(Action<String>  UpdateDataOutput, Action<String> UpdateStatusMessage, uint MaxReadLength = 32)
+        //Default Serial Port Settings
+
+        public void Initialize(Action<String>  UpdateDataOutput, Action<String> UpdateStatusMessage, uint MaxReadLength)
         {
             this.UpdateData = UpdateDataOutput;
             this.UpdateStatus = UpdateStatusMessage;
@@ -50,12 +54,10 @@ namespace CosmicWatch.UWP
 
         private void SetSerialSettings()
         {
-            if (SerialPort == null) { return; }
+            //SerialPort.BreakSignalState = true;
 
-            SerialPort.BreakSignalState = true;
-
-            SerialPort.WriteTimeout = TimeSpan.FromMilliseconds(1000);
-            SerialPort.ReadTimeout = TimeSpan.FromMilliseconds(1000);
+            SerialPort.WriteTimeout = TimeSpan.FromMilliseconds(ReadTimeOutMs);
+            SerialPort.ReadTimeout = TimeSpan.FromMilliseconds(WriteTimeOutMs);
 
             SerialPort.BaudRate = 9600;
             SerialPort.Parity = SerialParity.None;
@@ -66,9 +68,10 @@ namespace CosmicWatch.UWP
         private async Task ConnectionStart(String ConnectionID)
         {
             SerialPort = await SerialDevice.FromIdAsync(ConnectionID);
-            SetSerialSettings();
+            
             if (SerialPort != null)
             {
+                SetSerialSettings();
                 DataInputStream = new DataReader(SerialPort.InputStream);
             }
         }
@@ -84,7 +87,7 @@ namespace CosmicWatch.UWP
                 try
                 {
                     DeviceID = serialDeviceInfo.Id;
-                    ConnectionStart(DeviceID);
+                    //ConnectionStart(DeviceID);
                     return true;
                 }
                 catch (Exception e)
@@ -95,17 +98,19 @@ namespace CosmicWatch.UWP
             return false;
         }
 
-        public async void RunRecording()
+        public async Task RunRecording()
         {
-            //if (DeviceID != null) { await ConnectionStart(DeviceID); }
+            //Data Input Stream, the datareader, is slow.
 
-            SerialPort.BreakSignalState = false;
-            //IsRecording = true;
-            
+            if (DeviceID != null) { await ConnectionStart(DeviceID); }
+
+            //SerialPort.BreakSignalState = false;
+            IsRecording = true;
+
             await Task.Run(async () =>
             {
                 uint bytesToRead;
-                while (!SerialPort.BreakSignalState)//IsRecording)
+                while (IsRecording)//!SerialPort.BreakSignalState)//
                 {
                     try
                     {
@@ -122,10 +127,10 @@ namespace CosmicWatch.UWP
 
         public void StopRecording()
         {
-            SerialPort.BreakSignalState = true;
-            //IsRecording = false;
-            //SerialPort?.Dispose();
-            //DataInputStream?.Dispose();
+            //SerialPort.BreakSignalState = true;
+            IsRecording = false;
+            SerialPort?.Dispose();
+            DataInputStream?.Dispose();
         }
     }
 }

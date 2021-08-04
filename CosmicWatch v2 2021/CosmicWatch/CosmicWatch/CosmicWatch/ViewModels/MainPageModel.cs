@@ -50,6 +50,10 @@ namespace CosmicWatch.ViewModels
     */
     public class MainPageModel
     {
+        //[Strings]
+        String RecordNameSuffix = "MuonRecordingFile-";
+        String RecordTimeFormat = "yyyy-MM-ddTHH-mm-ss";
+        String RecordFileExtension = ".csv";
 
         //[Displays/Data Exit Functions]
         public Action<long> UpdateMuonDisplay;
@@ -154,20 +158,20 @@ namespace CosmicWatch.ViewModels
         public async Task Recording(long Time)
         {            
             //Prepare the data recording.
-
-            String filename = "MuonRecordingFile-" + DateTime.Now.ToString("yyyy-MM-ddTHH-mm-ss") + ".csv";
-            record = new DetectionRecord(filename);
-
+             String filename = RecordNameSuffix + DateTime.Now.ToString(RecordTimeFormat) + RecordFileExtension;
+            
             //Variable to indicate recording start.
             recording = true;
-            //Run the recording.
+            
+            //Start the recording.
             USBSerialConnection.RunRecording();
+            record = new DetectionRecord(filename);
 
             while (recording && (record.stopwatch.ElapsedMilliseconds < (Time * 1000)))
             {
-                //Wait 20 milleseconds for data to accumulate.
-                //Todo: Make this selectable/more dynamic? 20 milleseconds is rather arbitrary.
-                //Note for self: Await in order to yield the thread to other processes until it is done. Maybe move this into its own utility function? Also there has to be some more clever way then starting a new task all the goddamn time.
+                //Wait 25 milleseconds for data to accumulate.
+                //Todo: Make this selectable/more dynamic? 25 milleseconds is rather arbitrary.
+                //Also, is there a better way?
                 await Task.Delay(25);
                 //Update the time.
                 UpdateTimeDisplay?.Invoke(DateTime.Now);

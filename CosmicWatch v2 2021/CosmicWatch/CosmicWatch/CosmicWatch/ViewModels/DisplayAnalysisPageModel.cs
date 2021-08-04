@@ -132,6 +132,7 @@ namespace CosmicWatch.ViewModels
                     DataChoices[labelsList[labelNumber]].Add(resultsList[labelNumber]);
                 }
             }
+            Title = filename;
         }
 
         public void SelectChartType(ChartCreator.ChartTypes selectedType)
@@ -144,6 +145,12 @@ namespace CosmicWatch.ViewModels
 
         public void SelectXList(String selection)
         {
+            if (selection == null)
+            {
+                YLabel = null;
+                YList = null;
+                return;
+            }
             //Set the X Axis label and the data of the X Axis
             XLabel = selection;
             XList = DataChoices[XLabel];
@@ -153,6 +160,12 @@ namespace CosmicWatch.ViewModels
 
         public void SelectYList(String selection)
         {
+            if (selection == null)
+            {
+                YLabel = null;
+                YList = null;
+                return;
+            }
             //Set the Y Axis label and the data of the Y Axis
             YLabel = selection;
             YList = DataChoices[YLabel];

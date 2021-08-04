@@ -74,6 +74,11 @@ namespace CosmicWatch.Droid
         //[Settings Attributes]
         uint MaxReadLength;
 
+        //[Strings]
+        String ConnectFailNoDriver = "No Driver!";
+        String ConnectFailNoSerialDevice = "No serial device!";
+
+
         //[Pseudo-Constructor]
         public void Initialize(Action<String> UpdateDataOutput, Action<String> UpdateStatusMessage, uint MaxReadLength)
         {
@@ -122,14 +127,14 @@ namespace CosmicWatch.Droid
 
             if (Driver == null)
             {
-                UpdateStatus("No driver!");
+                UpdateStatus(ConnectFailNoDriver);
                 return false;
             }
             //Just get first port.
             UsbSerialPort port = Driver.Ports[0];
             if (port == null)
             {
-                UpdateStatus("No serial device.");
+                UpdateStatus(ConnectFailNoSerialDevice);
                 return false;
             }
 
@@ -149,14 +154,14 @@ namespace CosmicWatch.Droid
                 };
                 SerialIOManager.ErrorReceived += (Sender, Messenger) =>
                 {
-                    UpdateStatus?.Invoke("Error received: " + Messenger.ToString());
+                    UpdateStatus?.Invoke("Error: " + Messenger.ToString());
                 };
                 return true;
             }
             return false;
         }
 
-        public void RunRecording()
+        public async Task RunRecording()
         {
             try
             {
@@ -205,7 +210,7 @@ namespace CosmicWatch.Droid
 
             public async override void OnReceive(Context context, Intent intent)
             {
-                Connection.UpdateStatus?.Invoke("Detected something was plugged in.");
+                //Connection.UpdateStatus?.Invoke("Detected something was plugged in.");
 
                 //Get all the drivers which match detected USBSerial devices.
                 IList<IUsbSerialDriver> Drivers = await Connection.GetDrivers();
@@ -248,7 +253,7 @@ namespace CosmicWatch.Droid
 
             public async override void OnReceive(Context context, Intent intent)
             {
-                Connection.UpdateStatus?.Invoke("Detected something was unplugged.");
+                //Connection.UpdateStatus?.Invoke("Detected something was unplugged.");
 
                 //Get all the drivers which match detected USBSerial devices.
                 IList<IUsbSerialDriver> Drivers = await Connection.GetDrivers();

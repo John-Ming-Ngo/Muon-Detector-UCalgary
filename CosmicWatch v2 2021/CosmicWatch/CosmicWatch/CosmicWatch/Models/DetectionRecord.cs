@@ -41,8 +41,12 @@ namespace CosmicWatch.Models
 
         //Buffers and Processing Information
         String DataBuffer;
-        String[] SplitSymbols;
-        String[] RejectSymbols;
+        String[] SplitSymbols = new String[] { "\n" };
+        //It turns out that I don't need to get rid of the other symbols; on the contrary I need to simply ignore them. That is unbelievably weird.
+        String[] RejectSymbols = new String[] { "\r\n", "\r" };
+
+        //Static Labels and Strings
+        String[] RawDataLabels = new String[] { "Counts", "Ardn_time[ms]", "Amplitude[mV]", "SiPM[mV]", "Deadtime[ms]" };
 
         //[Constructor]
         public DetectionRecord(String filename)
@@ -50,15 +54,11 @@ namespace CosmicWatch.Models
             //Initialize 
             RawDataRecord = new SaveToFile(filename);
             
-            RawDataRecord.WriteLine(String.Join(" ", new String[]{ "Counts", "Ardn_time[ms]", "Amplitude[mV]", "SiPM[mV]", "Deadtime[ms]"}));
+            RawDataRecord.WriteLine(String.Join(" ", RawDataLabels));
 
             EventCount = 0;
 
-            DataBuffer = "";
-            SplitSymbols = new String[]{"\n"};
-
-            //It turns out that I don't need to get rid of the other symbols; on the contrary I need to simply ignore them. That is unbelievably weird.
-            //RejectSymbols = new String[] { "\r\n", "\r" };
+            DataBuffer = String.Empty;
 
             stopwatch = new Stopwatch();
             stopwatch.Start();

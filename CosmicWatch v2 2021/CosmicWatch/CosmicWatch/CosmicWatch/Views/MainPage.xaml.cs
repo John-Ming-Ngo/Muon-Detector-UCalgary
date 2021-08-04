@@ -31,6 +31,23 @@ namespace CosmicWatch
      */
     public partial class MainPage : ContentPage
     {
+        //[Constants]
+        const int MillsPerSec = 1000;
+
+        //[Strings]
+        String RecordBoxError = "Please enter numbers only! Recording period (s)";
+        String RecordBoxPrompt = "Recording period (s):";
+
+        String BeginRecordNonNumeric = "Please enter numbers only!";
+        String BeginRecordZeroOrLess = "I require some amount of time to record for!";
+        String BeginRecordNoDevice = "No Device Connected!";
+        String BeginRecordButtonSuccess = "Recording...";
+
+        String EndRecordButtonSuccess = "Start Recording.";
+
+        String ConnectedTrue = "Connected";
+        String ConnectedFalse = "Not Connected";
+
         //[Viewmodel]
         private MainPageModel PageModel {set; get;}
 
@@ -53,7 +70,7 @@ namespace CosmicWatch
         }
         private void UpdateElapsedDisplay(double elapsedMilleseconds)
         {
-            Device.BeginInvokeOnMainThread(() => elapsedDisplay.Text = $"Elapsed Time: {elapsedMilleseconds/1000 : 0.0} (s)");
+            Device.BeginInvokeOnMainThread(() => elapsedDisplay.Text = $"Elapsed Time: {elapsedMilleseconds/MillsPerSec : 0.0} (s)");
         }
         private void UpdateMuonDisplay(long count) {
             Device.BeginInvokeOnMainThread(() => muonCountsDisplay.Text = $"{count}");
@@ -71,12 +88,12 @@ namespace CosmicWatch
             bool isNumeric = double.TryParse(recordLength, out _);
             if (!isNumeric) 
             { 
-                recordLengthBox.Text = "";
-                recordLengthBox.Placeholder = "Please enter numbers only! Recording period (s)";
+                recordLengthBox.Text = String.Empty;
+                recordLengthBox.Placeholder = RecordBoxError;
             }
             else
             {
-                recordLengthBox.Placeholder = "Recording period (s):";
+                recordLengthBox.Placeholder = RecordBoxPrompt;
             }
         }
         //[Center Options - Buttons]
@@ -86,21 +103,21 @@ namespace CosmicWatch
             bool isNumeric = long.TryParse(recordingTimeEntry.Text, out long Seconds);
             if (!isNumeric)
             {
-                UpdateStatusMessage("Please enter numbers only!");
+                UpdateStatusMessage(BeginRecordNonNumeric);
             }
             else if (Seconds <= 0)
             {
-                UpdateStatusMessage("I require some amount of time to record for!");
+                UpdateStatusMessage(BeginRecordZeroOrLess);
             }
             else if (!PageModel.DeviceConnected)
             {
-                UpdateStatusMessage("No Device Connected!");
+                UpdateStatusMessage(BeginRecordNoDevice);
             }
             else
             {
-                UpdateStatusMessage("");
+                UpdateStatusMessage(String.Empty);
                 recordingTimeEntry.IsEnabled = false;
-                recordButton.Text = "Recording...";
+                recordButton.Text = BeginRecordButtonSuccess;
 
                 //Start the Recording
                 PageModel.Recording(Seconds);
@@ -110,7 +127,7 @@ namespace CosmicWatch
         private void EndRecording()
         {
             recordingTimeEntry.IsEnabled = true;
-            recordButton.Text = "Start Recording.";
+            recordButton.Text = EndRecordButtonSuccess;
         }
 
         private void EndRecordingEarly()
@@ -149,7 +166,7 @@ namespace CosmicWatch
         }
         //[Bottom Bar - Connection Status label.]
         private void UpdateConnectedDisplay(bool isConnected) {
-            Device.BeginInvokeOnMainThread(() => ConnectionLabel.Text = isConnected ? "Connected" : "Not Connected");
+            Device.BeginInvokeOnMainThread(() => ConnectionLabel.Text = isConnected ? ConnectedTrue : ConnectedFalse);
         }
         //[Bottom Bar - Connection Button]
         private async void OnConnect(object sender, EventArgs e) {

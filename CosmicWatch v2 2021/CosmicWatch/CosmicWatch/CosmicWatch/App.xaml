@@ -7,14 +7,37 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="Background">#0c164f</Color>
+            <Color x:Key="BackgroundSecondary">#2d475e</Color>
+            <Color x:Key="BackgroundTertiary">#5643fd</Color>
+            <Color x:Key="BackgroundQuatrinary">#2196F3</Color>
+            <Color x:Key="BarColour">#ba1e68</Color>
+            <Color x:Key="TextColour">White</Color>
+            
             <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
                 <Setter Property="BackgroundColor" Value="#0c164f" />
             </Style>
-            
-            <Color x:Key="Primary">#ba1e68</Color>
+
             <Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="{StaticResource BarColour}" />
+                <Setter Property="BarTextColor" Value="{StaticResource TextColour}" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TextColour}"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="TitleColor" Value="{StaticResource TextColour}"/>
+                <Setter Property="TextColor" Value="{StaticResource TextColour}"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource TextColour}"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="CornerRadius" Value="20"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

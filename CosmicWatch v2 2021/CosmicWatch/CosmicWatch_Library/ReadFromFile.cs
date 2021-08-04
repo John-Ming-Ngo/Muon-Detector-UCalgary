@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -10,7 +11,7 @@ namespace CosmicWatch_Library
     public class ReadFromFile
     {
         private String[] MainDirectoryPathElements = { DependencyService.Get<IPlatformDetails>().GetExternalStorageDir(), "CosmicWatchDetectorData" };
-        private string OutputDirectory;
+        private string InputDirectory;
         private StreamReader ReadFile;
 
         public bool EndOfFile
@@ -25,14 +26,14 @@ namespace CosmicWatch_Library
         //Todo: String directory input.
         public ReadFromFile()
         {
-            OutputDirectory = Path.Combine(MainDirectoryPathElements);
-            Directory.CreateDirectory(OutputDirectory);
+            InputDirectory = Path.Combine(MainDirectoryPathElements);
+            Directory.CreateDirectory(InputDirectory);
             
         }
 
         public bool Open(String Filename)
         {
-            ReadFile = new StreamReader(Path.Combine(new string[] { OutputDirectory, Filename }));
+            ReadFile = new StreamReader(Path.Combine(new string[] { InputDirectory, Filename }));
             return ReadFile != null;
         }
         public string ReadLine()
@@ -48,7 +49,8 @@ namespace CosmicWatch_Library
 
         public string[] GetFiles()
         {
-            return Directory.GetFiles(Path.Combine(MainDirectoryPathElements));
+            string[] Files = Directory.GetFiles(InputDirectory);
+            return Files.Select(File => Path.GetFileName(File)).ToArray();
         }
     }
 }

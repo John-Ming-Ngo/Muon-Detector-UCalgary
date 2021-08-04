@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-07-22T03:25:11.135</Modified>
+      <Modified>2021-08-04T01:05:08.580</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\CosmicWatch.UWP.exe">
       <PackagePath>entrypoint\CosmicWatch.UWP.exe</PackagePath>
-      <Modified>2021-07-22T03:25:09.841</Modified>
+      <Modified>2021-08-04T01:05:06.954</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -68,11 +68,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch.dll">
       <PackagePath>CosmicWatch.dll</PackagePath>
-      <Modified>2021-07-22T03:25:03.390</Modified>
+      <Modified>2021-08-03T23:44:01.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\bin\Debug\netstandard2.0\CosmicWatch_Library.dll">
       <PackagePath>CosmicWatch_Library.dll</PackagePath>
-      <Modified>2021-07-18T18:00:52.419</Modified>
+      <Modified>2021-08-03T03:53:12.568</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\john-\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -231,11 +231,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-07-22T03:25:09.744</Modified>
+      <Modified>2021-08-04T01:05:06.808</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-07-22T03:25:09.744</Modified>
+      <Modified>2021-08-04T01:05:06.808</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -251,11 +251,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-07-18T18:01:05.981</Modified>
+      <Modified>2021-08-03T03:29:30.703</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Core\CosmicWatch.UWP.exe">
       <PackagePath>CosmicWatch.UWP.exe</PackagePath>
-      <Modified>2021-07-22T03:25:11.128</Modified>
+      <Modified>2021-08-04T01:05:08.572</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

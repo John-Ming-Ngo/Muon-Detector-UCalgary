@@ -1,21 +1,24 @@
 ﻿Priorities:
 	1. UWP: Dispose/reconnect delay issue.
+		The issue is that the first loadAsync is slow. There does not appear to be any other way around this.
+
 	2. Clean up the app, start extracting things into variables meant to be modified by the config file, and comment it.
-	2a. More meaninful CSV save files.
+
 	3. Minimally functional options page.
 		a. This likely involves integration and usage of the C# Configurations class/library.
+		b. Before I do this, I need an idea of what options are required.
+			i. Colours(?)
+			ii. Languages(?)
+			iii. Inside/Outside selector
+
 	4. Implement different recording types. Ex. repeated recordings over X period of time.
+
 	5. Conclude project/round 1. Publish app?
 
 Time input as time picker or preset intervals
 Explaination, background information, and/or construction page. Possibly an embedded youtube video?
-Options:
-	Colour (for the colourblind especially)
-	Languages
-Inside/outside selector?
-Dedicated preset options.
 
-Altimiter maybe? Hardware end of things. Not my area of expertise here.
+Dedicated preset options.
 
 Code Refactor and Upgrade.
 	Currently have something funky going on with close. Should look into IDispose instead. May run into errors.

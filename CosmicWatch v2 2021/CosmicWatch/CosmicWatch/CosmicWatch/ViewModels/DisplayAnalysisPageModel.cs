@@ -93,7 +93,7 @@ namespace CosmicWatch.ViewModels
         //[Maximum Read Lines: To Prevent Reading too Much Data and Crashing]
         //Todo: Should be dynamically done?
         const int MAX_READ_LINES = 10000;
-
+        char DataSplitSymbol = ',';
         //[On Data Selected Functions]
         //These functions are called by the page's picker functions, and select the data to be displayed in the graph.
         public void SelectDataChoice(String filename)
@@ -103,8 +103,14 @@ namespace CosmicWatch.ViewModels
             {
                 if (Recordings == null || Recordings.EndOfFile) return new List<String>();
                 String labels = Recordings.ReadLine();
-                return new List<String>(labels.Split(' '));
+                return new List<String>(labels.Split(DataSplitSymbol));
                 //return new List<String>(labels.Split(','));
+            }
+
+            //Data Validation
+            if (filename == null)
+            {
+                return;
             }
 
             //Open the selected file.
@@ -147,8 +153,8 @@ namespace CosmicWatch.ViewModels
         {
             if (selection == null)
             {
-                YLabel = null;
-                YList = null;
+                XLabel = null;
+                XList = null;
                 return;
             }
             //Set the X Axis label and the data of the X Axis
@@ -171,6 +177,13 @@ namespace CosmicWatch.ViewModels
             YList = DataChoices[YLabel];
             //Update the graph
             UpdateGraph();
+        }
+
+        public void DeleteData()
+        {
+            Recordings.DeleteFile();
+            UpdateDataChoiceDisplay(new List<String>(Recordings.GetFiles()));
+            UpdateStatusDisplay("Dataset deleted from system memory. The data will remain loaded in active memory until you select a new dataset.");
         }
 
         public void UpdateGraph()

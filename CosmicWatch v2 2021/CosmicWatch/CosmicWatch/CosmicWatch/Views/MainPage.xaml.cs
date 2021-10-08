@@ -12,6 +12,7 @@ using CosmicWatch.ViewModels;
 
 using CosmicWatch_Library;
 using Xamarin.Essentials;
+using System.Collections;
 
 namespace CosmicWatch
 {
@@ -63,6 +64,14 @@ namespace CosmicWatch
         }
         private void OnDataAnalysis(object sender, EventArgs e) {
             Navigation.PushAsync(new DisplayAnalysisPage());
+        }
+        private void OnUsageGuide(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new UsageGuidePage());
+        }
+        private void OnCredits(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CreditsPage());
         }
         //[Center Options  - Display]
         private void UpdateTimeDisplay(DateTime time) {
@@ -152,17 +161,8 @@ namespace CosmicWatch
         }
 
         //[Bottom Bar - Picker]
-        private void UpdateDeviceList(List<String> SupportedDevices) {
+        private void UpdateDeviceList(IList SupportedDevices) {
             Device.BeginInvokeOnMainThread(() => supportedDevices.ItemsSource = SupportedDevices);
-        }
-        private void OnDeviceChange(object sender, EventArgs e) {
-            Picker picker = (Picker)sender;
-            int index = picker.SelectedIndex;
-            if (index != -1)
-            {
-                //Do something about the new picker.
-                PageModel.ChangeDevice(index);
-            }
         }
         //[Bottom Bar - Connection Status label.]
         private void UpdateConnectedDisplay(bool isConnected) {
@@ -170,7 +170,7 @@ namespace CosmicWatch
         }
         //[Bottom Bar - Connection Button]
         private async void OnConnect(object sender, EventArgs e) {
-            await PageModel.Connect();
+            await PageModel.Connect(supportedDevices.SelectedIndex);
         }
     }
 }

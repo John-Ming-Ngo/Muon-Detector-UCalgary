@@ -38,3 +38,9 @@ C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWat
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.pdb
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.csproj.AssemblyReference.cache
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.csproj.AssemblyReference.cache
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\CreditsPage.xaml.g.cs
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\UsageGuidePage.xaml.g.cs
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\UseGuideSubPages\HowToUsePage.xaml.g.cs
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\UseGuideSubPages\VideoDemonstrationPage.xaml.g.cs
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\UseGuideSubPages\BuildDetectorPage.xaml.g.cs
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\UseGuideSubPages\AboutTheSciencePage.xaml.g.cs

@@ -1,38 +1,69 @@
-﻿Priorities:
-	1. UWP: Dispose/reconnect delay issue.
-		The issue is that the first loadAsync is slow. There does not appear to be any other way around this.
+﻿Current Priorities:
+	Main page: Different menu and recording types: Timepicker vs typing in number / repeat after time vs no repetition.
+		UI
+		Functions connected to the UI
+		Model functionality
+		Config file to toggle which is active and which is not.
 
-	2. Clean up the app, start extracting things into variables meant to be modified by the config file, and comment it.
+	Options page: Different menu and recording types.
+		UI
+		Functions connected to the UI.
+		Config file modifying.
 
-	3. Minimally functional options page.
-		a. This likely involves integration and usage of the C# Configurations class/library.
-		b. Before I do this, I need an idea of what options are required.
-			i. Colours(?)
-			ii. Languages(?)
-			iii. Inside/Outside selector
+	Brush up on the format and appearance of the explaination pages. 
+	
+	Implement Upload to Google Drive
+		==> Looks much, much harder than I thought. Darn.
+		==> Consider using Javascript? Maybe.
 
-	4. Implement different recording types. Ex. repeated recordings over X period of time.
 
-	5. Conclude project/round 1. Publish app?
+Priorities:
+	Issues:
+		1. UWP: Dispose/reconnect delay issue.
+			The issue is that the first loadAsync is slow. There does not appear to be any other way around this.
 
-Time input as time picker or preset intervals
-Explaination, background information, and/or construction page. Possibly an embedded youtube video?
+	Upgrades:
+		1. Options Page:
+			a. Colours?
+			b. Languages?
+			c. Inside Outside Selector?
+			d. Save/no save data
+			e. Simulate with fake device?
 
-Dedicated preset options.
+		2. Main Page:
+			a. Different recording types? Ex. repeated recordings over X period of time.
+			b. Time input as time picker or preset intervals?
 
-Code Refactor and Upgrade.
-	Currently have something funky going on with close. Should look into IDispose instead. May run into errors.
-	TWO data records - one for raw, the other for processed.
+		3. Charting Page:
+			a. Data comparison? One data set against another?
 
-Bing Maps API integration to get reverse geocoding for the UWP side of this app: Figure it out.
-	==> Promoting this problem to the status of undead demon. I spent 3 hrs trying to figure this BS out! It won't work!
+		4. Muon Record:
+			a. More data:
+				i. Geolocation string data.
+				ii. Computer time data.
+				iii. Current rate data?
 
-Graphing Library Integration - 80% completed
-	Consider plugin: https://github.com/datavisyn/chartjs-plugin-error-bars
+		5. GeolocationString:
+			a. Reverse Geocoding?
+				i. Last attempt, was undead demon of a problem. Issue is that need costly API, so sucks.
 
-Options:
-	Save/No save
-	Simulate with a fake device?
+		6. ChartCreator:
+			a. Consider line of best fit plugin: https://github.com/datavisyn/chartjs-plugin-error-bars
 
-Data comparison - One set of data against the other.
-	==> Need verification that we're comparing like against like!
+		7. UseGuidePage: Fill in the subpages
+			a. What this app is.
+			b. How to use it.
+			c. How to build the device this app uses/find the documentation on it.
+			d. Youtube video showing how to make it work?
+
+		8. CreditsPage:
+			a. Libraries used and code credits.
+			b. UCalgary credits and to profs.
+			c. Myself.
+
+	Cleanup/Refactor:
+		1. Remove magic numbers/strings; extract them into meaningful variables.
+		2. Avoid using my own close function, implement IDispose instead, for library items:
+			a. ReadFromFile
+			b. SaveToFile
+		3. ChartCreator: Figure out a better way to implement the strings?

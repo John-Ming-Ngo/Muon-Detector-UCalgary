@@ -41,7 +41,8 @@ namespace CosmicWatch.Models
 
         //Buffers and Processing Information
         String DataBuffer;
-        String[] SplitSymbols = new String[] { "\n" };
+        String[] NewEntrySymbols = new String[] { "\n" };
+        String[] DataDividerSymbols = new string[] { " " };
         //It turns out that I don't need to get rid of the other symbols; on the contrary I need to simply ignore them. That is unbelievably weird.
         String[] RejectSymbols = new String[] { "\r\n", "\r" };
 
@@ -54,7 +55,7 @@ namespace CosmicWatch.Models
             //Initialize 
             RawDataRecord = new SaveToFile(filename);
             
-            RawDataRecord.WriteLine(String.Join(" ", RawDataLabels));
+            RawDataRecord.WriteLine(String.Join(",", RawDataLabels));
 
             EventCount = 0;
 
@@ -78,12 +79,15 @@ namespace CosmicWatch.Models
         //Parse the buffer, incrementing the counter by how many distinct events are found.
         private void ParseBufferDetections()
         {
-            String[] EventsDetected = DataBuffer.Split(SplitSymbols, StringSplitOptions.None);
+            String[] EventsDetected = DataBuffer.Split(NewEntrySymbols, StringSplitOptions.None);
             int NumLastLine = EventsDetected.Length - 1;
             //Want to not take all the data, but until 1 to the last... do I have to use a normal for loop? Goddamn.
             for (int DataLineIndex = 0; DataLineIndex < NumLastLine; DataLineIndex++)
             {
-                RawDataRecord.WriteLine(EventsDetected[DataLineIndex]);
+                String DataLine;
+                DataLine = String.Join("," , EventsDetected[DataLineIndex].Split(DataDividerSymbols, StringSplitOptions.None));
+
+                RawDataRecord.WriteLine(DataLine);
             }
             DataBuffer = EventsDetected[NumLastLine];
             EventCount += Math.Max(EventsDetected.Length - 1, 0);

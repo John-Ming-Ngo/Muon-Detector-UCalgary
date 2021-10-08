@@ -12,6 +12,7 @@ namespace CosmicWatch_Library
     {
         private String[] MainDirectoryPathElements = { DependencyService.Get<IPlatformDetails>().GetExternalStorageDir(), "CosmicWatchDetectorData" };
         private string InputDirectory;
+        private string OpenFile;
         private StreamReader ReadFile;
 
         public bool EndOfFile
@@ -33,7 +34,8 @@ namespace CosmicWatch_Library
 
         public bool Open(String Filename)
         {
-            ReadFile = new StreamReader(Path.Combine(new string[] { InputDirectory, Filename }));
+            OpenFile = Path.Combine(new string[] { InputDirectory, Filename });
+            ReadFile = new StreamReader(OpenFile);
             return ReadFile != null;
         }
         public string ReadLine()
@@ -45,6 +47,7 @@ namespace CosmicWatch_Library
         public void Close()
         {
             ReadFile?.Close();
+            OpenFile = "";
         }
 
         public string[] GetFiles()
@@ -52,5 +55,12 @@ namespace CosmicWatch_Library
             string[] Files = Directory.GetFiles(InputDirectory);
             return Files.Select(File => Path.GetFileName(File)).ToArray();
         }
+        public void DeleteFile()
+        {
+            ReadFile?.Close();
+            File.Delete(OpenFile);
+            OpenFile = "";
+        }
+
     }
 }

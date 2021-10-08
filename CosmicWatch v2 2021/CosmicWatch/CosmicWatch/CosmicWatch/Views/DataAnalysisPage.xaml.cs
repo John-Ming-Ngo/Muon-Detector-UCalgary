@@ -80,7 +80,11 @@ namespace CosmicWatch.Views
         //[Upload Functions - TODO, NOT DONE]
         private void OnUploadClick(object sender, EventArgs e)
         {
-            //pageModel.[NOT IMPLEMENTED]
+            //pageModel.Upload(); //NOT IMPLEMENTED
+        }
+        private void OnDeleteClick(object sender, EventArgs e)
+        {
+            pageModel.DeleteData();
         }
 
         //[Display Update Functions]

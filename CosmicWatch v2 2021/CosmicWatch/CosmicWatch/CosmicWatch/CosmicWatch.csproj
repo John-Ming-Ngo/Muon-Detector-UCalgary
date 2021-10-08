@@ -12,6 +12,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Text\CreditsPageText\MainText.txt" />
+    <None Remove="Resources\Text\CreditsPageText\MainTitle.txt" />
+    <None Remove="Resources\Text\UseGuidePageText\MainText.txt" />
+    <None Remove="Resources\Text\UseGuidePageText\MainTitle.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\AboutTheSciencePageText\MainText.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\AboutTheSciencePageText\MainTitle.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\BuildDetectorPageText\MainText.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\BuildDetectorPageText\MainTitle.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\HowToUsePageText\MainText.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\HowToUsePageText\MainTitle.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\VideoDemonstrationPageText\MainText.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\VideoDemonstrationPageText\MainTitle.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Text\CreditsPageText\MainTitle.txt" />
+    <EmbeddedResource Include="Resources\Text\CreditsPageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuidePageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuidePageText\MainTitle.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\AboutTheSciencePageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\AboutTheSciencePageText\MainTitle.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\BuildDetectorPageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\BuildDetectorPageText\MainTitle.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\HowToUsePageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\HowToUsePageText\MainTitle.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\VideoDemonstrationPageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\VideoDemonstrationPageText\MainTitle.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
   </ItemGroup>
@@ -23,6 +53,24 @@
     <Compile Update="Views\OptionsPage.xaml.cs">
       <DependentUpon>OptionsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\CreditsPage.xaml.cs">
+      <DependentUpon>CreditsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UsageGuidePage.xaml.cs">
+      <DependentUpon>UsageGuidePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UseGuideSubPages\VideoDemonstrationPage.xaml.cs">
+      <DependentUpon>VideoDemonstrationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UseGuideSubPages\BuildDetectorPage.xaml.cs">
+      <DependentUpon>BuildDetectorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UseGuideSubPages\HowToUsePage.xaml.cs">
+      <DependentUpon>HowToUsePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UseGuideSubPages\AboutTheSciencePage.xaml.cs">
+      <DependentUpon>AboutTheSciencePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -32,10 +80,17 @@
     <EmbeddedResource Update="Views\OptionsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\UsageGuidePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\UseGuideSubPages\AboutTheSciencePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Backend\" />
+    <Folder Include="Resources\Images\" />
   </ItemGroup>
 
   <ItemGroup>

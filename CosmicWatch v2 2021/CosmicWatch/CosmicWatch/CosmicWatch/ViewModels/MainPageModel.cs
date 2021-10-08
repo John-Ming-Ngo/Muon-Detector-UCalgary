@@ -8,6 +8,7 @@ using CosmicWatch.Models;
 
 using CosmicWatch_Library;
 using Xamarin.Essentials;
+using System.Collections;
 
 namespace CosmicWatch.ViewModels
 {
@@ -61,7 +62,8 @@ namespace CosmicWatch.ViewModels
         public Action<bool> UpdateConnectedDisplay;
         public Action<DateTime> UpdateTimeDisplay;
         public Action<double> UpdateElapsedDisplay;
-        public Action<List<String>> UpdateSupportedDevices;
+        //public Action<List<String>> UpdateSupportedDevices;
+        public Action<IList> UpdateSupportedDevices;
         public Action<String> UpdateStatusMessage;
 
         public Action EndRecording;
@@ -71,7 +73,7 @@ namespace CosmicWatch.ViewModels
         DetectionRecord record;
 
         //[Constructor]
-        public MainPageModel(Action<long> UpdateMuonDisplay, Action<double> UpdateMuonsPerMinuteDisplay, Action<bool> UpdateConnectedDisplay, Action<DateTime> UpdateTimeDisplay, Action<double> UpdateElapsedDisplay, Action<List<String>> UpdateSupportedDevices, Action<String> UpdateStatusMessage, Action EndRecording)
+        public MainPageModel(Action<long> UpdateMuonDisplay, Action<double> UpdateMuonsPerMinuteDisplay, Action<bool> UpdateConnectedDisplay, Action<DateTime> UpdateTimeDisplay, Action<double> UpdateElapsedDisplay, Action<IList> UpdateSupportedDevices, Action<String> UpdateStatusMessage, Action EndRecording)
         {
             //Save the given display functions to local memory for later use.
             this.UpdateMuonDisplay += UpdateMuonDisplay;
@@ -85,10 +87,13 @@ namespace CosmicWatch.ViewModels
             
             //Initiate the platform appropriate implementation of the USB serial connection.
             USBSerialConnection = DependencyService.Get<IUSBSerialConnection>();
-            USBSerialConnection.Initialize(ReceiveData, UpdateStatusMessage, 32);
+            USBSerialConnection.Initialize(ReceiveData, UpdateStatusMessage, UpdateSupportedDevices, 32);
 
             //Inititalize variables which need an unambiguous initial status.
             recording = false;
+
+            //Debug stuff.
+            //UpdateStatusMessage(DependencyService.Get<IPlatformDetails>().GetExternalStorageDir());
         }
 
         //[Navigation bar]
@@ -197,8 +202,15 @@ namespace CosmicWatch.ViewModels
         public void ChangeDevice(int supportedIndex) {
             DeviceIndex = supportedIndex;
         }
-        public async Task Connect() {
-            DeviceConnected = await USBSerialConnection.Connect();
+
+        public async Task Connect(int SelectedIndex) {
+            if (SelectedIndex == -1)
+            {
+                UpdateStatusMessage?.Invoke("No Device Selected!");
+                DeviceConnected = false;
+                return;
+            }
+            DeviceConnected = await USBSerialConnection.Connect(SelectedIndex);
         }
     }
 }

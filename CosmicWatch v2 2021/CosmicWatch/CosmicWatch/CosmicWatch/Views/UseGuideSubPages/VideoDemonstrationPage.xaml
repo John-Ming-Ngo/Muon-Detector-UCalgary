@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CosmicWatch.Views.UseGuideSubPages.VideoDemonstrationPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame
+                    BackgroundColor="{StaticResource BackgroundTertiary}">
+                    <Label 
+                    Text="Text Not Loaded."
+                    x:Name="MainTextTitle"/>
+                </Frame>
+                <Label 
+                    Text="Text Not Loaded."
+                    x:Name="MainTextDisplay"
+                    FontSize="15"/>
+
+                <!-- Webview: Video Display -->
+                <WebView BackgroundColor = "{StaticResource Background}"  
+                     VerticalOptions="EndAndExpand" 
+                     HeightRequest="400" 
+                     WidthRequest="500">
+                    <WebView.Source>
+                        <HtmlWebViewSource x:Name = "HtmlSource" />
+                    </WebView.Source>
+                </WebView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

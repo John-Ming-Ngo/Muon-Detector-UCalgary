@@ -21,6 +21,7 @@ using Xamarin.Forms;
 using Hoho.Android.UsbSerial.Driver;
 using Hoho.Android.UsbSerial.Extensions;
 using Hoho.Android.UsbSerial.Util;
+using System.Collections;
 
 [assembly: UsesFeature("android.hardware.usb.host")]
 [assembly: Dependency(typeof(AndroidUsbSerialConnection))]
@@ -59,6 +60,7 @@ namespace CosmicWatch.Droid
         //[Return Communication Functions]
         Action<String> UpdateData;
         Action<String> UpdateStatus;
+        Action<IList> UpdateSupportedDevices;
 
         //[Serial Connection Attributes]
         UsbManager UsbManager;
@@ -80,11 +82,12 @@ namespace CosmicWatch.Droid
 
 
         //[Pseudo-Constructor]
-        public void Initialize(Action<String> UpdateDataOutput, Action<String> UpdateStatusMessage, uint MaxReadLength)
+        public void Initialize(Action<String> UpdateDataOutput, Action<String> UpdateStatusMessage, Action<IList> UpdateSupportedDevices, uint MaxReadLength)
         {
             //Set the return functions and any possibly used attributes.
             this.UpdateData = UpdateDataOutput;
             this.UpdateStatus = UpdateStatusMessage;
+            this.UpdateSupportedDevices = UpdateSupportedDevices;
             this.MaxReadLength = MaxReadLength;
 
             //Get important local variables
@@ -116,14 +119,13 @@ namespace CosmicWatch.Droid
         }
 
         //This follows the example set in the Xamarin USBSerial library closely.
-        public async Task<bool> Connect()
+        public async Task<bool> Connect(int Selection)
         {
             //Get all the drivers which match detected USBSerial devices.
             IList<IUsbSerialDriver> Drivers = await GetDrivers();
 
-            //Just get the first one.
-            //Todo: Do this better. There's options to get specific devices, for example.
-            IUsbSerialDriver Driver = Drivers.FirstOrDefault();
+            //Get selected device.
+            IUsbSerialDriver Driver = Drivers.ElementAt(Selection);
 
             if (Driver == null)
             {
@@ -214,6 +216,7 @@ namespace CosmicWatch.Droid
 
                 //Get all the drivers which match detected USBSerial devices.
                 IList<IUsbSerialDriver> Drivers = await Connection.GetDrivers();
+                Connection.UpdateSupportedDevices((IList)Drivers);
 
                 //Just get the first one.
                 //Todo: Do this better. There's options to get specific devices, for example.
@@ -257,6 +260,7 @@ namespace CosmicWatch.Droid
 
                 //Get all the drivers which match detected USBSerial devices.
                 IList<IUsbSerialDriver> Drivers = await Connection.GetDrivers();
+                Connection.UpdateSupportedDevices((IList)Drivers);
 
             }
         }

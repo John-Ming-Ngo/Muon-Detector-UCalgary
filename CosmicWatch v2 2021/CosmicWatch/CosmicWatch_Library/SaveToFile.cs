@@ -17,6 +17,8 @@ namespace CosmicWatch_Library
     {
         //Current directory for testing purposes: C:\Users\john-\AppData\Local\Packages\b0c704da-8932-48eb-9d48-719b45cebf63_z1sq4jxngb7wr\LocalState
 
+        //Moved to C:\Users\john-\AppData\Local\Packages\b0c704da-8932-48eb-9d48-719b45cebf63_nae1zmw3sy44a\LocalState\CosmicWatchDetectorData
+
         //Works, but this class is actually sort of dumb and redundent. The better syntax involves calling the base stuff directly and using the using statement, since using ensures proper item disposal...
 
         private String[] MainDirectoryPathElements;

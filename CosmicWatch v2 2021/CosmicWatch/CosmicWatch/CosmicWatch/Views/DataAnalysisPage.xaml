@@ -19,7 +19,7 @@
                     Title="Display Type"
                     SelectedIndexChanged="OnGraphTypeSelect"/>
 
-            <!-- Stack Layout: Axis Options and Export -->
+            <!-- Stack Layout: Axis Options -->
             <StackLayout Orientation="Horizontal">
                 <!-- Picker: X Axis -->
                 <Picker x:Name="X_Axis"
@@ -31,13 +31,22 @@
                         Title="Y Axis"
                         SelectedIndexChanged="OnYSelect"/>
 
+            </StackLayout>
+
+            <!-- Stack Layout: Further Options -->
+            <StackLayout Orientation="Horizontal">
+                
                 <!-- Button: Upload Selected File to Google Drive -->
                 <Button Text="Export to Google Drive" 
                         CornerRadius="20"
                         Pressed="OnUploadClick"/>
-                
+                <!-- Button: Upload Selected File to Google Drive -->
+                <Button Text="Delete Data" 
+                        CornerRadius="20"
+                        Pressed="OnDeleteClick"/>
+
             </StackLayout>
-            
+
             <!-- Text: Status Display.-->
             <Label x:Name ="statusDisplay"/>
             

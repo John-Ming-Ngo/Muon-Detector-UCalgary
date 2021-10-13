@@ -1,8 +1,7 @@
 ﻿Current Priorities:
 	Main page: Different menu and recording types: Timepicker vs typing in number / repeat after time vs no repetition.
-		UI
-		Functions connected to the UI
-		Model functionality
+		Comment on current implementation and REFACTOR IT.
+
 		Config file to toggle which is active and which is not.
 
 	Options page: Different menu and recording types.

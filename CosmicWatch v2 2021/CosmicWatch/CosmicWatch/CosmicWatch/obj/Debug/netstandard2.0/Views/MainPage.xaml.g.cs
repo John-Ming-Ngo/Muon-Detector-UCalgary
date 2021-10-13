@@ -29,6 +29,9 @@ namespace CosmicWatch {
         private global::Xamarin.Forms.Label muonsPerMinuteDisplay;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Grid TimeEntryRow;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.StackLayout PickerTimeLayout;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -50,7 +53,7 @@ namespace CosmicWatch {
         private global::Xamarin.Forms.Button recordButton;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.StackLayout RecordingRepeatMenu;
+        private global::Xamarin.Forms.Grid RepetitionDelayRow;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.StackLayout PickerTimeRepeatLayout;
@@ -89,6 +92,7 @@ namespace CosmicWatch {
             elapsedDisplay = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "elapsedDisplay");
             muonCountsDisplay = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "muonCountsDisplay");
             muonsPerMinuteDisplay = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "muonsPerMinuteDisplay");
+            TimeEntryRow = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Grid>(this, "TimeEntryRow");
             PickerTimeLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "PickerTimeLayout");
             recordingTimeHoursPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "recordingTimeHoursPicker");
             recordingTimeMinutesPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "recordingTimeMinutesPicker");
@@ -96,7 +100,7 @@ namespace CosmicWatch {
             EntryTimeLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "EntryTimeLayout");
             recordingTimeEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "recordingTimeEntry");
             recordButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "recordButton");
-            RecordingRepeatMenu = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "RecordingRepeatMenu");
+            RepetitionDelayRow = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Grid>(this, "RepetitionDelayRow");
             PickerTimeRepeatLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "PickerTimeRepeatLayout");
             recordingTimeHoursRepeatPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "recordingTimeHoursRepeatPicker");
             recordingTimeMinutesRepeatPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "recordingTimeMinutesRepeatPicker");

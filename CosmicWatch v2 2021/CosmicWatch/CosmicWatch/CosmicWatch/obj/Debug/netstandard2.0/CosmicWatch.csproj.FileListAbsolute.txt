@@ -11,7 +11,6 @@ D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandar
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\DataAnalysisPage.xaml.g.cs
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\OptionsPage.xaml.g.cs
-D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\Windows.Foundation.FoundationContract.winmd
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.csproj.CopyComplete
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch_Library.dll
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\CosmicWatch_Library.pdb

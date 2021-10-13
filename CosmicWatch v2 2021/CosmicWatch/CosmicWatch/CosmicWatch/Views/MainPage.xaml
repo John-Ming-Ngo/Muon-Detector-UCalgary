@@ -110,22 +110,34 @@
             <Frame BackgroundColor="{StaticResource BackgroundSecondary}">
                 <StackLayout
                     Orientation="Vertical">
-                    <!-- Stack Layout: Data Recording Toolbar Options -->
-                    <StackLayout 
-                        Orientation="Horizontal">
+                    <!-- First Row: Time Entry and Recording Start -->
+                    <Grid
+                        x:Name="TimeEntryRow"
+                        VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Two Columns -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
 
                         <!-- Pickers: Seconds Time Entry -->
                         <StackLayout 
+                            Grid.Row="0"
+                            Grid.Column="0"
                             x:Name="PickerTimeLayout"
                             Orientation="Horizontal"
-                            HorizontalOptions="FillAndExpand" 
-                            IsVisible="False">
+                            HorizontalOptions="FillAndExpand">
 
                             <Picker
                                 x:Name="recordingTimeHoursPicker"
                                 Title="Hours"
                                 FontSize="14"
-                                HorizontalOptions="FillAndExpand" />
+                                HorizontalOptions="FillAndExpand"
+                                />
                             <Picker
                                 x:Name="recordingTimeMinutesPicker"
                                 Title="Minutes"
@@ -140,11 +152,12 @@
 
                         <!-- Entry: Seconds Time Entry -->
                         <StackLayout
+                            Grid.Row="0"
+                            Grid.Column="0"
                             x:Name="EntryTimeLayout"
                             Orientation="Horizontal"
-                            HorizontalOptions="FillAndExpand" 
-                            IsVisible="True">
-                            
+                            HorizontalOptions="FillAndExpand">
+
                             <Entry x:Name="recordingTimeEntry" 
                                 Placeholder="Record For (seconds)" 
                                 Keyboard="Numeric" 
@@ -158,27 +171,44 @@
                         </StackLayout>
 
                         <!-- Button: Start Recording -->
-                        <Button x:Name="recordButton" 
+                        <Button 
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            x:Name="recordButton" 
                             Text="Start Recording" 
                             Padding="10" 
                             CornerRadius="20" 
                             HorizontalOptions="FillAndExpand" 
                             Clicked="OnRecord"/>
-                    </StackLayout>
-                    <StackLayout
-                        x:Name="RecordingRepeatMenu"
-                        Orientation="Horizontal"
-                        IsVisible="False">
+                    </Grid>
+                    <!-- == Second Row: Label and Repetition Time Delay == -->
+                    <Grid
+                        x:Name="RepetitionDelayRow"
+                        VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Two Columns -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <!-- Label: Recording After (Explaining the Purpose of Later Buttons) -->
                         <Label
-                            Text="Repeat in:"
-                            FontSize="14"
-                            HorizontalOptions="FillAndExpand" 
-                            Padding="10"/>
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Padding="10"
+                            Text="Repeat After:"
+                            FontSize="16"
+                            HorizontalOptions="FillAndExpand" />
+
                         <StackLayout 
+                            Grid.Row="0"
+                            Grid.Column="1"
                             x:Name="PickerTimeRepeatLayout"
                             Orientation="Horizontal"
-                            HorizontalOptions="FillAndExpand" 
-                            IsVisible="False">
+                            HorizontalOptions="FillAndExpand">
                             <Picker
                                 x:Name="recordingTimeHoursRepeatPicker"
                                 Title="Hours"
@@ -197,24 +227,27 @@
                         </StackLayout>
 
                         <StackLayout
+                            Grid.Row="0"
+                            Grid.Column="1"
                             x:Name="EntryTimeRepeatLayout"
                             Orientation="Horizontal"
-                            HorizontalOptions="FillAndExpand" 
-                            IsVisible="True">
+                            HorizontalOptions="FillAndExpand">
                             <!-- Entry: Seconds Time Repeat Entry -->
-                            <Entry x:Name="recordingTimeRepeatEntry" 
-                                Placeholder="Record For (seconds)" 
+                            <Entry 
+                                x:Name="recordingTimeRepeatEntry" 
+                                Placeholder="Repeat in: (Seconds)" 
                                 Keyboard="Numeric" 
                                 ClearButtonVisibility="WhileEditing" 
-                                TextChanged="OnRecordingLengthEntry" 
-                                Completed="OnRecordingLengthEntry" 
+                                TextChanged="OnRepeatLengthEntry" 
+                                Completed="OnRepeatLengthEntry" 
                                 TextColor="{StaticResource TextColour}" 
                                 BackgroundColor="{StaticResource BackgroundSecondary}" 
                                 HorizontalOptions="FillAndExpand" 
                                 PlaceholderColor="{StaticResource TextColour}"/>
                         </StackLayout>
-                    </StackLayout>
+                    </Grid>
                 </StackLayout>
+                
             </Frame>
 
             <!--Label: Status Display -->
@@ -223,39 +256,45 @@
         </StackLayout>
 
         <!-- Stack Layout: Bottom Bar Screen Options -->
-        <StackLayout BackgroundColor="{StaticResource BarColour}" 
-                     Orientation="Horizontal" 
-                     VerticalOptions="End">
+        <StackLayout 
+            BackgroundColor="{StaticResource BarColour}" 
+            Orientation="Horizontal" 
+            VerticalOptions="End">
             
             <!-- Picker: Supported Devices -->
-            <Picker x:Name="supportedDevices" 
-                    FontSize = "14" 
-                    Title="Supported Devices"/>
+            <Picker 
+                x:Name="supportedDevices" 
+                FontSize = "14" 
+                Title="Supported Devices"/>
             
             <!-- Stack Layout: Connection Status Vertical Display -->
-            <StackLayout Orientation="Vertical" 
-                         HorizontalOptions="FillAndExpand">
+            <StackLayout 
+                Orientation="Vertical" 
+                HorizontalOptions="FillAndExpand">
                 
                 <!-- Label: Connection Status Title -->
-                <Label Text="Connection Status: " 
-                       FontSize = "14" 
-                       HorizontalTextAlignment="Center" 
-                       HorizontalOptions="FillAndExpand"/>
+                <Label 
+                    Text="Connection Status: " 
+                    FontSize = "14" 
+                    HorizontalTextAlignment="Center" 
+                    HorizontalOptions="FillAndExpand"/>
                 
                 <!-- Label: Connection Status Display -->
-                <Label x:Name = "ConnectionLabel" 
-                       Text="Not Connected" 
-                       FontSize = "14" 
-                       HorizontalTextAlignment="Center" 
-                       HorizontalOptions="FillAndExpand"/>
+                <Label 
+                    x:Name = "ConnectionLabel" 
+                    Text="Not Connected" 
+                    FontSize = "14" 
+                    HorizontalTextAlignment="Center" 
+                    HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             
             <!-- Button: Initiate Connection -->
-            <Button x:Name="connectionButton" 
-                    Text="Connect to Device"
-                    CornerRadius="20" 
-                    HorizontalOptions="CenterAndExpand" 
-                    Clicked="OnConnect"/>
+            <Button 
+                x:Name="connectionButton" 
+                Text="Connect to Device"
+                CornerRadius="20" 
+                HorizontalOptions="CenterAndExpand" 
+                Clicked="OnConnect"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

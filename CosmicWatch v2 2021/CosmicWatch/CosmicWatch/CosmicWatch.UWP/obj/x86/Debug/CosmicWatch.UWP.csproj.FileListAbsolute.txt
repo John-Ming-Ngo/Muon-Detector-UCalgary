@@ -128,3 +128,4 @@ C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWat
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885526160000000.json
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\CosmicWatch.UWP.csproj.AssemblyReference.cache
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\CosmicWatch.UWP.csproj.AssemblyReference.cache
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637425031200000000.json

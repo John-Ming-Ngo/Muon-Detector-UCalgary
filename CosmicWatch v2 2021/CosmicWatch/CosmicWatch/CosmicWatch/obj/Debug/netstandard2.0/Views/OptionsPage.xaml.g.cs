@@ -17,16 +17,20 @@ namespace CosmicWatch.Views {
     public partial class OptionsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Picker TESTPICKER;
+        private global::Xamarin.Forms.Picker TimeEntryFormatPicker;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::System.Array TESTPICKERLIST;
+        private global::Xamarin.Forms.CheckBox RecordingRepeatCheckbox;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Button RefreshMainPageButton;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(OptionsPage));
-            TESTPICKER = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "TESTPICKER");
-            TESTPICKERLIST = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::System.Array>(this, "TESTPICKERLIST");
+            TimeEntryFormatPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "TimeEntryFormatPicker");
+            RecordingRepeatCheckbox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "RecordingRepeatCheckbox");
+            RefreshMainPageButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "RefreshMainPageButton");
         }
     }
 }

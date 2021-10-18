@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L0oGAcPZJEquTuz2JRsn/CiuPZWJp18VYFF5AKjbN8yzDg+6zM1tRQkF3yCfmd9PoIG+1Bhce+d19bQ9vBRZfQ==",
+  "dgSpecHash": "zDE1T5+9SoywSOWN/Rbf1Z6FQFAyexAlIGjKIEw0mZxYqaPZFTNDtLXx8c0gurnAoewWsrFSFRHf/5oXzdZYaA==",
   "success": true,
   "projectFilePath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.UWP\\CosmicWatch.UWP.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\\2.2.12\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\\6.2.12\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.12.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\win2d.uwp\\1.20.0\\win2d.uwp.1.20.0.nupkg.sha512",
+    "C:\\Users\\john-\\.nuget\\packages\\xam.plugins.settings\\3.1.1\\xam.plugins.settings.3.1.1.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\xamarin.forms\\5.0.0.2083\\xamarin.forms.5.0.0.2083.nupkg.sha512"
   ],

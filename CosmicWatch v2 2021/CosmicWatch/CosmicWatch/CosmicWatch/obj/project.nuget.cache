@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QpAIBNHwQJHMHS15cDvc3gtJaN5fDgP8ZXhnMaHXuP/k2OqfX6Qj4eRGBft1PtkJr/fzFAI+6VEwh6B2J+LJtQ==",
+  "dgSpecHash": "9tfKPgYU1b/ZSrvueHiUTpbS0+HDCUO6VJEpH9TWcfNLg0X1G3Bed7NrUJ382KCQZwjdETwIAiFck8RZYwzbTw==",
   "success": true,
   "projectFilePath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch\\CosmicWatch.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\john-\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\john-\\.nuget\\packages\\xam.plugins.settings\\3.1.1\\xam.plugins.settings.3.1.1.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\xamarin.forms\\5.0.0.2083\\xamarin.forms.5.0.0.2083.nupkg.sha512"
   ],

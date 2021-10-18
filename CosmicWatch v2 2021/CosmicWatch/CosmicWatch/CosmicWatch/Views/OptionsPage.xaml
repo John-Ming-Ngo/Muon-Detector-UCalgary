@@ -3,52 +3,110 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CosmicWatch.Views.OptionsPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Options"
+        <ScrollView>
+            <StackLayout
+            Orientation="Vertical">
+                <Frame
+                BackgroundColor = "{StaticResource BackgroundQuatrinary}"
+                Padding="10"
+                CornerRadius="10">
+                    <Label Text="Options"
                    VerticalOptions="Start" 
                    HorizontalOptions="CenterAndExpand"
                    TextColor="White"
                    FontSize="24"
-                   BackgroundColor = "{StaticResource BackgroundQuatrinary}"
-                   Padding="10"
                  />
-            <!-- Grid: Options -->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <!-- Left Column - Options -->
-                <StackLayout Orientation="Vertical" Grid.Column="0">
-                    <Label Text="Option 1" HorizontalOptions="StartAndExpand" Padding="10" BackgroundColor="{StaticResource BarColour}"/>
-                    <Label Text="Option 2" HorizontalOptions="StartAndExpand" Padding="10" BackgroundColor="{StaticResource BarColour}"/>
-                    <Label Text="Option 3" HorizontalOptions="StartAndExpand" Padding="10" BackgroundColor="{StaticResource BarColour}"/>
-                </StackLayout>
-                <!-- Right Column - Buttons and Dials -->
-                <StackLayout Orientation="Vertical" Grid.Column="1">
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                        <CheckBox HorizontalOptions="CenterAndExpand"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                        <CheckBox HorizontalOptions="CenterAndExpand"/>
-                        <CheckBox HorizontalOptions="CenterAndExpand"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                        <Picker x:Name="TESTPICKER"
-                        Title="TESTPICKER"
-                        TitleColor="{StaticResource TextColour}">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}" x:Name="TESTPICKERLIST">
-                                    <x:String>ROBBER</x:String>
-                                    <x:String>ROBBER</x:String>
-                                    <x:String>ROBBER</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                    </StackLayout>
-                </StackLayout>
-            </Grid>
+                </Frame>
 
-        </StackLayout>
+                <Frame
+                BackgroundColor = "{StaticResource BackgroundTertiary}"
+                Padding="5"
+                CornerRadius="10">
+                    <Label Text="Main Screen Options (Takes Effect after App Restart)"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   FontSize="20"
+                 />
+                </Frame>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Two Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Padding="10"
+                    Text="Time Entry Format:"
+                    HorizontalOptions="FillAndExpand" />
+
+                    <Picker
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="TimeEntryFormatPicker"
+                    SelectedIndexChanged="OnTimeEntryFormatPickerChanged"/>
+
+                </Grid>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Two Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Padding="10"
+                    Text="Repeat Recordings:"
+                    HorizontalOptions="FillAndExpand" />
+                    <CheckBox
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="RecordingRepeatCheckbox"
+                    CheckedChanged="OnRecordingRepeatCheckboxChanged"/>
+
+                </Grid>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Two Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Padding="10"
+                    Text="Refresh Immediately:"
+                    HorizontalOptions="FillAndExpand" />
+                    <Button
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="RefreshMainPageButton"
+                    Text="Refresh"
+                    Clicked="OnRefreshMainPageButton"
+                    CornerRadius="10"/>
+
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+        
+        
     </ContentPage.Content>
 </ContentPage>

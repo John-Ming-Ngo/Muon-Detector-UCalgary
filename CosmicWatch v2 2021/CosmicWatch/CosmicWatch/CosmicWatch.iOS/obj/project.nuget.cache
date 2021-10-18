@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5JF0AumHaYb+6NtoVbZUIjzvAS5IP2koj8oplKeT9TafLgnfQ5wLP5rvP17R+2u1kgUemIgeA9bhGaERoVlHBg==",
+  "dgSpecHash": "pXwl8L3zGI6VQAdGzi4evgfhQil1xF0EltmR4Au7cUCgshJ7enKjYeM1snVrzzJ0xwovwGs4FrmYeZz1nyeuvQ==",
   "success": true,
   "projectFilePath": "D:\\VisualStudioProjects\\CosmicWatch\\CosmicWatch\\CosmicWatch.iOS\\CosmicWatch.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\john-\\.nuget\\packages\\chart.js\\2.9.3\\chart.js.2.9.3.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\john-\\.nuget\\packages\\xam.plugins.settings\\3.1.1\\xam.plugins.settings.3.1.1.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\john-\\.nuget\\packages\\xamarin.forms\\5.0.0.2083\\xamarin.forms.5.0.0.2083.nupkg.sha512"
   ],

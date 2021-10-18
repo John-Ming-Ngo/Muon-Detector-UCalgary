@@ -59,7 +59,6 @@ D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\qu
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\ProjectArchitectures.txt
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160967180000000.json
-D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885526160000000.json
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\CosmicWatch_Library.dll
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\CosmicWatch_Library.pdb
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml
@@ -129,3 +128,8 @@ C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWat
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\CosmicWatch.UWP.csproj.AssemblyReference.cache
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\CosmicWatch.UWP.csproj.AssemblyReference.cache
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637425031200000000.json
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Plugin.Settings.Abstractions.dll
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Plugin.Settings.Abstractions.pdb
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Plugin.Settings.dll
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Plugin.Settings.pdb
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\Plugin.Settings.pri.xml

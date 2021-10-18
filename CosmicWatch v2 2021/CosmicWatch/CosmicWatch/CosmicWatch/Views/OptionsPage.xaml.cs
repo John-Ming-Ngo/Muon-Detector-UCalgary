@@ -12,10 +12,34 @@ namespace CosmicWatch.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OptionsPage : ContentPage
     {
-        public OptionsPage()
+        Action UpdateMainPage;
+        public OptionsPage(Action UpdateMainPage)
         {
             InitializeComponent();
+            InitializeUserSettings();
+
+            this.UpdateMainPage += UpdateMainPage;
         }
-        // Want to display this: FileSystem.AppDataDirectory
+        private void InitializeUserSettings()
+        {
+            TimeEntryFormatPicker.ItemsSource = Enum.GetValues(typeof(MainPage.NumberEntryFormat)).Cast<MainPage.NumberEntryFormat>().ToList();
+            TimeEntryFormatPicker.SelectedIndex = TimeEntryFormatPicker.Items.IndexOf(UserSettings.NumberEntryFormat);
+            RecordingRepeatCheckbox.IsChecked = UserSettings.IsRepeating;
+        }
+
+        private void OnTimeEntryFormatPickerChanged(object sender, EventArgs e)
+        {
+            UserSettings.NumberEntryFormat = TimeEntryFormatPicker.Items[TimeEntryFormatPicker.SelectedIndex];
+        }
+
+        private void OnRecordingRepeatCheckboxChanged(object sender, CheckedChangedEventArgs e)
+        {
+            UserSettings.IsRepeating = RecordingRepeatCheckbox.IsChecked;
+        }
+
+        private void OnRefreshMainPageButton(object sender, EventArgs e)
+        {
+            UpdateMainPage?.Invoke();
+        }
     }
 }

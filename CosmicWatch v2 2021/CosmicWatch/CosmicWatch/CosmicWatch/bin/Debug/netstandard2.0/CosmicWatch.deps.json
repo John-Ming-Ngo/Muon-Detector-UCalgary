@@ -11,9 +11,9 @@
         "dependencies": {
           "CosmicWatch_Library": "1.0.0",
           "NETStandard.Library": "2.0.3",
+          "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2083",
-          "Windows.Foundation.FoundationContract": "3.0.0.0"
+          "Xamarin.Forms": "5.0.0.2083"
         },
         "runtime": {
           "CosmicWatch.dll": {}
@@ -31,6 +31,21 @@
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {
             "assemblyVersion": "4.1.4.0",
             "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Xam.Plugins.Settings/3.1.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Settings.Abstractions.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.1.1.0"
+          },
+          "lib/netstandard1.0/Plugin.Settings.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.1.1.0"
           }
         }
       },
@@ -70,14 +85,6 @@
         "runtime": {
           "CosmicWatch_Library.dll": {}
         }
-      },
-      "Windows.Foundation.FoundationContract/3.0.0.0": {
-        "runtime": {
-          "Windows.Foundation.FoundationContract.winmd": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "10.0.18362.1"
-          }
-        }
       }
     }
   },
@@ -115,6 +122,13 @@
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
+    "Xam.Plugins.Settings/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EQEYQJ64ZLqui5GWkLMavgqitHxwUHZHryTzUD1021UBuz1XwDSjPL45W0K4pPXjz9oKbg7YpRXKPR1luPr/5Q==",
+      "path": "xam.plugins.settings/3.1.1",
+      "hashPath": "xam.plugins.settings.3.1.1.nupkg.sha512"
+    },
     "Xamarin.Essentials/1.7.0": {
       "type": "package",
       "serviceable": true,
@@ -131,11 +145,6 @@
     },
     "CosmicWatch_Library/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Windows.Foundation.FoundationContract/3.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

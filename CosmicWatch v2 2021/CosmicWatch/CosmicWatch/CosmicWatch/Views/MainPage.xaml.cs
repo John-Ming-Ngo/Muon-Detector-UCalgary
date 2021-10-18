@@ -71,17 +71,26 @@ namespace CosmicWatch
             
             //Initializations
             InitializeComponent();
-
-            InitiateTimeInputFormat();
-            InitiateTimePickers();
-            InitiateDelayMenu();
+            InitializeUI();
 
             //Establish the Page Model
             PageModel = new MainPageModel(UpdateMuonDisplay, UpdateMuonsPerMinuteDisplay, UpdateConnectedDisplay, UpdateTimeDisplay, UpdateElapsedDisplay, UpdateDeviceList, UpdateStatusMessage, EndRecording);
         }
+        //[Page initialization and refreshing]
+        private void InitializeUI()
+        {
+            InitializeUserSettings();
+
+            InitiateTimeInputFormat();
+            InitiateTimePickers();
+            InitiateDelayMenu();
+        }
+
+
         //[Menu Bar Buttons]
         private void OnOptions(object sender, EventArgs e) {
-            Navigation.PushAsync(new OptionsPage());
+            InitializeUI();
+            Navigation.PushAsync(new OptionsPage(InitializeUI));
         }
         private void OnDataAnalysis(object sender, EventArgs e) {
             Navigation.PushAsync(new DisplayAnalysisPage());
@@ -110,15 +119,30 @@ namespace CosmicWatch
         }
 
         //[Center Options: Recording Length]
-        private bool isPickerFormat;
+        public enum NumberEntryFormat
+        {
+            TextEntry,
+            Picker
+        }
+
+        private NumberEntryFormat EntryFormat;
+
+        private void InitializeUserSettings()
+        {
+            if (!Enum.TryParse(UserSettings.NumberEntryFormat, out EntryFormat))
+            {
+                EntryFormat = NumberEntryFormat.TextEntry;
+            }
+            isDelayRepeating = UserSettings.IsRepeating;
+        }
 
         private void InitiateTimeInputFormat()
         {
-            EntryTimeLayout.IsVisible = !isPickerFormat;
-            PickerTimeLayout.IsVisible = isPickerFormat;
+            EntryTimeLayout.IsVisible = EntryFormat == NumberEntryFormat.TextEntry;
+            PickerTimeLayout.IsVisible = EntryFormat == NumberEntryFormat.Picker;
 
-            EntryTimeRepeatLayout.IsVisible = !isPickerFormat;
-            PickerTimeRepeatLayout.IsVisible = isPickerFormat;
+            EntryTimeRepeatLayout.IsVisible = EntryFormat == NumberEntryFormat.TextEntry;
+            PickerTimeRepeatLayout.IsVisible = EntryFormat == NumberEntryFormat.Picker;
         }
 
         private void InitiateTimePickers()
@@ -143,7 +167,7 @@ namespace CosmicWatch
             recordingTimeSecondsRepeatPicker.SelectedIndex = 0;
         }
 
-        public void OnRecordingLengthEntry(object sender, EventArgs e)
+        private void OnRecordingLengthEntry(object sender, EventArgs e)
         {
             Entry recordLengthBox = (Entry)sender;
             String recordLength = recordLengthBox.Text;
@@ -185,12 +209,30 @@ namespace CosmicWatch
             long Seconds = PickerHours * MinPerHour * SecPerMin + PickerMinutes * SecPerMin + PickerSeconds;
             return Seconds;
         }
+        
+        private long GetRecordTime()
+        {
+            long Seconds = 0;
+
+            switch (EntryFormat)
+            {
+                case NumberEntryFormat.Picker:
+                    Seconds = ParsePickerTimeSelection();
+                    break;
+                case NumberEntryFormat.TextEntry:
+                    Seconds = ParseEntryTimeSelection();
+                    break;
+            }
+
+            return Seconds;
+        }
 
         private void BeginRecording()
         {
             RestartRecording = null;
 
-            long Seconds = isPickerFormat ? ParsePickerTimeSelection() : ParseEntryTimeSelection();
+            long Seconds = GetRecordTime();
+
             if (Seconds <= 0)
             {
                 UpdateStatusMessage(BeginRecordZeroOrLess);
@@ -202,7 +244,6 @@ namespace CosmicWatch
             else
             {
                 UpdateStatusMessage(String.Empty);
-                recordingTimeEntry.IsEnabled = false;
                 recordButton.Text = BeginRecordButtonSuccess;
 
                 //Start the Recording
@@ -212,7 +253,7 @@ namespace CosmicWatch
 
         //[Center - Repeat Delay Options]
 
-        private bool isDelayRepeating = true;
+        private bool isDelayRepeating;
 
         private void InitiateDelayMenu()
         {
@@ -261,15 +302,26 @@ namespace CosmicWatch
 
         private long GetRepeatDelay()
         {
-            long Seconds = isPickerFormat ? ParsePickerTimeRepeatSelection() : ParseEntryTimeRepeatSelection();
+            long Seconds = 0;
+
+            switch (EntryFormat)
+            {
+                case NumberEntryFormat.Picker:
+                    Seconds = ParsePickerTimeRepeatSelection();
+                    break;
+                case NumberEntryFormat.TextEntry:
+                    Seconds = ParseEntryTimeRepeatSelection();
+                    break;
+            }
             return Seconds;
         }
-        //[TODO: I hate this implementation. Needs something smarter.]
+
         private DelayedEvent RestartRecording;
 
-        private async void BeginDelayedRecording()
+        private void BeginDelayedRecording()
         {
-            RestartRecording = new DelayedEvent(GetRepeatDelay() * MillsPerSec, (() => {
+            RestartRecording = new DelayedEvent(GetRepeatDelay() * MillsPerSec, (() =>
+            {
                 if (!PageModel.recording) BeginRecording();
             }));
         }
@@ -299,7 +351,6 @@ namespace CosmicWatch
                 RestartRecording.Terminate();
                 RestartRecording = null;
 
-                recordingTimeEntry.IsEnabled = true;
                 recordButton.Text = EndRecordButtonSuccess;
             }
             else if (!PageModel.recording)

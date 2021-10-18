@@ -1,68 +1,6 @@
 ﻿Current Priorities:
-	Main page: Different menu and recording types: Timepicker vs typing in number / repeat after time vs no repetition.
-		Comment on current implementation and REFACTOR IT.
-
-		Config file to toggle which is active and which is not.
-
-	Options page: Different menu and recording types.
-		UI
-		Functions connected to the UI.
-		Config file modifying.
-
 	Brush up on the format and appearance of the explaination pages. 
 	
 	Implement Upload to Google Drive
 		==> Looks much, much harder than I thought. Darn.
 		==> Consider using Javascript? Maybe.
-
-
-Priorities:
-	Issues:
-		1. UWP: Dispose/reconnect delay issue.
-			The issue is that the first loadAsync is slow. There does not appear to be any other way around this.
-
-	Upgrades:
-		1. Options Page:
-			a. Colours?
-			b. Languages?
-			c. Inside Outside Selector?
-			d. Save/no save data
-			e. Simulate with fake device?
-
-		2. Main Page:
-			a. Different recording types? Ex. repeated recordings over X period of time.
-			b. Time input as time picker or preset intervals?
-
-		3. Charting Page:
-			a. Data comparison? One data set against another?
-
-		4. Muon Record:
-			a. More data:
-				i. Geolocation string data.
-				ii. Computer time data.
-				iii. Current rate data?
-
-		5. GeolocationString:
-			a. Reverse Geocoding?
-				i. Last attempt, was undead demon of a problem. Issue is that need costly API, so sucks.
-
-		6. ChartCreator:
-			a. Consider line of best fit plugin: https://github.com/datavisyn/chartjs-plugin-error-bars
-
-		7. UseGuidePage: Fill in the subpages
-			a. What this app is.
-			b. How to use it.
-			c. How to build the device this app uses/find the documentation on it.
-			d. Youtube video showing how to make it work?
-
-		8. CreditsPage:
-			a. Libraries used and code credits.
-			b. UCalgary credits and to profs.
-			c. Myself.
-
-	Cleanup/Refactor:
-		1. Remove magic numbers/strings; extract them into meaningful variables.
-		2. Avoid using my own close function, implement IDispose instead, for library items:
-			a. ReadFromFile
-			b. SaveToFile
-		3. ChartCreator: Figure out a better way to implement the strings?

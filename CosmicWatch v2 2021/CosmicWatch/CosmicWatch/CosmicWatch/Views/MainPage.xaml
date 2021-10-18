@@ -11,22 +11,26 @@
                      Order="Primary" 
                      Text="Options" 
                      Priority="0" 
-                     Clicked = "OnOptions"/>
+                     Clicked = "OnOptions"
+                     IconImageSource=""/>
         <ToolbarItem Name="Data Analysis" 
                      Order="Primary" 
                      Text="Data Analysis" 
                      Priority="1" 
-                     Clicked = "OnDataAnalysis"/>
+                     Clicked = "OnDataAnalysis"
+                     IconImageSource=""/>
         <ToolbarItem Name="Usage Guide" 
-                     Order="Primary" 
+                     Order="Secondary" 
                      Text="Usage Guide" 
                      Priority="2" 
-                     Clicked = "OnUsageGuide"/>
+                     Clicked = "OnUsageGuide"
+                     IconImageSource=""/>
         <ToolbarItem Name="Credits" 
-                     Order="Primary" 
+                     Order="Secondary" 
                      Text="Credits" 
                      Priority="3" 
-                     Clicked = "OnCredits"/>
+                     Clicked = "OnCredits"
+                     IconImageSource=""/>
     </ContentPage.ToolbarItems>
     
     <!-- Stack Layout: Main Display/Content -->

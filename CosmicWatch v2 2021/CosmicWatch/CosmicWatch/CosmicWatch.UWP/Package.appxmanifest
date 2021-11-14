@@ -9,7 +9,7 @@
   <Identity
     Name="b0c704da-8932-48eb-9d48-719b45cebf63"
     Publisher="CN=DarkwarriorJ"
-    Version="1.0.0.0" />
+    Version="1.0.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

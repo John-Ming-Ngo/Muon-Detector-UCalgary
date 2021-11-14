@@ -133,3 +133,4 @@ D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Pl
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Plugin.Settings.dll
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Plugin.Settings.pdb
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\obj\x86\Debug\Plugin.Settings.pri.xml
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch.UWP\bin\x86\Debug\Core\ForBundle\AppxManifest.xml

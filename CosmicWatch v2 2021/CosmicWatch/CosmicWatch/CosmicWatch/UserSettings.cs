@@ -4,11 +4,7 @@ using System;
 
 namespace CosmicWatch
 {
-    /// <summary>   
-    /// This is the Settings static class that can be used in your Core solution or in any   
-    /// of your client applications. All settings are laid out the same exact way with getters   
-    /// and setters.     
-    /// </summary>   
+    //Credits to the UserSettings sample class from https://docs.microsoft.com/en-us/xamarin/xamarin-forms/enterprise-application-patterns/configuration-management .
     public static class UserSettings
     {
         static ISettings AppSettings
@@ -29,6 +25,13 @@ namespace CosmicWatch
         {
             get => AppSettings.GetValueOrDefault(nameof(IsRepeating), false);
             set => AppSettings.AddOrUpdateValue(nameof(IsRepeating), value);
+        }
+
+        //[Main Page Model]
+        public static bool IsFakeRecording
+        {
+            get => AppSettings.GetValueOrDefault(nameof(IsFakeRecording), true);
+            set => AppSettings.AddOrUpdateValue(nameof(IsFakeRecording), value);
         }
 
         public static void ClearAllData()

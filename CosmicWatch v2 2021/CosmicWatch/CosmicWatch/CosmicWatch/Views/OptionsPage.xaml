@@ -10,7 +10,7 @@
                 BackgroundColor = "{StaticResource BackgroundQuatrinary}"
                 Padding="10"
                 CornerRadius="10">
-                    <Label Text="Options"
+                    <Label Text="Options (Takes Effect after App Restart)"
                    VerticalOptions="Start" 
                    HorizontalOptions="CenterAndExpand"
                    TextColor="White"
@@ -22,7 +22,7 @@
                 BackgroundColor = "{StaticResource BackgroundTertiary}"
                 Padding="5"
                 CornerRadius="10">
-                    <Label Text="Main Screen Options (Takes Effect after App Restart)"
+                    <Label Text="Main Screen Options"
                    VerticalOptions="Start" 
                    HorizontalOptions="CenterAndExpand"
                    TextColor="White"
@@ -102,6 +102,42 @@
                     Text="Refresh"
                     Clicked="OnRefreshMainPageButton"
                     CornerRadius="10"/>
+
+                </Grid>
+                
+                <Frame
+                BackgroundColor = "{StaticResource BackgroundTertiary}"
+                Padding="5"
+                CornerRadius="10">
+                    <Label Text="Fake Recording Options"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   FontSize="20"
+                 />
+                </Frame>
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Two Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Padding="10"
+                    Text="Fake Recordings:"
+                    HorizontalOptions="FillAndExpand" />
+                    <CheckBox
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="FakeRecordingCheckbox"
+                    CheckedChanged="OnFakeRecordingCheckboxChanged"/>
 
                 </Grid>
             </StackLayout>

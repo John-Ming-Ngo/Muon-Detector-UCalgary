@@ -1,6 +1,5 @@
 ﻿Current Priorities:
 	Brush up on the format and appearance of the explaination pages. 
-	
-	Implement Upload to Google Drive
-		==> Looks much, much harder than I thought. Darn.
-		==> Consider using Javascript? Maybe.
+
+	Maybe consider using an ASP.Net server and having users upload their data to our server? Maybe.
+	https://www.youtube.com/watch?v=KPDGtLeNClQ

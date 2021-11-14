@@ -155,7 +155,7 @@ namespace CosmicWatch.UWP
         }
 
         //Methods to execute when a device has been detected added or removed.
-        async void UpdateDeviceChoices()
+        public async void UpdateDeviceChoices()
         {
             DeviceInformationCollection serialDeviceInfos = await DeviceInformation.FindAllAsync(SerialDevice.GetDeviceSelector());
             List<String> SelectionChoices = new List<String>();
@@ -165,7 +165,7 @@ namespace CosmicWatch.UWP
             }
             UpdateSupportedDevices(SelectionChoices);
         }
-        async void StopWatcher(object sender, RoutedEventArgs eventArgs)
+        public async void StopWatcher(object sender, RoutedEventArgs eventArgs)
         {
             try
             {
@@ -184,7 +184,7 @@ namespace CosmicWatch.UWP
             }
         }
 
-        async void WatchDevicesAdded(DeviceWatcher sender, DeviceInformation deviceInterface)
+        public async void WatchDevicesAdded(DeviceWatcher sender, DeviceInformation deviceInterface)
         {
             //UpdateStatus("Attempted to add devices.");
             /**
@@ -198,7 +198,7 @@ namespace CosmicWatch.UWP
             */
         }
 
-        async void WatchDevicesUpdated(DeviceWatcher sender, DeviceInformationUpdate devUpdate)
+        public async void WatchDevicesUpdated(DeviceWatcher sender, DeviceInformationUpdate devUpdate)
         {
             //UpdateStatus("Attempted to update devices.");
 
@@ -211,7 +211,7 @@ namespace CosmicWatch.UWP
             UpdateSupportedDevices(SelectionChoices);
         }
 
-        async void WatchDevicesRemoved(DeviceWatcher sender, DeviceInformationUpdate devUpdate)
+        public async void WatchDevicesRemoved(DeviceWatcher sender, DeviceInformationUpdate devUpdate)
         {
             //UpdateStatus("Attempted to remove devices.");
             /**
@@ -226,7 +226,7 @@ namespace CosmicWatch.UWP
 
         }
 
-        async void WatchDevicesEnumerationCompleted(DeviceWatcher sender, object args)
+        public async void WatchDevicesEnumerationCompleted(DeviceWatcher sender, object args)
         {
             DeviceInformationCollection serialDeviceInfos = await DeviceInformation.FindAllAsync(SerialDevice.GetDeviceSelector());
             List<String> SelectionChoices = new List<String>();
@@ -237,7 +237,7 @@ namespace CosmicWatch.UWP
             UpdateSupportedDevices(SelectionChoices);
         }
 
-        async void WatchDevicesStopped(DeviceWatcher sender, object args)
+        public async void WatchDevicesStopped(DeviceWatcher sender, object args)
         {
 
         }

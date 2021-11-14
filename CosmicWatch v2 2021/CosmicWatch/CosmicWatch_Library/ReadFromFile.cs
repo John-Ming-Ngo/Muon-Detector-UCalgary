@@ -35,7 +35,14 @@ namespace CosmicWatch_Library
         public bool Open(String Filename)
         {
             OpenFile = Path.Combine(new string[] { InputDirectory, Filename });
-            ReadFile = new StreamReader(OpenFile);
+            try
+            {
+                ReadFile = new StreamReader(OpenFile);
+            }
+            catch (Exception e)
+            {
+                ReadFile = null;
+            }
             return ReadFile != null;
         }
         public string ReadLine()
@@ -58,6 +65,7 @@ namespace CosmicWatch_Library
         public void DeleteFile()
         {
             ReadFile?.Close();
+            if (!File.Exists(OpenFile)) return;
             File.Delete(OpenFile);
             OpenFile = "";
         }

@@ -113,8 +113,8 @@ namespace CosmicWatch.ViewModels
                 return;
             }
 
-            //Open the selected file.
-            Recordings.Open(filename);
+            //Open the selected file, and return if it doesn't work.
+            if (!Recordings.Open(filename)) return;
 
             //Get the first row of data. In a normal CSV, that contains the labels. We then update the choice of X and Y axis with these labels.
             List<String> labelsList = NextData();

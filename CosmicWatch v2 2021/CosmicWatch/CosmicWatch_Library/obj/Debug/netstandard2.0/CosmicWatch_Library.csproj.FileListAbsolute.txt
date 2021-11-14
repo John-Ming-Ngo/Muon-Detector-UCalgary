@@ -18,3 +18,4 @@ C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWat
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.dll
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.pdb
 C:\Users\john-\OneDrive\Github\MuonDetectorProject\CosmicWatch v2 2021\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.csproj.AssemblyReference.cache
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch_Library\obj\Debug\netstandard2.0\CosmicWatch_Library.csproj.AssemblyReference.cache

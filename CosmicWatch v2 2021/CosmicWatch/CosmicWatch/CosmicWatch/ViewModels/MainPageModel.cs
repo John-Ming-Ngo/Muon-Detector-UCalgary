@@ -86,7 +86,15 @@ namespace CosmicWatch.ViewModels
             this.EndRecording += EndRecording;
             
             //Initiate the platform appropriate implementation of the USB serial connection.
-            USBSerialConnection = DependencyService.Get<IUSBSerialConnection>();
+            if (UserSettings.IsFakeRecording)
+            {
+                USBSerialConnection = new FakeUSBSerialRecording();
+            }
+            else
+            {
+                USBSerialConnection = DependencyService.Get<IUSBSerialConnection>();
+            }
+            
             USBSerialConnection.Initialize(ReceiveData, UpdateStatusMessage, UpdateSupportedDevices, 32);
 
             //Inititalize variables which need an unambiguous initial status.

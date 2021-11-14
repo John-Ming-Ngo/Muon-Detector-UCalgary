@@ -25,6 +25,7 @@ namespace CosmicWatch.Views
             TimeEntryFormatPicker.ItemsSource = Enum.GetValues(typeof(MainPage.NumberEntryFormat)).Cast<MainPage.NumberEntryFormat>().ToList();
             TimeEntryFormatPicker.SelectedIndex = TimeEntryFormatPicker.Items.IndexOf(UserSettings.NumberEntryFormat);
             RecordingRepeatCheckbox.IsChecked = UserSettings.IsRepeating;
+            FakeRecordingCheckbox.IsChecked = UserSettings.IsFakeRecording;
         }
 
         private void OnTimeEntryFormatPickerChanged(object sender, EventArgs e)
@@ -40,6 +41,11 @@ namespace CosmicWatch.Views
         private void OnRefreshMainPageButton(object sender, EventArgs e)
         {
             UpdateMainPage?.Invoke();
+        }
+
+        private void OnFakeRecordingCheckboxChanged(object sender, CheckedChangedEventArgs e)
+        {
+            UserSettings.IsFakeRecording = FakeRecordingCheckbox.IsChecked;
         }
     }
 }

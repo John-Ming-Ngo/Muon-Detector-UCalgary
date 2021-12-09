@@ -51,6 +51,9 @@
 
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="internetClientServer"/>
+    <Capability Name="privateNetworkClientServer"/>
+    <uap:Capability Name="sharedUserCertificates"/>
     <DeviceCapability Name="location"/>
     <DeviceCapability Name="serialcommunication">
     <Device Id="any">

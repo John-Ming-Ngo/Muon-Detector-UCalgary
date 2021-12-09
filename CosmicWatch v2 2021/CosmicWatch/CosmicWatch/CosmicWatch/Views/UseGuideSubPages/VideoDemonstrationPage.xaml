@@ -2,8 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CosmicWatch.Views.UseGuideSubPages.VideoDemonstrationPage">
+    <!-- Content of the Page -->
     <ContentPage.Content>
+        <!-- Scroll View: Allows users to scroll up and down if there's more content. -->
         <ScrollView>
+            <!-- StackLayout: Content displayed in a vertical stack -->
             <StackLayout>
                 <Frame
                     BackgroundColor="{StaticResource BackgroundTertiary}">

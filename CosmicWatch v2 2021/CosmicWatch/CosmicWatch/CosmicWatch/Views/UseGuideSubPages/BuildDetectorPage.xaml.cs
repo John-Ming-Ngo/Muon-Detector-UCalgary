@@ -14,6 +14,7 @@ namespace CosmicWatch.Views.UseGuideSubPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BuildDetectorPage : ContentPage
     {
+        //[Display Variables]
         private String mainText;
         private String MainText
         {
@@ -42,7 +43,7 @@ namespace CosmicWatch.Views.UseGuideSubPages
         public BuildDetectorPage()
         {
             InitializeComponent();
-
+            //[Initialize Page Display Variables]
             MainTitle = AssortedUtil.GetEmbeddedText(typeof(BuildDetectorPage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.BuildDetectorPageText.MainTitle.txt");
             MainText = AssortedUtil.GetEmbeddedText(typeof(BuildDetectorPage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.BuildDetectorPageText.MainText.txt");
         }

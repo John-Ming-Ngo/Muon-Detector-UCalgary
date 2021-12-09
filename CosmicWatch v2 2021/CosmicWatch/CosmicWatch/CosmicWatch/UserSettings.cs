@@ -34,6 +34,25 @@ namespace CosmicWatch
             set => AppSettings.AddOrUpdateValue(nameof(IsFakeRecording), value);
         }
 
+        //[Saving to and Reading From Folder]
+        public static string SaveDataFolder
+        {
+            get => AppSettings.GetValueOrDefault(nameof(SaveDataFolder), "CosmicWatchDetectorData");
+            set => AppSettings.AddOrUpdateValue(nameof(SaveDataFolder), value);
+        }
+
+        public static string UploadDataWebsite
+        {
+            get => AppSettings.GetValueOrDefault(nameof(UploadDataWebsite), "http://localhost:8888/index.html");
+            set => AppSettings.AddOrUpdateValue(nameof(UploadDataWebsite), value);
+        }
+
+        public static string UploadDataKey
+        {
+            get => AppSettings.GetValueOrDefault(nameof(UploadDataKey), "8kBx==!h");
+            set => AppSettings.AddOrUpdateValue(nameof(UploadDataKey), value);
+        }
+
         public static void ClearAllData()
         {
             AppSettings.Clear();

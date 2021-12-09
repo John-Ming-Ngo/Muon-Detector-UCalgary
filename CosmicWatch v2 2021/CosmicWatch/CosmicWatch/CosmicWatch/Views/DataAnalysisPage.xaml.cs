@@ -40,7 +40,7 @@ namespace CosmicWatch.Views
             //Initialize Viewmodel
             pageModel = new DisplayAnalysisPageModel(UpdateDataChoiceDisplay, UpdateGraphChoiceDisplay, UpdateXChoiceDisplay, UpdateYChoiceDisplay, UpdateStatusMessage, UpdateGraphDisplay);
 
-            //Initial Graph Display
+            //Initial Graph Display with example graph.
             UpdateGraphDisplay(
                 ChartCreator.ScatterChartString(
                     new List<double> { 10, 20, 30, 40, 50 }, 
@@ -77,14 +77,19 @@ namespace CosmicWatch.Views
             String selectedY = (String)selector.SelectedItem;
             pageModel.SelectYList(selectedY);
         }
-        //[Upload Functions - TODO, NOT DONE]
+        //[Button Bar Functions]
         private void OnUploadClick(object sender, EventArgs e)
         {
-            //pageModel.Upload(); //NOT IMPLEMENTED
+            String selectedFile = (String)Datasets.SelectedItem;
+            pageModel.Upload(selectedFile);
         }
         private void OnDeleteClick(object sender, EventArgs e)
         {
             pageModel.DeleteData();
+        }
+        private void OnStatusClear(object sender, EventArgs e)
+        {
+            UpdateStatusMessage(String.Empty);
         }
 
         //[Display Update Functions]

@@ -32,11 +32,6 @@ namespace CosmicWatch
         2. By location on the screen (Top first, bottom last)
 
     Any data manipulation is sent to the Viewmodel to handle and return to here.
-
-    ConfigFileStuffToDO:
-    https://www.c-sharpcorner.com/article/learn-about-user-settings-in-xamarin-forms/
-    https://docs.microsoft.com/en-us/xamarin/xamarin-forms/enterprise-application-patterns/configuration-management
-    https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/application-class#properties-dictionary
      */
     public partial class MainPage : ContentPage
     {

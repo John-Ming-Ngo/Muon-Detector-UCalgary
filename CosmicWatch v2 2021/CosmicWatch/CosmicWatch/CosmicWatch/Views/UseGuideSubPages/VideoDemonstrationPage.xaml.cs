@@ -14,6 +14,7 @@ namespace CosmicWatch.Views.UseGuideSubPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VideoDemonstrationPage : ContentPage
     {
+        //[Display Variables]
         private String mainText;
         private String MainText
         {
@@ -42,7 +43,7 @@ namespace CosmicWatch.Views.UseGuideSubPages
         public VideoDemonstrationPage()
         {
             InitializeComponent();
-
+            //[Initialize Page Display Variables]
             MainTitle = AssortedUtil.GetEmbeddedText(typeof(VideoDemonstrationPage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.VideoDemonstrationPageText.MainTitle.txt");
             MainText = AssortedUtil.GetEmbeddedText(typeof(VideoDemonstrationPage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.VideoDemonstrationPageText.MainText.txt");
             

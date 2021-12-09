@@ -9,6 +9,7 @@ using CosmicWatch.Models;
 using CosmicWatch_Library;
 using Xamarin.Essentials;
 using System.Linq;
+using System.IO;
 
 namespace CosmicWatch.ViewModels
 {
@@ -69,7 +70,7 @@ namespace CosmicWatch.ViewModels
             this.UpdateGraphDisplay += UpdateGraphDisplay;
 
             //Initialize models
-            Recordings = new ReadFromFile();
+            Recordings = new ReadFromFile(UserSettings.SaveDataFolder);
 
             //Initialize Data
             UpdateDataChoiceDisplay(new List<String>(Recordings.GetFiles()));
@@ -177,6 +178,23 @@ namespace CosmicWatch.ViewModels
             YList = DataChoices[YLabel];
             //Update the graph
             UpdateGraph();
+        }
+
+        public async void Upload(String fileToUpload)
+        {
+            if ((fileToUpload == String.Empty) || (fileToUpload == null))
+            {
+                UpdateStatusDisplay("Upload Failed - No File Selected!");
+            }
+            else if (await WebServerFileHandler.Post(UserSettings.UploadDataWebsite, Recordings.GetDirectory(), fileToUpload, UserSettings.UploadDataKey))
+            {
+                UpdateStatusDisplay("Upload Succeeded.");
+            }
+            else
+            {
+                UpdateStatusDisplay("Upload Failed - Check the server url in the application options.");
+            }
+
         }
 
         public void DeleteData()

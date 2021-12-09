@@ -14,6 +14,7 @@ namespace CosmicWatch.Views.UseGuideSubPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HowToUsePage : ContentPage
     {
+        //[Display Variables]
         private String mainText;
         private String MainText
         {
@@ -42,7 +43,7 @@ namespace CosmicWatch.Views.UseGuideSubPages
         public HowToUsePage()
         {
             InitializeComponent();
-
+            //[Initialize Page Display Variables]
             MainTitle = AssortedUtil.GetEmbeddedText(typeof(HowToUsePage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.HowToUsePageText.MainTitle.txt");
             MainText = AssortedUtil.GetEmbeddedText(typeof(HowToUsePage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.HowToUsePageText.MainText.txt");
         }

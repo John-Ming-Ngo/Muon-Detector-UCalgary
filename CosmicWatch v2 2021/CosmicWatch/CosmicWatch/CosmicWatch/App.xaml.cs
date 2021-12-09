@@ -9,7 +9,7 @@ namespace CosmicWatch
         public App()
         {
             InitializeComponent();
-
+            //Important: Setting this to NavigationPage to allow for navigation!
             MainPage = new NavigationPage(new MainPage());
         }
 

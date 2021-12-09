@@ -2,34 +2,36 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CosmicWatch.Views.OptionsPage">
+    <!-- Content of the Page -->
     <ContentPage.Content>
+        <!-- Scroll View: Allows users to scroll up and down if there's more content. -->
         <ScrollView>
             <StackLayout
-            Orientation="Vertical">
+                Orientation="Vertical">
                 <Frame
-                BackgroundColor = "{StaticResource BackgroundQuatrinary}"
-                Padding="10"
-                CornerRadius="10">
+                    BackgroundColor = "{StaticResource BackgroundQuatrinary}"
+                    Padding="10"
+                    CornerRadius="10">
                     <Label Text="Options (Takes Effect after App Restart)"
-                   VerticalOptions="Start" 
-                   HorizontalOptions="CenterAndExpand"
-                   TextColor="White"
-                   FontSize="24"
-                 />
+                        VerticalOptions="Start" 
+                        HorizontalOptions="CenterAndExpand"
+                        TextColor="White"
+                        FontSize="24"
+                        />
                 </Frame>
-
+                <!-- Main Screen Options -->
                 <Frame
-                BackgroundColor = "{StaticResource BackgroundTertiary}"
-                Padding="5"
-                CornerRadius="10">
+                    BackgroundColor = "{StaticResource BackgroundTertiary}"
+                    Padding="5"
+                    CornerRadius="10">
                     <Label Text="Main Screen Options"
-                   VerticalOptions="Start" 
-                   HorizontalOptions="CenterAndExpand"
-                   TextColor="White"
-                   FontSize="20"
-                 />
+                        VerticalOptions="Start" 
+                        HorizontalOptions="CenterAndExpand"
+                        TextColor="White"
+                        FontSize="20"
+                    />
                 </Frame>
-
+                <!-- Option: Time Entry Format -->
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -41,20 +43,20 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Padding="10"
-                    Text="Time Entry Format:"
-                    HorizontalOptions="FillAndExpand" />
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="10"
+                        Text="Time Entry Format:"
+                        HorizontalOptions="FillAndExpand" />
 
                     <Picker
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    x:Name="TimeEntryFormatPicker"
-                    SelectedIndexChanged="OnTimeEntryFormatPickerChanged"/>
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        x:Name="TimeEntryFormatPicker"
+                        SelectedIndexChanged="OnTimeEntryFormatPickerChanged"/>
 
                 </Grid>
-
+                <!-- Option: Repeat Recordings -->
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -66,19 +68,19 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Padding="10"
-                    Text="Repeat Recordings:"
-                    HorizontalOptions="FillAndExpand" />
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="10"
+                        Text="Repeat Recordings:"
+                        HorizontalOptions="FillAndExpand" />
                     <CheckBox
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    x:Name="RecordingRepeatCheckbox"
-                    CheckedChanged="OnRecordingRepeatCheckboxChanged"/>
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        x:Name="RecordingRepeatCheckbox"
+                        CheckedChanged="OnRecordingRepeatCheckboxChanged"/>
 
                 </Grid>
-
+                <!-- Option: Refresh Main Screen Immediately -->
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -90,33 +92,33 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Padding="10"
-                    Text="Refresh Immediately:"
-                    HorizontalOptions="FillAndExpand" />
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="10"
+                        Text="Refresh Immediately:"
+                        HorizontalOptions="FillAndExpand" />
                     <Button
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    x:Name="RefreshMainPageButton"
-                    Text="Refresh"
-                    Clicked="OnRefreshMainPageButton"
-                    CornerRadius="10"/>
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        x:Name="RefreshMainPageButton"
+                        Text="Refresh"
+                        Clicked="OnRefreshMainPageButton"
+                        CornerRadius="10"/>
 
                 </Grid>
-                
+                <!-- Fake Recording Options -->
                 <Frame
-                BackgroundColor = "{StaticResource BackgroundTertiary}"
-                Padding="5"
-                CornerRadius="10">
+                    BackgroundColor = "{StaticResource BackgroundTertiary}"
+                    Padding="5"
+                    CornerRadius="10">
                     <Label Text="Fake Recording Options"
-                   VerticalOptions="Start" 
-                   HorizontalOptions="CenterAndExpand"
-                   TextColor="White"
-                   FontSize="20"
-                 />
+                        VerticalOptions="Start" 
+                        HorizontalOptions="CenterAndExpand"
+                        TextColor="White"
+                        FontSize="20"
+                        />
                 </Frame>
-                
+                <!-- Option: Fake Recording Enable/Disable -->
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -128,16 +130,112 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Padding="10"
-                    Text="Fake Recordings:"
-                    HorizontalOptions="FillAndExpand" />
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="10"
+                        Text="Enable Fake Recordings:"
+                        HorizontalOptions="FillAndExpand" />
                     <CheckBox
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    x:Name="FakeRecordingCheckbox"
-                    CheckedChanged="OnFakeRecordingCheckboxChanged"/>
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        x:Name="FakeRecordingCheckbox"
+                        CheckedChanged="OnFakeRecordingCheckboxChanged"/>
+
+                </Grid>
+                <!-- File Saving and Upload Options -->
+                <Frame
+                    BackgroundColor = "{StaticResource BackgroundTertiary}"
+                    Padding="5"
+                    CornerRadius="10">
+                    <Label Text="File Directory and Upload Options"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="CenterAndExpand"
+                        TextColor="White"
+                        FontSize="20"
+                        />
+                </Frame>
+                <!-- Option: Save Data to (Folder) -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Two Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="10"
+                        Text="Save Data to (Folder):"
+                        HorizontalOptions="FillAndExpand" />
+                    <Entry 
+                        x:Name="FolderName"
+                        Placeholder="Folder Name" 
+                        Keyboard="Plain"
+                        ClearButtonVisibility="WhileEditing" 
+                        TextChanged="OnFolderNameEntry" 
+                        Completed="OnFolderNameEntry" 
+                        Grid.Row="0"
+                        Grid.Column="1"/>
+
+                </Grid>
+                <!-- Option: Upload Server URL -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Two Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="10"
+                        Text="Upload Server URL:"
+                        HorizontalOptions="FillAndExpand" />
+                    <Entry 
+                        x:Name="WebServerName"
+                        Placeholder="Upload Server URL" 
+                        Keyboard="Url"
+                        ClearButtonVisibility="WhileEditing" 
+                        TextChanged="OnUploadServerAddressEntry" 
+                        Completed="OnUploadServerAddressEntry" 
+                        Grid.Row="0"
+                        Grid.Column="1"/>
+
+                </Grid>
+                <!-- Option: Upload Server Key -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Two Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="10"
+                        Text="Upload Server Key:"
+                        HorizontalOptions="FillAndExpand" />
+                    <Entry 
+                        x:Name="WebServerKey"
+                        Placeholder="Upload Server Key" 
+                        Keyboard="Url"
+                        ClearButtonVisibility="WhileEditing" 
+                        TextChanged="OnUploadServerKeyEntry" 
+                        Completed="OnUploadServerKeyEntry" 
+                        Grid.Row="0"
+                        Grid.Column="1"/>
 
                 </Grid>
             </StackLayout>

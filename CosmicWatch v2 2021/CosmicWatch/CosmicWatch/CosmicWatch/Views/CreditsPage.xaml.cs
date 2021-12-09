@@ -14,6 +14,7 @@ namespace CosmicWatch.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreditsPage : ContentPage
     {
+        //[Display Variables]
         private String mainText;
         private String MainText
         {
@@ -39,10 +40,11 @@ namespace CosmicWatch.Views
                 MainTextTitle.Text = value;
             }
         }
+        //[Constructor]
         public CreditsPage()
         {
             InitializeComponent();
-
+            //[Initialize Page Display Variables]
             MainTitle = AssortedUtil.GetEmbeddedText(typeof(CreditsPage), "CosmicWatch.Resources.Text.CreditsPageText.MainTitle.txt");
             MainText = AssortedUtil.GetEmbeddedText(typeof(CreditsPage), "CosmicWatch.Resources.Text.CreditsPageText.MainText.txt");
         }

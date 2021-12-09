@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="Alpha 1.0" package="com.UCalgary.cosmicwatch" android:installLocation="preferExternal">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="Alpha 1.0" package="com.UCalgary.cosmicwatch" android:installLocation="internalOnly">
 	<uses-sdk android:minSdkVersion="29" android:targetSdkVersion="29" />
 	<application android:label="CosmicWatch Muon Detector" android:theme="@style/MainTheme"></application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -8,4 +8,4 @@
 	-- File saving permissions --
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /><uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /><uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" /><uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
 	-- Use UART/USB Serial --
-	<uses-permission android:name="com.google.android.things.permission.USE_PERIPHERAL_IO" /></manifest>
+	<uses-permission android:name="com.google.android.things.permission.USE_PERIPHERAL_IO" /><uses-permission android:name="android.permission.INTERNET" /></manifest>

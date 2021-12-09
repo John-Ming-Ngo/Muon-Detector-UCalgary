@@ -5,7 +5,7 @@
     <!--Navigation Toolbar, Hierarchical Organization-->
     <ContentPage.ToolbarItems>
     </ContentPage.ToolbarItems>
-
+    <!-- Content of the Page -->
     <ContentPage.Content>
         <!-- Stack Layout: Main Display/Content -->
         <StackLayout Orientation= "Vertical">
@@ -37,13 +37,17 @@
             <StackLayout Orientation="Horizontal">
                 
                 <!-- Button: Upload Selected File to Google Drive -->
-                <Button Text="Export to Google Drive" 
+                <Button Text="Send to Web Server" 
                         CornerRadius="20"
                         Pressed="OnUploadClick"/>
-                <!-- Button: Upload Selected File to Google Drive -->
+                <!-- Button: Delete Selected Data -->
                 <Button Text="Delete Data" 
                         CornerRadius="20"
                         Pressed="OnDeleteClick"/>
+                <!-- Button: Clear Status Message -->
+                <Button Text="Clear Status Message" 
+                        CornerRadius="20"
+                        Pressed="OnStatusClear"/>
 
             </StackLayout>
 

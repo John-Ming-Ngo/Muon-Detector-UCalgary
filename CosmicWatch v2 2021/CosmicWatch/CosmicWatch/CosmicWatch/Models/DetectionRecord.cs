@@ -53,7 +53,7 @@ namespace CosmicWatch.Models
         public DetectionRecord(String filename)
         {
             //Initialize 
-            RawDataRecord = new SaveToFile(filename);
+            RawDataRecord = new SaveToFile(filename, UserSettings.SaveDataFolder);
             
             RawDataRecord.WriteLine(String.Join(",", RawDataLabels));
 

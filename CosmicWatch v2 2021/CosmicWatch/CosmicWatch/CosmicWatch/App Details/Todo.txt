@@ -1,5 +1,3 @@
 ﻿Current Priorities:
-	Brush up on the format and appearance of the explaination pages. 
-
-	Maybe consider using an ASP.Net server and having users upload their data to our server? Maybe.
-	https://www.youtube.com/watch?v=KPDGtLeNClQ
+	0. Brush up on the format and appearance of the explaination pages. 
+	1. Brush up everything.

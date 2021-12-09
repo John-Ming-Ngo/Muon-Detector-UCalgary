@@ -19,12 +19,11 @@ namespace CosmicWatch_Library
 
         //Works, but this class is actually sort of dumb and redundent. The better syntax involves calling the base stuff directly and using the using statement, since using ensures proper item disposal...
 
-        private String[] MainDirectoryPathElements;
         private String OutputDirectory;
         private StreamWriter WriteToFile;
-        public SaveToFile(String fileName)
+        public SaveToFile(String fileName, String SaveFolder)
         {
-            MainDirectoryPathElements = new String[]{ DependencyService.Get<IPlatformDetails>().GetExternalStorageDir(), "CosmicWatchDetectorData"};
+            String[] MainDirectoryPathElements = new String[]{ DependencyService.Get<IPlatformDetails>().GetExternalStorageDir(), SaveFolder};
 
             OutputDirectory = Path.Combine(MainDirectoryPathElements);
             Directory.CreateDirectory(OutputDirectory);

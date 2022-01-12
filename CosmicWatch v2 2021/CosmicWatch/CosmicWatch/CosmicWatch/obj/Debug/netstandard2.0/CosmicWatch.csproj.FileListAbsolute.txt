@@ -43,3 +43,5 @@ D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandar
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\UseGuideSubPages\VideoDemonstrationPage.xaml.g.cs
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\UseGuideSubPages\BuildDetectorPage.xaml.g.cs
 D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\Views\UseGuideSubPages\AboutTheSciencePage.xaml.g.cs
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\bin\Debug\netstandard2.0\Windows.Foundation.FoundationContract.winmd
+D:\VisualStudioProjects\CosmicWatch\CosmicWatch\CosmicWatch\obj\Debug\netstandard2.0\CosmicWatch.GeneratedMSBuildEditorConfig.editorconfig

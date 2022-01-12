@@ -137,7 +137,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -212,7 +212,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -220,7 +220,12 @@
       "restore": {
         "projectUniqueName": "D:\\VisualStudioProjects\\CosmicWatch\\UsbSerialForAndroid\\UsbSerialForAndroid.csproj",
         "projectName": "UsbSerialForAndroid",
-        "projectPath": "D:\\VisualStudioProjects\\CosmicWatch\\UsbSerialForAndroid\\UsbSerialForAndroid.csproj"
+        "projectPath": "D:\\VisualStudioProjects\\CosmicWatch\\UsbSerialForAndroid\\UsbSerialForAndroid.csproj",
+        "frameworks": {
+          "monoandroid50": {
+            "projectReferences": {}
+          }
+        }
       },
       "frameworks": {
         "monoandroid50": {}

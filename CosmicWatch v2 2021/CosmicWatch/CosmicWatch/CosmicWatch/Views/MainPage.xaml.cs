@@ -74,13 +74,24 @@ namespace CosmicWatch
         //[Page initialization and refreshing]
         private void InitializeUI()
         {
+            InitializeToolbarIcons();
+            
             InitializeUserSettings();
 
             InitiateTimeInputFormat();
             InitiateTimePickers();
             InitiateDelayMenu();
         }
-
+        //[Toolbar Icons]
+        private void InitializeToolbarIcons()
+        {
+            int iconCount = 0;
+            foreach (ToolbarItem item in ToolbarItems)
+            {
+                item.IconImageSource = AssortedUtil.GetEmbeddedImage(typeof(MainPage), "CosmicWatch.Resources.Icons.MainPageToolbarIcons.Icon" + iconCount.ToString() + ".png");
+                iconCount++;
+            }
+        }
 
         //[Menu Bar Buttons]
         private void OnOptions(object sender, EventArgs e) {

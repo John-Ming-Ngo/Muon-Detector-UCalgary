@@ -12,32 +12,48 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Text\CreditsPageText\MainText.txt" />
+    <None Remove="Resources\Icons\MainPageToolbarIcons\Icon0.png" />
+    <None Remove="Resources\Icons\UseGuidePageToolbarIcons\Icon0.png" />
+    <None Remove="Resources\Images\CreditsPageImages\Image0.png" />
+    <None Remove="Resources\Images\UseGuidePageImages\Image0.png" />
+    <None Remove="Resources\Images\UseGuideSubPagesImages\AboutTheSciencePageImages\Image0.png" />
+    <None Remove="Resources\Images\UseGuideSubPagesImages\BuildDetectorPageImages\Image0.png" />
+    <None Remove="Resources\Images\UseGuideSubPagesImages\HowToUsePageImages\Image0.png" />
+    <None Remove="Resources\Images\UseGuideSubPagesImages\VideoDemonstrationPageImages\Image0.png" />
     <None Remove="Resources\Text\CreditsPageText\MainTitle.txt" />
-    <None Remove="Resources\Text\UseGuidePageText\MainText.txt" />
+    <None Remove="Resources\Text\CreditsPageText\Text0.txt" />
     <None Remove="Resources\Text\UseGuidePageText\MainTitle.txt" />
-    <None Remove="Resources\Text\UseGuideSubPagesText\AboutTheSciencePageText\MainText.txt" />
+    <None Remove="Resources\Text\UseGuidePageText\Text0.txt" />
     <None Remove="Resources\Text\UseGuideSubPagesText\AboutTheSciencePageText\MainTitle.txt" />
-    <None Remove="Resources\Text\UseGuideSubPagesText\BuildDetectorPageText\MainText.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\AboutTheSciencePageText\Text0.txt" />
     <None Remove="Resources\Text\UseGuideSubPagesText\BuildDetectorPageText\MainTitle.txt" />
-    <None Remove="Resources\Text\UseGuideSubPagesText\HowToUsePageText\MainText.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\BuildDetectorPageText\Text0.txt" />
     <None Remove="Resources\Text\UseGuideSubPagesText\HowToUsePageText\MainTitle.txt" />
-    <None Remove="Resources\Text\UseGuideSubPagesText\VideoDemonstrationPageText\MainText.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\HowToUsePageText\Text0.txt" />
     <None Remove="Resources\Text\UseGuideSubPagesText\VideoDemonstrationPageText\MainTitle.txt" />
+    <None Remove="Resources\Text\UseGuideSubPagesText\VideoDemonstrationPageText\Text0.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\MainPageToolbarIcons\Icon0.png" />
+    <EmbeddedResource Include="Resources\Icons\UseGuidePageToolbarIcons\Icon0.png" />
+    <EmbeddedResource Include="Resources\Images\CreditsPageImages\Image0.png" />
+    <EmbeddedResource Include="Resources\Images\UseGuidePageImages\Image0.png" />
+    <EmbeddedResource Include="Resources\Images\UseGuideSubPagesImages\AboutTheSciencePageImages\Image0.png" />
+    <EmbeddedResource Include="Resources\Images\UseGuideSubPagesImages\BuildDetectorPageImages\Image0.png" />
+    <EmbeddedResource Include="Resources\Images\UseGuideSubPagesImages\HowToUsePageImages\Image0.png" />
+    <EmbeddedResource Include="Resources\Images\UseGuideSubPagesImages\VideoDemonstrationPageImages\Image0.png" />
     <EmbeddedResource Include="Resources\Text\CreditsPageText\MainTitle.txt" />
-    <EmbeddedResource Include="Resources\Text\CreditsPageText\MainText.txt" />
-    <EmbeddedResource Include="Resources\Text\UseGuidePageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\CreditsPageText\Text0.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuidePageText\Text0.txt" />
     <EmbeddedResource Include="Resources\Text\UseGuidePageText\MainTitle.txt" />
-    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\AboutTheSciencePageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\AboutTheSciencePageText\Text0.txt" />
     <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\AboutTheSciencePageText\MainTitle.txt" />
-    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\BuildDetectorPageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\BuildDetectorPageText\Text0.txt" />
     <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\BuildDetectorPageText\MainTitle.txt" />
-    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\HowToUsePageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\HowToUsePageText\Text0.txt" />
     <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\HowToUsePageText\MainTitle.txt" />
-    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\VideoDemonstrationPageText\MainText.txt" />
+    <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\VideoDemonstrationPageText\Text0.txt" />
     <EmbeddedResource Include="Resources\Text\UseGuideSubPagesText\VideoDemonstrationPageText\MainTitle.txt" />
   </ItemGroup>
 
@@ -91,7 +107,6 @@
 
   <ItemGroup>
     <Folder Include="Backend\" />
-    <Folder Include="Resources\Images\" />
   </ItemGroup>
 
   <ItemGroup>

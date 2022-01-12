@@ -57,7 +57,15 @@ namespace CosmicWatch.ViewModels
         private ReadFromFile Recordings;
 
         //[Data variables]
-        
+
+        //[Status Messages]
+
+        String UploadFailNoFile = "Upload Failed - No File Selected!";
+        String UploadSucceeded = "Upload Succeeded.";
+        String UploadFailedResponse = "Upload Failed - Wrong URL or Key!";
+
+        String DeleteFileComplete = "Dataset deleted from system memory. The data will remain loaded in active memory until you select a new dataset.";
+
         //[Constructors]
         public DisplayAnalysisPageModel(Action<List<String>> UpdateDataChoiceDisplay, Action<List<ChartCreator.ChartTypes>> UpdateGraphChoiceDisplay, Action<List<String>> UpdateXChoiceDisplay, Action<List<String>> UpdateYChoiceDisplay, Action<String> UpdateStatusDisplay, Action<String> UpdateGraphDisplay)
         {
@@ -184,15 +192,15 @@ namespace CosmicWatch.ViewModels
         {
             if ((fileToUpload == String.Empty) || (fileToUpload == null))
             {
-                UpdateStatusDisplay("Upload Failed - No File Selected!");
+                UpdateStatusDisplay(UploadFailNoFile);
             }
             else if (await WebServerFileHandler.Post(UserSettings.UploadDataWebsite, Recordings.GetDirectory(), fileToUpload, UserSettings.UploadDataKey))
             {
-                UpdateStatusDisplay("Upload Succeeded.");
+                UpdateStatusDisplay(UploadSucceeded);
             }
             else
             {
-                UpdateStatusDisplay("Upload Failed - Check the server url in the application options.");
+                UpdateStatusDisplay(UploadFailedResponse);
             }
 
         }
@@ -201,7 +209,7 @@ namespace CosmicWatch.ViewModels
         {
             Recordings.DeleteFile();
             UpdateDataChoiceDisplay(new List<String>(Recordings.GetFiles()));
-            UpdateStatusDisplay("Dataset deleted from system memory. The data will remain loaded in active memory until you select a new dataset.");
+            UpdateStatusDisplay(DeleteFileComplete);
         }
 
         public void UpdateGraph()

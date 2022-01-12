@@ -1,3 +1,4 @@
 ﻿Current Priorities:
-	0. Brush up on the format and appearance of the explaination pages. 
 	1. Brush up everything.
+	2. Look up web integration? Or Chrome android app running? I think that's a thing.
+	3. Look up publish to android.

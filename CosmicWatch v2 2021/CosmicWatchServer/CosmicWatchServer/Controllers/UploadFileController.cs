@@ -12,14 +12,21 @@ namespace CosmicWatchServer.Controllers
     [Route("[controller]")]
     public class UploadFileController : ControllerBase
     {
-        private readonly ILogger<UploadFileController> _logger;
-        private readonly IWebHostEnvironment _environment;
+        private readonly ILogger<UploadFileController> _Logger;
+        private readonly IWebHostEnvironment _Environment;
+
+        private String KeyCode;
 
         public UploadFileController(ILogger<UploadFileController> logger,
             IWebHostEnvironment environment)
         {
-            _logger = logger;
-            _environment = environment ?? throw new ArgumentNullException(nameof(environment));
+            _Logger = logger;
+            _Environment = environment ?? throw new ArgumentNullException(nameof(environment));
+            //Load in the Key Code.
+            String FilePath = Path.Combine(_Environment.ContentRootPath, "KeyFolder");
+            Directory.CreateDirectory(FilePath);
+            String KeyFilePath = Path.Combine(FilePath, "Key.txt");
+            KeyCode = System.IO.File.ReadAllText(KeyFilePath);
         }
 
         [HttpPost]
@@ -31,43 +38,36 @@ namespace CosmicWatchServer.Controllers
 
                 HttpContext httpContext = httpRequest.HttpContext;
 
-                string authHeader = httpContext.Request.Headers["Authorization"];
+                String AuthHeader = httpContext.Request.Headers["Authorization"];
                 
-                if (authHeader != null && authHeader.StartsWith("Basic"))
+                if (AuthHeader != null && AuthHeader.StartsWith("Basic"))
                 {
-                    string encodedUsernamePassword = authHeader.Substring("Basic ".Length).Trim();
+                    String Key = AuthHeader.Substring("Basic ".Length).Trim();
 
-                    //Encoding encoding = Encoding.GetEncoding("iso-8859-1");
-                    //string usernamePassword = encoding.GetString(Convert.FromBase64String(encodedUsernamePassword));
-
-                    //int seperatorIndex = usernamePassword.IndexOf(':');
-
-                    //var username = usernamePassword.Substring(0, seperatorIndex);
-                    //var password = usernamePassword.Substring(seperatorIndex + 1);
+                    if (KeyCode != Key) throw new Exception("Failed Authentication");
                 }
                 else
                 {
-                    throw new Exception("Failed Authentication");
+                    throw new Exception("No Authentication");
                 }
                 if (httpRequest.Form.Files.Count > 0)
                 {
                     foreach (IFormFile file in httpRequest.Form.Files)
                     {
-                        string filePath = Path.Combine(_environment.ContentRootPath, "uploads");
-                        Directory.CreateDirectory(filePath);
-                        using MemoryStream memoryStream = new MemoryStream();
-                        await file.CopyToAsync(memoryStream);
-                        System.IO.File.WriteAllBytes(Path.Combine(filePath, file.FileName), memoryStream.ToArray());
+                        String FilePath = Path.Combine(_Environment.ContentRootPath, "Uploads");
+                        Directory.CreateDirectory(FilePath);
+                        using MemoryStream MemoryStream = new MemoryStream();
+                        await file.CopyToAsync(MemoryStream);
+                        System.IO.File.WriteAllBytes(Path.Combine(FilePath, file.FileName), MemoryStream.ToArray());
                     }
                     return Ok();
                 }
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Error");
-                return new StatusCodeResult(500);
+                _Logger.LogError(e, "Error");
+                return BadRequest();
             }
-
             return BadRequest();
         }
     }

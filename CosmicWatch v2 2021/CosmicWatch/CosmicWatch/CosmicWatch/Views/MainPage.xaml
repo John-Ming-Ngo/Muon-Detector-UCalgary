@@ -2,35 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CosmicWatch.MainPage"
-
              xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <!--Navigation Toolbar, Hierarchical Organization-->
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="Options" 
-                     Order="Primary" 
-                     Text="Options" 
-                     Priority="0" 
-                     Clicked = "OnOptions"
-                     IconImageSource=""/>
+        <ToolbarItem 
+            Name="Options" 
+            Order="Primary" 
+            Text="Options" 
+            Priority="0" 
+            Clicked = "OnOptions"
+            />
         <ToolbarItem Name="Data Analysis" 
-                     Order="Primary" 
-                     Text="Data Analysis" 
-                     Priority="1" 
-                     Clicked = "OnDataAnalysis"
-                     IconImageSource=""/>
+            Order="Primary" 
+            Text="Data Analysis" 
+            Priority="1" 
+            Clicked = "OnDataAnalysis"
+            />
         <ToolbarItem Name="Usage Guide" 
-                     Order="Secondary" 
-                     Text="Usage Guide" 
-                     Priority="2" 
-                     Clicked = "OnUsageGuide"
-                     IconImageSource=""/>
+            Order="Primary" 
+            Text="Usage Guide" 
+            Priority="2" 
+            Clicked = "OnUsageGuide"
+            />
         <ToolbarItem Name="Credits" 
-                     Order="Secondary" 
-                     Text="Credits" 
-                     Priority="3" 
-                     Clicked = "OnCredits"
-                     IconImageSource=""/>
+            Order="Primary" 
+            Text="Credits" 
+            Priority="3" 
+            Clicked = "OnCredits"
+            />
     </ContentPage.ToolbarItems>
     
     <!-- Stack Layout: Main Display/Content -->

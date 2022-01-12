@@ -20,10 +20,12 @@
                     FontSize="15"/>
 
                 <!-- Webview: Video Display -->
-                <WebView BackgroundColor = "{StaticResource Background}"  
-                     VerticalOptions="EndAndExpand" 
-                     HeightRequest="400" 
-                     WidthRequest="500">
+                <WebView 
+                    BackgroundColor = "{StaticResource Background}"  
+                    VerticalOptions="EndAndExpand" 
+                    HeightRequest="400" 
+                    WidthRequest="500"
+                    x:Name="WebDisplay">
                     <WebView.Source>
                         <HtmlWebViewSource x:Name = "HtmlSource" />
                     </WebView.Source>

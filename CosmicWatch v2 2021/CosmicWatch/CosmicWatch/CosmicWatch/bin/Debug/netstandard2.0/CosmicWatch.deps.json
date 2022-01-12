@@ -13,7 +13,8 @@
           "NETStandard.Library": "2.0.3",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2083"
+          "Xamarin.Forms": "5.0.0.2083",
+          "Windows.Foundation.FoundationContract": "3.0.0.0"
         },
         "runtime": {
           "CosmicWatch.dll": {}
@@ -85,6 +86,14 @@
         "runtime": {
           "CosmicWatch_Library.dll": {}
         }
+      },
+      "Windows.Foundation.FoundationContract/3.0.0.0": {
+        "runtime": {
+          "Windows.Foundation.FoundationContract.winmd": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "10.0.18362.1"
+          }
+        }
       }
     }
   },
@@ -145,6 +154,11 @@
     },
     "CosmicWatch_Library/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Windows.Foundation.FoundationContract/3.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

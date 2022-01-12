@@ -14,38 +14,26 @@ namespace CosmicWatch.Views.UseGuideSubPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HowToUsePage : ContentPage
     {
-        //[Display Variables]
-        private String mainText;
-        private String MainText
-        {
-            get
-            {
-                return mainText;
-            }
-            set
-            {
-                mainText = value;
-                MainTextDisplay.Text = mainText;
-            }
-        }
-        private String mainTitle;
-        private String MainTitle
-        {
-            get
-            {
-                return mainTitle;
-            }
-            set
-            {
-                MainTextTitle.Text = value;
-            }
-        }
         public HowToUsePage()
         {
             InitializeComponent();
             //[Initialize Page Display Variables]
-            MainTitle = AssortedUtil.GetEmbeddedText(typeof(HowToUsePage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.HowToUsePageText.MainTitle.txt");
-            MainText = AssortedUtil.GetEmbeddedText(typeof(HowToUsePage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.HowToUsePageText.MainText.txt");
+            MainTextTitle.Text = AssortedUtil.GetEmbeddedText(typeof(HowToUsePage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.HowToUsePageText.MainTitle.txt");
+            //[Text and Images: Row 1]
+            MainTextDisplay.Text = AssortedUtil.GetEmbeddedText(typeof(HowToUsePage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.HowToUsePageText.Text0.txt");
+            MainImage.Source = AssortedUtil.GetEmbeddedImage(typeof(HowToUsePage), "CosmicWatch.Resources.Images.UseGuideSubPagesImages.HowToUsePageImages.Image0.png");
+            //[Text and Images: Row 2]
+            MainTextDisplay1.Text = AssortedUtil.GetEmbeddedText(typeof(HowToUsePage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.HowToUsePageText.Text1.txt");
+            MainImage1.Source = AssortedUtil.GetEmbeddedImage(typeof(HowToUsePage), "CosmicWatch.Resources.Images.UseGuideSubPagesImages.HowToUsePageImages.Image1.png");
+            //[Text and Images: Row 3]
+            MainTextDisplay2.Text = AssortedUtil.GetEmbeddedText(typeof(HowToUsePage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.HowToUsePageText.Text2.txt");
+            MainImage2.Source = AssortedUtil.GetEmbeddedImage(typeof(HowToUsePage), "CosmicWatch.Resources.Images.UseGuideSubPagesImages.HowToUsePageImages.Image2.png");
+            //[Text and Images: Row 4]
+            MainTextDisplay3.Text = AssortedUtil.GetEmbeddedText(typeof(HowToUsePage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.HowToUsePageText.Text3.txt");
+            MainImage3.Source = AssortedUtil.GetEmbeddedImage(typeof(HowToUsePage), "CosmicWatch.Resources.Images.UseGuideSubPagesImages.HowToUsePageImages.Image3.png");
+            //[Text and Images: Row 5]
+            MainTextDisplay4.Text = AssortedUtil.GetEmbeddedText(typeof(HowToUsePage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.HowToUsePageText.Text4.txt");
+            MainImage4.Source = AssortedUtil.GetEmbeddedImage(typeof(HowToUsePage), "CosmicWatch.Resources.Images.UseGuideSubPagesImages.HowToUsePageImages.Image4.png");
         }
     }
 }

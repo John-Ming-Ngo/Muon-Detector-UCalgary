@@ -14,10 +14,41 @@
                     Text="Text Not Loaded."
                     x:Name="MainTextTitle"/>
                 </Frame>
+                <!-- Text and Image: First Row -->
                 <Label 
                     Text="Text Not Loaded."
                     x:Name="MainTextDisplay"
                     FontSize="15"/>
+                <Image 
+                    x:Name="MainImage"/>
+                <!-- Text and Image: Second Row -->
+                <Label 
+                    Text="Text Not Loaded."
+                    x:Name="MainTextDisplay1"
+                    FontSize="15"/>
+                <Image 
+                    x:Name="MainImage1"/>
+                <!-- Text and Image: Third Row -->
+                <Label 
+                    Text="Text Not Loaded."
+                    x:Name="MainTextDisplay2"
+                    FontSize="15"/>
+                <Image 
+                    x:Name="MainImage2"/>
+                <!-- Text and Image: Fourth Row -->
+                <Label 
+                    Text="Text Not Loaded."
+                    x:Name="MainTextDisplay3"
+                    FontSize="15"/>
+                <Image 
+                    x:Name="MainImage3"/>
+                <!-- Text and Image: Fifth Row -->
+                <Label 
+                    Text="Text Not Loaded."
+                    x:Name="MainTextDisplay4"
+                    FontSize="15"/>
+                <Image 
+                    x:Name="MainImage4"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

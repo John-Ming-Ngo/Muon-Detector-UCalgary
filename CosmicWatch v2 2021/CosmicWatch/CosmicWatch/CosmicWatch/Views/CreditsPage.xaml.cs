@@ -14,39 +14,27 @@ namespace CosmicWatch.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreditsPage : ContentPage
     {
-        //[Display Variables]
-        private String mainText;
-        private String MainText
-        {
-            get
-            {
-                return mainText;
-            }
-            set
-            {
-                mainText = value;
-                MainTextDisplay.Text = mainText;
-            }
-        }
-        private String mainTitle;
-        private String MainTitle
-        {
-            get
-            {
-                return mainTitle;
-            }
-            set
-            {
-                MainTextTitle.Text = value;
-            }
-        }
         //[Constructor]
         public CreditsPage()
         {
             InitializeComponent();
             //[Initialize Page Display Variables]
-            MainTitle = AssortedUtil.GetEmbeddedText(typeof(CreditsPage), "CosmicWatch.Resources.Text.CreditsPageText.MainTitle.txt");
-            MainText = AssortedUtil.GetEmbeddedText(typeof(CreditsPage), "CosmicWatch.Resources.Text.CreditsPageText.MainText.txt");
+            MainTextTitle.Text = AssortedUtil.GetEmbeddedText(typeof(CreditsPage), "CosmicWatch.Resources.Text.CreditsPageText.MainTitle.txt");
+            //[Text and Images: Row 1]
+            MainTextDisplay.Text = AssortedUtil.GetEmbeddedText(typeof(CreditsPage), "CosmicWatch.Resources.Text.CreditsPageText.Text0.txt");
+            MainImage.Source = AssortedUtil.GetEmbeddedImage(typeof(CreditsPage), "CosmicWatch.Resources.Images.CreditsPageImages.Image0.png");
+            //[Text and Images: Row 2]
+            MainTextDisplay1.Text = AssortedUtil.GetEmbeddedText(typeof(CreditsPage), "CosmicWatch.Resources.Text.CreditsPageText.Text1.txt");
+            MainImage1.Source = AssortedUtil.GetEmbeddedImage(typeof(CreditsPage), "CosmicWatch.Resources.Images.CreditsPageImages.Image1.png");
+            //[Text and Images: Row 3]
+            MainTextDisplay2.Text = AssortedUtil.GetEmbeddedText(typeof(CreditsPage), "CosmicWatch.Resources.Text.CreditsPageText.Text2.txt");
+            MainImage2.Source = AssortedUtil.GetEmbeddedImage(typeof(CreditsPage), "CosmicWatch.Resources.Images.CreditsPageImages.Image2.png");
+            //[Text and Images: Row 4]
+            MainTextDisplay3.Text = AssortedUtil.GetEmbeddedText(typeof(CreditsPage), "CosmicWatch.Resources.Text.CreditsPageText.Text3.txt");
+            MainImage3.Source = AssortedUtil.GetEmbeddedImage(typeof(CreditsPage), "CosmicWatch.Resources.Images.CreditsPageImages.Image3.png");
+            //[Text and Images: Row 5]
+            MainTextDisplay4.Text = AssortedUtil.GetEmbeddedText(typeof(CreditsPage), "CosmicWatch.Resources.Text.CreditsPageText.Text4.txt");
+            MainImage4.Source = AssortedUtil.GetEmbeddedImage(typeof(CreditsPage), "CosmicWatch.Resources.Images.CreditsPageImages.Image4.png");
         }
     }
 }

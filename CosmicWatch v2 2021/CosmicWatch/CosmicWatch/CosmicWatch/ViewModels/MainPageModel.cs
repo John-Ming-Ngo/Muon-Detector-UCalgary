@@ -56,6 +56,9 @@ namespace CosmicWatch.ViewModels
         String RecordTimeFormat = "yyyy-MM-ddTHH-mm-ss";
         String RecordFileExtension = ".csv";
 
+        //[Status Messages]
+        String ConnectNoDeviceError = "No Device Selected!";
+
         //[Displays/Data Exit Functions]
         public Action<long> UpdateMuonDisplay;
         public Action<double> UpdateMuonsPerMinuteDisplay;
@@ -214,7 +217,7 @@ namespace CosmicWatch.ViewModels
         public async Task Connect(int SelectedIndex) {
             if (SelectedIndex == -1)
             {
-                UpdateStatusMessage?.Invoke("No Device Selected!");
+                UpdateStatusMessage?.Invoke(ConnectNoDeviceError);
                 DeviceConnected = false;
                 return;
             }
@@ -234,22 +237,5 @@ namespace CosmicWatch.ViewModels
             //UpdateStatusMessage(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
 
             UpdateStatusMessage(DependencyService.Get<IPlatformDetails>().GetExternalStorageDir());
-
-        private async Task FakeRecording() {
-            MuonCount = 0;
-            recording = true;
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            while (recording) {
-                await Task.Run(() => {
-                    System.Threading.Thread.Sleep(20);
-                    });
-                UpdateTimeDisplay?.Invoke(DateTime.Now);
-                MuonCount += 1;
-                Double MuonsPerMinute = (MuonCount / (stopwatch.ElapsedMilliseconds / 1000.0));
-                UpdateMuonsPerMinuteDisplay?.Invoke(MuonsPerMinute);
-            }
-            stopwatch.Stop();
-        }
  */
 

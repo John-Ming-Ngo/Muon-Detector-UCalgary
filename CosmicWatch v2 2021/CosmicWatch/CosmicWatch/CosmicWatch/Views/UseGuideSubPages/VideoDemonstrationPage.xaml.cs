@@ -14,38 +14,13 @@ namespace CosmicWatch.Views.UseGuideSubPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VideoDemonstrationPage : ContentPage
     {
-        //[Display Variables]
-        private String mainText;
-        private String MainText
-        {
-            get
-            {
-                return mainText;
-            }
-            set
-            {
-                mainText = value;
-                MainTextDisplay.Text = mainText;
-            }
-        }
-        private String mainTitle;
-        private String MainTitle
-        {
-            get
-            {
-                return mainTitle;
-            }
-            set
-            {
-                MainTextTitle.Text = value;
-            }
-        }
         public VideoDemonstrationPage()
         {
             InitializeComponent();
             //[Initialize Page Display Variables]
-            MainTitle = AssortedUtil.GetEmbeddedText(typeof(VideoDemonstrationPage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.VideoDemonstrationPageText.MainTitle.txt");
-            MainText = AssortedUtil.GetEmbeddedText(typeof(VideoDemonstrationPage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.VideoDemonstrationPageText.MainText.txt");
+            MainTextTitle.Text = AssortedUtil.GetEmbeddedText(typeof(VideoDemonstrationPage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.VideoDemonstrationPageText.MainTitle.txt");
+            MainTextDisplay.Text = AssortedUtil.GetEmbeddedText(typeof(VideoDemonstrationPage), "CosmicWatch.Resources.Text.UseGuideSubPagesText.VideoDemonstrationPageText.Text0.txt");
+            WebDisplay.Source = "https://www.youtube.com/watch?v=OZBpu67tbS0";
             
         }
     }

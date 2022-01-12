@@ -14,39 +14,39 @@ namespace CosmicWatch.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UsageGuidePage : ContentPage
     {
-        //[Display Variables]
-        private String mainText;
-        private String MainText
-        {
-            get
-            {
-                return mainText;
-            }
-            set
-            {
-                mainText = value;
-                MainTextDisplay.Text = mainText;
-            }
-        }
-        private String mainTitle;
-        private String MainTitle
-        {
-            get
-            {
-                return mainTitle;
-            }
-            set
-            {
-                MainTextTitle.Text = value;
-            }
-        }
         //[Constructor]
         public UsageGuidePage()
         {
             InitializeComponent();
             //[Initialize Page Display Variables]
-            MainTitle = AssortedUtil.GetEmbeddedText(typeof(UsageGuidePage), "CosmicWatch.Resources.Text.UseGuidePageText.MainTitle.txt");
-            MainText = AssortedUtil.GetEmbeddedText(typeof(UsageGuidePage), "CosmicWatch.Resources.Text.UseGuidePageText.MainText.txt");
+            InitializeToolbarIcons();
+            MainTextTitle.Text = AssortedUtil.GetEmbeddedText(typeof(UsageGuidePage), "CosmicWatch.Resources.Text.UseGuidePageText.MainTitle.txt");
+            //[Text and Images: Row 1]
+            MainTextDisplay.Text = AssortedUtil.GetEmbeddedText(typeof(UsageGuidePage), "CosmicWatch.Resources.Text.UseGuidePageText.Text0.txt");
+            MainImage.Source = AssortedUtil.GetEmbeddedImage(typeof(UsageGuidePage), "CosmicWatch.Resources.Images.UseGuidePageImages.Image0.png");
+            //[Text and Images: Row 2]
+            MainTextDisplay1.Text = AssortedUtil.GetEmbeddedText(typeof(UsageGuidePage), "CosmicWatch.Resources.Text.UseGuidePageText.Text1.txt");
+            MainImage1.Source = AssortedUtil.GetEmbeddedImage(typeof(UsageGuidePage), "CosmicWatch.Resources.Images.UseGuidePageImages.Image1.png");
+            //[Text and Images: Row 3]
+            MainTextDisplay2.Text = AssortedUtil.GetEmbeddedText(typeof(UsageGuidePage), "CosmicWatch.Resources.Text.UseGuidePageText.Text2.txt");
+            MainImage2.Source = AssortedUtil.GetEmbeddedImage(typeof(UsageGuidePage), "CosmicWatch.Resources.Images.UseGuidePageImages.Image2.png");
+            //[Text and Images: Row 4]
+            MainTextDisplay3.Text = AssortedUtil.GetEmbeddedText(typeof(UsageGuidePage), "CosmicWatch.Resources.Text.UseGuidePageText.Text3.txt");
+            MainImage3.Source = AssortedUtil.GetEmbeddedImage(typeof(UsageGuidePage), "CosmicWatch.Resources.Images.UseGuidePageImages.Image3.png");
+            //[Text and Images: Row 5]
+            MainTextDisplay4.Text = AssortedUtil.GetEmbeddedText(typeof(UsageGuidePage), "CosmicWatch.Resources.Text.UseGuidePageText.Text4.txt");
+            MainImage4.Source = AssortedUtil.GetEmbeddedImage(typeof(UsageGuidePage), "CosmicWatch.Resources.Images.UseGuidePageImages.Image4.png");
+            
+        }
+        //[Toolbar Icons]
+        private void InitializeToolbarIcons()
+        {
+            int iconCount = 0;
+            foreach (ToolbarItem item in ToolbarItems)
+            {
+                item.IconImageSource = AssortedUtil.GetEmbeddedImage(typeof(MainPage), "CosmicWatch.Resources.Icons.UseGuidePageToolbarIcons.Icon" + iconCount.ToString() + ".png");
+                iconCount++;
+            }
         }
         //[Navigation Bar Buttons]
         private void OnAboutTheScience(object sender, EventArgs e)

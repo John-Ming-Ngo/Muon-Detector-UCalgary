@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using Xamarin.Forms;
 
 namespace CosmicWatch_Library
 {
@@ -12,12 +13,23 @@ namespace CosmicWatch_Library
         {
             Assembly assembly = IntrospectionExtensions.GetTypeInfo(ClassType).Assembly;
             Stream stream = assembly.GetManifestResourceStream(resourceName);
-            String text = "";
-            using (StreamReader reader = new StreamReader(stream))
+            String text = String.Empty;
+            try
             {
-                text = reader.ReadToEnd();
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    text = reader.ReadToEnd();
+                }
+            }
+            catch (Exception)
+            {
+                text = String.Empty;
             }
             return text;
+        }
+        public static ImageSource GetEmbeddedImage(Type ClassType, String resourceName)
+        {
+            return ImageSource.FromResource(resourceName, ClassType.GetTypeInfo().Assembly);
         }
     }
 }

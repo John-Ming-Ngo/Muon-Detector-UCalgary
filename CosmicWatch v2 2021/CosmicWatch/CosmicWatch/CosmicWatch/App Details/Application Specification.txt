@@ -13,7 +13,8 @@
 		d. Have some data display and analysis functionality. Ex. plot one column against another column.
 			Currently using: Chart.js, for its sheer flexibility.
 		e. Save the raw data, and a cleaned up version, to CSV or an SQL database online, depending on user preferences or settings.
-			d1. Possibly look into export to Google drive as well.
+			i. Possibly look into export to Google drive as well.
+			ii. Change of plans: Created an ASP.net file upload server.
 
 Resources required:
 	a. Access to the muon detector.

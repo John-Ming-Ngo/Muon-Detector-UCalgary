@@ -29,6 +29,10 @@ namespace CosmicWatch.Models
         //RNG Generator
         Random random;
 
+        //Strings
+
+        String FakeMachineName = "Fake Machine";
+
         public void Initialize(Action<String> UpdateDataOutput, Action<String> UpdateStatusMessage, Action<IList> UpdateSupportedDevices, uint MaxReadLength)
         {
             this.UpdateData = UpdateDataOutput;
@@ -38,7 +42,7 @@ namespace CosmicWatch.Models
 
             random = new Random();
 
-            UpdateSupportedDevices(new List<String> { "Fake Machine" });
+            UpdateSupportedDevices(new List<String> { FakeMachineName });
         }
 
         public async Task<bool> Connect(int ConnectIndex)

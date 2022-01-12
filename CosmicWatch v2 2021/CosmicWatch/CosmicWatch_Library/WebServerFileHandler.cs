@@ -24,7 +24,8 @@ namespace CosmicWatch_Library
             try
             {
                 using HttpResponseMessage Response = await WebClient.PostAsync(ServerToUploadTo, HttpContent);
-                return true;
+                if (Response.IsSuccessStatusCode) return true;
+                return false;
             }
             catch (Exception)
             {

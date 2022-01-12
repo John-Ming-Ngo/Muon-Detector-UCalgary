@@ -5,6 +5,10 @@ using System;
 namespace CosmicWatch
 {
     //Credits to the UserSettings sample class from https://docs.microsoft.com/en-us/xamarin/xamarin-forms/enterprise-application-patterns/configuration-management .
+
+    /*
+     This class is the static, saved between app-bootup user settings of this application.     
+     */
     public static class UserSettings
     {
         static ISettings AppSettings
